@@ -1,16 +1,5 @@
-import React, { useState } from "react";
-import { supabase } from "./lib/sup, setName] = useState("");import { supabase } from "./lib/supabase";
-  const [message, setMessage] = useState("");
 
-  async function createProfile() {
-    if (!name) {
-      setMessage("Inserisci un nome");
-      return;
-    }
-
-    const coupleCode = Math.random().toString(36).substring(2, 8).toUpperCase();
-
-    const { error } = await supabase.from("profiles").insert({
+import React, { useState } from "react";import React, { useStateinsert({
       name: name,
       couple_code: coupleCode
     });
@@ -40,5 +29,17 @@ import { supabase } from "./lib/sup, setName] = useState("");import { supabase }
     </div>
   );
 }
+import { supabase } from "./lib/supabase";
 
 export default function App() {
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  async function createProfile() {
+    if (!name) {
+      setMessage("Inserisci un nome");
+      return;
+    }
+
+    const coupleCode = Math.random().toString(36).substring(2, 8).toUpperCase();
+
