@@ -19,6 +19,7 @@ export default function App() {
     });
 
     if (error) {
+      console.error(error);
       setMessage("Errore: controlla Supabase");
     } else {
       setMessage("✅ Profilo creato! Codice: " + coupleCode);
@@ -26,7 +27,7 @@ export default function App() {
   }
 
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 20, fontFamily: "Arial, sans-serif" }}>
       <h1>Il Nome Perfetto</h1>
 
       <input
