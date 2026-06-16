@@ -1,165 +1,179 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { supabase } from "./lib/supabase";
 
-const demoNames = [
-  { name: "Sofia", origin: "Greco", meaning: "Saggezza e intelligenza." },
-  { name: "Emma", origin: "Germanico", meaning: "Universale, completa." },
-  { name: "Giulia", origin: "Latino", meaning: "Giovane, luminosa." },
-  { name: "Alice", origin: "Germanico", meaning: "Di nobile stirpe." },
-  { name: "Bianca", origin: "Italiano", meaning: "Candida, splendente." }
-];
-
 export default function App() {
+  const [profile, setProfile] = useState(null);
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-  const [profileCreated, setProfileCreated] = useState(false);
-  const [coupleCode, setCoupleCode] = useState("");
 
-  const [started, setStarted] = useState(false);
+  const [names, setNames] = useState([]);
   const [index, setIndex] = useState(0);
 
-  const [liked, setLiked] = useState([]);
-  const [loved, setLoved] = useState([]);
-  const [disliked, setDisliked] = useState([]);
-
-  async function createProfile() {
-    if (!name.trim()) {
-      setMessage("Inserisci un nome");
-      return;
+  // ✅ load profile da localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem("profile");
+    if (saved) {
+      setProfile(JSON.parse(saved));
     }
+  }, []);
 
-    const newCoupleCode = Math.random().toString(36).substring(2, 8).toUpperCase();
-
-    const { error } = await supabase.from("profiles").insert({
-      name: name.trim(),
-      couple_code: newCoupleCode
-    });
-
-    if (error) {
-      console.error("SUPABASE ERROR:", error);
-      setMessage("Errore Supabase: " + error.message);
-      return;
-    }
-
-    setCoupleCode(newCoupleCode);
-    setProfileCreated(true);
-    setMessage("✅ Profilo creato! Codice coppia: " + newCoupleCode);
+  // ✅ salva profile
+  function saveProfile(p) {
+    localStorage.setItem("profile", JSON.stringify(p));
+    setProfile(p);
   }
 
-  function startDemo() {
-    setStarted(true);
+  // ✅ crea profilo
+  async function createProfile() {
+    if (!name) return;
+
+    const code = Math.random().toString(36).substring(2, 8).toUpperCase();
+
+    const { data, error } = await supabase
+      .from("profiles")
+      .insert({ name, couple_code: code })
+      .select()
+      .single();
+
+    if (error) {
+      setMessage(error.message);
+    } else {
+      saveProfile({
+        id: data.id,
+        name: data.name,
+        coupleCode: data.couple_code,
+        liked: [],
+        disliked: []
+      });
+    }
+  }
+
+  // ✅ genera nomi (mock per ora)
+  function generateNames() {
+    setNames([
+      "Luca",
+      "Matteo",
+      "Edoardo",
+      "Tommaso",
+      "Leonardo",
+      "Sofia",
+      "Giulia",
+      "Emma",
+      "Aurora",
+      "Alice"
+    ]);
     setIndex(0);
   }
 
-  function vote(type) {
-    const current = demoNames[index];
+  // ✅ salva voto
+  async function vote(type) {
+    const current = names[index];
 
-    if (type === "yes") {
-      setLiked((prev) => [...prev, current.name]);
-    }
+    if (!current) return;
 
-    if (type === "love") {
-      setLoved((prev) => [...prev, current.name]);
-      setLiked((prev) => [...prev, current.name]);
+    let newProfile = { ...profile };
+
+    if (type === "like") {
+      newProfile.liked = [...(profile.liked || []), current];
     }
 
     if (type === "no") {
-      setDisliked((prev) => [...prev, current.name]);
+      newProfile.disliked = [...(profile.disliked || []), current];
     }
 
-    if (index < demoNames.length - 1) {
-      setIndex(index + 1);
+    // ✅ aggiorna DB
+    await supabase
+      .from("profiles")
+      .update({
+        liked_names: newProfile.liked,
+        disliked_names: newProfile.disliked
+      })
+      .eq("id", profile.id);
+
+    // ✅ storico voti
+    await supabase.from("votes").insert({
+      profile_id: profile.id,
+      baby_name: current,
+      vote_type: type
+    });
+
+    saveProfile(newProfile);
+
+    setIndex(index + 1);
+  }
+
+  // ✅ collegamento partner (base)
+  const [partnerCode, setPartnerCode] = useState("");
+
+  async function connectPartner() {
+    const { data } = await supabase
+      .from("profiles")
+      .select("*")
+      .eq("couple_code", partnerCode)
+      .limit(1);
+
+    if (data.length > 0) {
+      alert("✅ Partner trovato: " + data[0].name);
     } else {
-      setStarted(false);
-      setMessage("✨ Hai finito i nomi demo!");
+      alert("❌ Codice non trovato");
     }
   }
 
-  const currentName = demoNames[index];
+  // ---------------- UI ----------------
+
+  if (!profile) {
+    return (
+      <div style={{ padding: 20 }}>
+        <h1>Il Nome Perfetto</h1>
+
+        <input
+          placeholder="Il tuo nome"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+
+        <button onClick={createProfile}>Crea profilo</button>
+
+        <p>{message}</p>
+      </div>
+    );
+  }
 
   return (
-    <div
-      style={{
-        padding: 24,
-        fontFamily: "Arial, sans-serif",
-        maxWidth: 700,
-        margin: "0 auto"
-      }}
-    >
-      <h1>Il Nome Perfetto</h1>
+    <div style={{ padding: 20 }}>
+      <h2>Ciao {profile.name}</h2>
+      <p>Codice coppia: {profile.coupleCode}</p>
 
-      {!profileCreated && (
-        <div style={{ marginBottom: 24 }}>
-          <input
-            placeholder="Il tuo nome"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            style={{
-              padding: 10,
-              marginRight: 10,
-              minWidth: 220
-            }}
-          />
-          <button onClick={createProfile}>Crea profilo</button>
-        </div>
-      )}
+      {/* partner */}
+      <div style={{ marginTop: 20 }}>
+        <input
+          placeholder="Codice partner"
+          value={partnerCode}
+          onChange={(e) => setPartnerCode(e.target.value)}
+        />
+        <button onClick={connectPartner}>Collega partner</button>
+      </div>
 
-      {message && (
-        <p style={{ marginBottom: 20 }}>
-          {message}
-        </p>
-      )}
+      {/* genera nomi */}
+      <div style={{ marginTop: 20 }}>
+        <button onClick={generateNames}>Genera nomi</button>
+      </div>
 
-      {profileCreated && !started && (
+      {/* swipe */}
+      {names.length > 0 && index < names.length && (
         <div style={{ marginTop: 20 }}>
-          <p>
-            <strong>Codice coppia:</strong> {coupleCode}
-          </p>
+          <h1>{names[index]}</h1>
+
+          <button onClick={() => vote("no")}>NO</button>
+          <button onClick={() => vote("like")}>SI</button>
 
           <p>
-            <strong>Mi piace:</strong> {liked.length} |{" "}
-            <strong>Adoro:</strong> {loved.length} |{" "}
-            <strong>No:</strong> {disliked.length}
+            {index + 1} / {names.length}
           </p>
-
-          <button onClick={startDemo}>Genera nomi demo</button>
         </div>
       )}
 
-      {profileCreated && started && currentName && (
-        <div
-          style={{
-            marginTop: 30,
-            border: "1px solid #ddd",
-            borderRadius: 16,
-            padding: 24,
-            textAlign: "center",
-            boxShadow: "0 8px 20px rgba(0,0,0,0.08)"
-          }}
-        >
-          <p style={{ color: "#777", marginBottom: 8 }}>
-            {index + 1} / {demoNames.length}
-          </p>
-
-          <h2 style={{ fontSize: 36, marginBottom: 10 }}>
-            {currentName.name}
-          </h2>
-
-          <p>
-            <strong>Origine:</strong> {currentName.origin}
-          </p>
-
-          <p style={{ marginBottom: 24 }}>
-            <strong>Significato:</strong> {currentName.meaning}
-          </p>
-
-          <div style={{ display: "flex", justifyContent: "center", gap: 12 }}>
-            <button onClick={() => vote("no")}>NO</button>
-            <button onClick={() => vote("love")}>ADORO</button>
-            <button onClick={() => vote("yes")}>SÌ</button>
-          </div>
-        </div>
-      )}
+      {index >= names.length && <p>Fine lista ✅</p>}
     </div>
   );
 }
