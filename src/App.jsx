@@ -1,45 +1,32 @@
-
-import React, { useState } from "react";import React, { useStateinsert({
-      name: name,
-      couple_code: coupleCode
-    });
+import React, { useState } from "react";import React, { useState }")
+      .select("*")
+      .limit(1);
 
     if (error) {
       console.error("SUPABASE ERROR:", error);
       setMessage("Errore Supabase: " + error.message);
     } else {
-      setMessage("✅ Profilo creato! Codice: " + coupleCode);
+      setMessage("Supabase connesso ✅");
+      console.log("Dati ricevuti:", data);
     }
   }
 
   return (
     <div style={{ padding: 20, fontFamily: "Arial, sans-serif" }}>
-      <h1>Il Nome Perfetto</h1>
-
-      <input
-        placeholder="Il tuo nome"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        style={{ padding: 10, marginRight: 10 }}
-      />
-
-      <button onClick={createProfile}>Crea profilo</button>
-
-      <p>{message}</p>
+      <h1>Test connessione Supabase</h1>
+      <button onClick={testSupabase} style={{ padding: 10 }}>
+        Testa Supabase
+      </button>
+      <p style={{ marginTop: 20 }}>{message}</p>
     </div>
   );
 }
 import { supabase } from "./lib/supabase";
 
 export default function App() {
-  const [name, setName] = useState("");
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("Premi il bottone per testare Supabase");
 
-  async function createProfile() {
-    if (!name) {
-      setMessage("Inserisci un nome");
-      return;
-    }
+  async function testSupabase() {
+    setMessage("Controllo in corso...");
 
-    const coupleCode = Math.random().toString(36).substring(2, 8).toUpperCase();
-
+    const { data, error } = await supabase
