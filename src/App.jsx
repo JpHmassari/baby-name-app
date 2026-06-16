@@ -1,18 +1,32 @@
-import React, { useEffect, useState } from "react";import React, { useEffectnesso ✅");
-        }
-      } catch (err) {
-        console.error("ERRORE GENERALE:", err);
-        setStatus("Errore generale: " + err.message);
-      }
-    }
+import React, { useState } from "react";import React, { useState }    const coupleCode = Math.random().toString(36).substring(2, 8).toUpperCase();
 
-    testSupabase();
-  }, []);
+    const { error } = await supabase.from("profiles").insert({
+      name: name,
+      couple_code: coupleCode
+    });
+
+    if (error) {
+      console.error("SUPABASE ERROR:", error);
+      setMessage("Errore Supabase: " + error.message);
+    } else {
+      setMessage("Profilo creato correttamente! Codice: " + coupleCode);
+    }
+  }
 
   return (
     <div style={{ padding: 20, fontFamily: "Arial, sans-serif" }}>
-      <h1>Il Nome Perfetto — v2</h1>
-      <p>{status}</p>
+      <h1>Il Nome Perfetto</h1>
+
+      <input
+        placeholder="Il tuo nome"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        style={{ padding: 10, marginRight: 10 }}
+      />
+
+      <button onClick={createProfile}>Crea profilo</button>
+
+      <p>{message}</p>
     </div>
   );
 }
@@ -20,18 +34,12 @@ import React, { useEffect, useState } from "react";import React, { useEffectness
 import { supabase } from "./lib/supabase";
 
 export default function App() {
-  const [status, setStatus] = useState("Controllo connessione a Supabase...");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
 
-  useEffect(() => {
-    async function testSupabase() {
-      try {
-        const { data, error } = await supabase
-          .from("profiles")
-          .select("*")
-          .limit(1);
+  async function createProfile() {
+    if (!name) {
+      setMessage("Inserisci un nome");
+      return;
+    }
 
-        if (error) {
-          console.error("SUPABASE ERROR:", error);
-          setStatus("Errore Supabase: " + error.message);
-        } else {
-          console.log("SUPABASE OK:", data);
