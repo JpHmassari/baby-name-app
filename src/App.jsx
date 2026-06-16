@@ -1,20 +1,4 @@
-import React, { useState } from "react";import React, { useState }    const coupleCode = Math.random().toString(36).substring(2, 8).toUpperCase();
-
-    const { error } = await supabase.from("profiles").insert({
-      name: name,
-      couple_code: coupleCode
-    });
-
-    if (error) {
-      console.error("SUPABASE ERROR:", error);
-      setMessage("Errore Supabase: " + error.message);
-    } else {
-      setMessage("Profilo creato correttamente! Codice: " + coupleCode);
-    }
-  }
-
-  return (
-    <div style={{ padding: 20, fontFamily: "Arial, sans-serif" }}>
+import React, { useState } from "react";import React, { useState } from "react <div style={{ padding: 20, fontFamily: "Arial, sans-serif" }}>
       <h1>Il Nome Perfetto</h1>
 
       <input
@@ -38,8 +22,25 @@ export default function App() {
   const [message, setMessage] = useState("");
 
   async function createProfile() {
-    if (!name) {
+    if (!name.trim()) {
       setMessage("Inserisci un nome");
       return;
     }
 
+    const coupleCode = Math.random().toString(36).substring(2, 8).toUpperCase();
+
+    const { error } = await supabase.from("profiles").insert({
+      name: name.trim(),
+      couple_code: coupleCode,
+    });
+
+    if (error) {
+      console.error("SUPABASE ERROR:", error);
+      setMessage("Errore Supabase: " + error.message);
+    } else {
+      setMessage("Profilo creato correttamente! Codice: " + coupleCode);
+      setName("");
+    }
+  }
+
+  return (
