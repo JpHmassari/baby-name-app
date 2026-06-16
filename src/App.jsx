@@ -1,40 +1,26 @@
-import React, { useEffect, useState } from "react";import React, { useEffect, uselib/supabase";
-
-export default function App() {
-  const [profile, setProfile] = useState(null);
-  const [partner, setPartner] = useState(null);
-  const [message, setMessage] = useState("Caricamento...");
-  const [name, setName] = useState("");
-
-  useEffect(() => {
-    setMessage("Inserisci il tuo nome per creare il profilo.");
-  }, []);
+import React, { useState } from "react";
+import { supabase } from "./lib/sup, setName] = useState("");import { supabase } from "./lib/supabase";
+  const [message, setMessage] = useState("");
 
   async function createProfile() {
-    if (!name.trim()) {
+    if (!name) {
       setMessage("Inserisci un nome");
       return;
     }
 
     const coupleCode = Math.random().toString(36).substring(2, 8).toUpperCase();
 
-    const { data, error } = await supabase
-      .from("profiles")
-      .insert({
-        name: name.trim(),
-        couple_code: coupleCode
-      })
-      .select()
-      .single();
+    const { error } = await supabase.from("profiles").insert({
+      name: name,
+      couple_code: coupleCode
+    });
 
     if (error) {
       console.error("SUPABASE ERROR:", error);
       setMessage("Errore Supabase: " + error.message);
-      return;
+    } else {
+      setMessage("✅ Profilo creato! Codice: " + coupleCode);
     }
-
-    setProfile(data);
-    setMessage("✅ Profilo creato! Codice: " + coupleCode);
   }
 
   return (
@@ -51,14 +37,8 @@ export default function App() {
       <button onClick={createProfile}>Crea profilo</button>
 
       <p>{message}</p>
-
-      {profile && (
-        <div style={{ marginTop: 20 }}>
-          <strong>Profilo creato:</strong>
-          <div>Nome: {profile.name}</div>
-          <div>Codice coppia: {profile.couple_code}</div>
-        </div>
-      )}
     </div>
   );
 }
+
+export default function App() {
