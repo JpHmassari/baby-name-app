@@ -1,125 +1,66 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { supabase } from "./lib/supabase";
 
+const NAMES = [
+  "Sofia",
+  "Emma",
+  "Giulia",
+  "Aurora",
+  "Alice",
+  "Luca",
+  "Leonardo",
+  "Matteo",
+  "Tommaso",
+  "Francesco"
+];
+
 export default function App() {
-  const [profile, setProfile] = useState(null);
   const [name, setName] = useState("");
+  const [profile, setProfile] = useState(null);
+  const [index, setIndex] = useState(0);
   const [message, setMessage] = useState("");
 
-  const [names, setNames] = useState([]);
-  const [index, setIndex] = useState(0);
-
-  // ✅ load profile da localStorage
-  useEffect(() => {
-    const saved = localStorage.getItem("profile");
-    if (saved) {
-      setProfile(JSON.parse(saved));
-    }
-  }, []);
-
-  // ✅ salva profile
-  function saveProfile(p) {
-    localStorage.setItem("profile", JSON.stringify(p));
-    setProfile(p);
-  }
-
-  // ✅ crea profilo
   async function createProfile() {
-    if (!name) return;
+    if (!name) {
+      setMessage("Inserisci un nome");
+      return;
+    }
 
-    const code = Math.random().toString(36).substring(2, 8).toUpperCase();
+    const coupleCode = Math.random().toString(36).substring(2, 8).toUpperCase();
 
     const { data, error } = await supabase
       .from("profiles")
-      .insert({ name, couple_code: code })
+      .insert({
+        name: name,
+        couple_code: coupleCode
+      })
       .select()
       .single();
 
     if (error) {
-      setMessage(error.message);
+      console.error(error);
+      setMessage("Errore Supabase: " + error.message);
     } else {
-      saveProfile({
-        id: data.id,
-        name: data.name,
-        coupleCode: data.couple_code,
-        liked: [],
-        disliked: []
-      });
+      setProfile(data);
+      setMessage("✅ Profilo creato! Codice: " + coupleCode);
     }
   }
 
-  // ✅ genera nomi (mock per ora)
-  function generateNames() {
-    setNames([
-      "Luca",
-      "Matteo",
-      "Edoardo",
-      "Tommaso",
-      "Leonardo",
-      "Sofia",
-      "Giulia",
-      "Emma",
-      "Aurora",
-      "Alice"
-    ]);
-    setIndex(0);
-  }
-
-  // ✅ salva voto
   async function vote(type) {
-    const current = names[index];
+    const currentName = NAMES[index];
 
-    if (!current) return;
-
-    let newProfile = { ...profile };
-
-    if (type === "like") {
-      newProfile.liked = [...(profile.liked || []), current];
-    }
-
-    if (type === "no") {
-      newProfile.disliked = [...(profile.disliked || []), current];
-    }
-
-    // ✅ aggiorna DB
-    await supabase
-      .from("profiles")
-      .update({
-        liked_names: newProfile.liked,
-        disliked_names: newProfile.disliked
-      })
-      .eq("id", profile.id);
-
-    // ✅ storico voti
     await supabase.from("votes").insert({
       profile_id: profile.id,
-      baby_name: current,
+      baby_name: currentName,
       vote_type: type
     });
 
-    saveProfile(newProfile);
-
-    setIndex(index + 1);
-  }
-
-  // ✅ collegamento partner (base)
-  const [partnerCode, setPartnerCode] = useState("");
-
-  async function connectPartner() {
-    const { data } = await supabase
-      .from("profiles")
-      .select("*")
-      .eq("couple_code", partnerCode)
-      .limit(1);
-
-    if (data.length > 0) {
-      alert("✅ Partner trovato: " + data[0].name);
+    if (index + 1 < NAMES.length) {
+      setIndex(index + 1);
     } else {
-      alert("❌ Codice non trovato");
+      setMessage("✅ Hai finito i nomi!");
     }
   }
-
-  // ---------------- UI ----------------
 
   if (!profile) {
     return (
@@ -130,6 +71,7 @@ export default function App() {
           placeholder="Il tuo nome"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          style={{ padding: 10, marginRight: 10 }}
         />
 
         <button onClick={createProfile}>Crea profilo</button>
@@ -141,39 +83,19 @@ export default function App() {
 
   return (
     <div style={{ padding: 20 }}>
-      <h2>Ciao {profile.name}</h2>
-      <p>Codice coppia: {profile.coupleCode}</p>
+      <h1>Scegli il nome</h1>
 
-      {/* partner */}
-      <div style={{ marginTop: 20 }}>
-        <input
-          placeholder="Codice partner"
-          value={partnerCode}
-          onChange={(e) => setPartnerCode(e.target.value)}
-        />
-        <button onClick={connectPartner}>Collega partner</button>
-      </div>
+      <h2>{NAMES[index]}</h2>
 
-      {/* genera nomi */}
-      <div style={{ marginTop: 20 }}>
-        <button onClick={generateNames}>Genera nomi</button>
-      </div>
+      <button onClick={() => vote("yes")} style={{ marginRight: 10 }}>
+        ❤️ Mi piace
+      </button>
 
-      {/* swipe */}
-      {names.length > 0 && index < names.length && (
-        <div style={{ marginTop: 20 }}>
-          <h1>{names[index]}</h1>
+      <button onClick={() => vote("no")}>
+        ❌ No
+      </button>
 
-          <button onClick={() => vote("no")}>NO</button>
-          <button onClick={() => vote("like")}>SI</button>
-
-          <p>
-            {index + 1} / {names.length}
-          </p>
-        </div>
-      )}
-
-      {index >= names.length && <p>Fine lista ✅</p>}
+      <p>{message}</p>
     </div>
   );
 }
