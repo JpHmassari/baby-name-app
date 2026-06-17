@@ -26,6 +26,7 @@ const COLORS = {
   border: "#ebe7f5",
   primary: "#7c3aed",
   primary2: "#a855f7",
+  primary3: "#ec4899",
   primarySoft: "#f3e8ff",
   green: "#15803d",
   greenSoft: "#dcfce7",
@@ -70,6 +71,16 @@ function generateNamesByStyle(style, count, startsWith, excludes) {
   return uniqueArray([...shuffled, ...fallbackPool]).slice(0, count);
 }
 
+function pageStyle() {
+  return {
+    minHeight: "100vh",
+    background: `linear-gradient(180deg, ${COLORS.bgTop} 0%, ${COLORS.bgBottom} 100%)`,
+    padding: 20,
+    fontFamily: "Inter, Arial, sans-serif",
+    color: COLORS.text,
+  };
+}
+
 function cardStyle(extra = {}) {
   return {
     background: COLORS.card,
@@ -105,6 +116,11 @@ function buttonStyle(kind = "primary") {
       background: "#fff",
       color: COLORS.text,
       border: `1px solid ${COLORS.border}`,
+    },
+    ghost: {
+      background: "rgba(255,255,255,0.10)",
+      color: "#fff",
+      border: "1px solid rgba(255,255,255,0.25)",
     },
     yes: {
       background: COLORS.greenSoft,
@@ -165,6 +181,12 @@ function statBoxStyle(bg, border) {
     border: `1px solid ${border}`,
     padding: 16,
   };
+}
+
+function voteBadgeStyle(vote) {
+  if (vote === "love") return badgeStyle(COLORS.primarySoft, COLORS.primary);
+  if (vote === "yes") return badgeStyle(COLORS.greenSoft, COLORS.green);
+  return badgeStyle(COLORS.redSoft, COLORS.red);
 }
 
 export default function App() {
@@ -240,18 +262,6 @@ export default function App() {
     return namePool.filter((babyName) => isPositiveVote(votes[babyName]) && isPositiveVote(partnerVotes[babyName]));
   }, [votes, partnerVotes, namePool]);
 
-  const shortlist = useMemo(() => {
-    const loved = [];
-    const liked = [];
-
-    namePool.forEach((babyName) => {
-      if (votes[babyName] === "love") loved.push(babyName);
-      else if (votes[babyName] === "yes") liked.push(babyName);
-    });
-
-    return [...loved, ...liked].slice(0, 5);
-  }, [votes, namePool]);
-
   const filteredNamePool = useMemo(() => {
     if (deckFilter === "favorites") return favoriteNames;
     if (deckFilter === "matches") return matchedNames;
@@ -296,10 +306,7 @@ export default function App() {
   async function loadVotes(profileId) {
     setVotesLoading(true);
     try {
-      const { data, error } = await supabase
-        .from("votes")
-        .select("baby_name, vote")
-        .eq("profile_id", profileId);
+      const { data, error } = await supabase.from("votes").select("baby_name, vote").eq("profile_id", profileId);
 
       if (error) {
         setMessage("Errore caricamento voti: " + error.message);
@@ -532,10 +539,7 @@ export default function App() {
     setVoteSaving(true);
 
     try {
-      const { error } = await supabase
-        .from("votes")
-        .delete()
-        .eq("profile_id", profile.id);
+      const { error } = await supabase.from("votes").delete().eq("profile_id", profile.id);
 
       if (error) {
         setMessage("Errore reset voti: " + error.message);
@@ -563,31 +567,87 @@ export default function App() {
     setMessage("Profilo scollegato da questo dispositivo");
   }
 
-  if (checkingSession) {
-    return (
-      <div style={{ minHeight: "100vh", background: `linear-gradient(180deg, ${COLORS.bgTop} 0%, ${COLORS.bgBottom} 100%)`, padding: 24, fontFamily: "Inter, Arial, sans-serif" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+  const pageWrapStyle = {
+    maxWidth: 1180,
+    margin: "0 auto",
+  };
+
+  const gridMainStyle = {
+    display: "grid",
+    gap: 20,
+    alignItems: "start",
+  };
+
+  const deckCardStyle = {
+    position: "relative",
+    borderRadius: 30,
+    padding: 24,
+    background: `linear-gradient(135deg, ${COLORS.primary} 0%, ${COLORS.primary2} 56%, ${COLORS.primary3} 100%)`,
+    color: "white",
+    minHeight: 360,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    boxShadow: "0 24px 50px rgba(124, 58, 237, 0.24)",
+    overflow: "hidden",
+    animation: currentName ? "floatCard 4.6s ease-in-out infinite" : "none",
+  };
+
+  return (
+    <div style={pageStyle()}>
+      <style>{`
+        * { box-sizing: border-box; }
+        .app-shell { max-width: 1180px; margin: 0 auto; }
+        .hero-grid { display: grid; gap: 20px; }
+        .stats-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+        .main-grid { display: grid; gap: 20px; grid-template-columns: minmax(320px, 1.3fr) minmax(280px, 1fr); align-items: start; }
+        .stack-grid { display: grid; gap: 20px; }
+        .two-col { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .auth-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+        .deck-actions { display: grid; gap: 12px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .deck-filter-wrap { display: flex; gap: 8px; flex-wrap: wrap; }
+        .chip-wrap { display: flex; gap: 8px; flex-wrap: wrap; }
+        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(71, 56, 135, 0.10); }
+        .pulse-soft { animation: pulseSoft 2.6s ease-in-out infinite; }
+        .message-bar { position: sticky; bottom: 14px; z-index: 20; }
+        @keyframes pulseSoft {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.015); }
+          100% { transform: scale(1); }
+        }
+        @keyframes floatCard {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-4px); }
+          100% { transform: translateY(0px); }
+        }
+        @media (max-width: 980px) {
+          .main-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 640px) {
+          .deck-actions { grid-template-columns: 1fr; }
+          .hero-title { font-size: 30px !important; }
+          .deck-name { font-size: 36px !important; }
+        }
+      `}</style>
+
+      {checkingSession ? (
+        <div style={pageWrapStyle}>
           <h1 style={{ color: COLORS.text }}>Il Nome Perfetto</h1>
           <p style={{ color: COLORS.muted }}>Caricamento profilo...</p>
         </div>
-      </div>
-    );
-  }
-
-  if (!profile) {
-    return (
-      <div style={{ minHeight: "100vh", background: `linear-gradient(180deg, ${COLORS.bgTop} 0%, ${COLORS.bgBottom} 100%)`, padding: 24, fontFamily: "Inter, Arial, sans-serif", color: COLORS.text }}>
-        <div style={{ maxWidth: 780, margin: "0 auto" }}>
-          <div style={cardStyle({ padding: 28, marginBottom: 20, background: `linear-gradient(135deg, ${COLORS.primarySoft} 0%, #ffffff 100%)` })}>
-            <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>✨ V8 Balanced</div>
-            <h1 style={{ fontSize: 38, marginBottom: 10 }}>Il Nome Perfetto</h1>
-            <p style={{ color: COLORS.muted, fontSize: 16, lineHeight: 1.6 }}>
-              Stessa logica stabile di v7, ma con un’esperienza più premium: deck più bello, shortlist elegante, metriche migliori e layout più fluido.
+      ) : !profile ? (
+        <div style={{ ...pageWrapStyle, maxWidth: 780 }}>
+          <div className="hover-lift" style={cardStyle({ padding: 28, marginBottom: 20, background: `linear-gradient(135deg, ${COLORS.primarySoft} 0%, #ffffff 100%)` })}>
+            <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>✨ V8.5 Polish</div>
+            <h1 className="hero-title" style={{ fontSize: 38, marginBottom: 10 }}>Il Nome Perfetto</h1>
+            <p style={{ color: COLORS.muted, fontSize: 16, lineHeight: 1.6, marginBottom: 0 }}>
+              Versione polish: più bella da usare, più morbida nelle transizioni, più pulita su mobile — senza aggiungere winner o finali complicate.
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 18 }}>
-            <div style={cardStyle()}>
+          <div className="auth-grid">
+            <div className="hover-lift" style={cardStyle()}>
               <h2 style={{ marginTop: 0 }}>Crea nuova coppia</h2>
               <input type="text" placeholder="Il tuo nome" value={name} onChange={(e) => setName(e.target.value)} style={{ ...inputStyle(), marginBottom: 12 }} />
               <button onClick={createNewCouple} disabled={loading} style={buttonStyle("primary")}>
@@ -595,7 +655,7 @@ export default function App() {
               </button>
             </div>
 
-            <div style={cardStyle()}>
+            <div className="hover-lift" style={cardStyle()}>
               <h2 style={{ marginTop: 0 }}>Unisciti a una coppia</h2>
               <input type="text" placeholder="Il tuo nome" value={name} onChange={(e) => setName(e.target.value)} style={{ ...inputStyle(), marginBottom: 12 }} />
               <input type="text" placeholder="Codice coppia esistente" value={joinCode} onChange={(e) => setJoinCode(e.target.value.toUpperCase())} style={{ ...inputStyle(), marginBottom: 12 }} />
@@ -611,235 +671,235 @@ export default function App() {
             </div>
           ) : null}
         </div>
-      </div>
-    );
-  }
-
-  return (
-    <div style={{ minHeight: "100vh", background: `linear-gradient(180deg, ${COLORS.bgTop} 0%, ${COLORS.bgBottom} 100%)`, padding: 20, fontFamily: "Inter, Arial, sans-serif", color: COLORS.text }}>
-      <div style={{ maxWidth: 1180, margin: "0 auto" }}>
-        <div style={cardStyle({ padding: 24, marginBottom: 20, background: `linear-gradient(135deg, #ffffff 0%, ${COLORS.primarySoft} 100%)` })}>
-          <div style={{ display: "flex", justifyContent: "space-between", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
-            <div>
-              <div style={{ ...badgeStyle(COLORS.primarySoft, COLORS.primary), marginBottom: 12 }}>💜 Profilo attivo</div>
-              <h1 style={{ margin: 0, fontSize: 34 }}>Il Nome Perfetto</h1>
-              <p style={{ color: COLORS.muted, marginBottom: 0 }}>
-                Ciao <strong>{profile.name}</strong> — codice coppia <strong>{profile.couple_code}</strong>
-              </p>
-            </div>
-
-            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-              <button onClick={refreshMatches} style={buttonStyle("secondary")}>Aggiorna match</button>
-              <button onClick={logoutProfile} style={buttonStyle("secondary")}>Esci</button>
-            </div>
-          </div>
-
-          <div style={{ marginTop: 18 }}>
-            <div style={{ display: "flex", justifyContent: "space-between", fontSize: 14, color: COLORS.muted, marginBottom: 8 }}>
-              <span>Progresso voti</span>
-              <span>{votedCount} / {totalCount} · {progress}%</span>
-            </div>
-            <div style={{ height: 12, borderRadius: 999, background: "#ede9fe", overflow: "hidden" }}>
-              <div style={{ width: `${progress}%`, height: "100%", background: `linear-gradient(90deg, ${COLORS.primary} 0%, ${COLORS.primary2} 100%)` }} />
-            </div>
-          </div>
-        </div>
-
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14, marginBottom: 20 }}>
-          <div style={statBoxStyle(COLORS.redSoft, "#fecaca")}>
-            <div style={badgeStyle(COLORS.redSoft, COLORS.red)}>👎 No</div>
-            <h3 style={{ marginBottom: 0, fontSize: 28 }}>{summary.no}</h3>
-            <p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>Passati oltre</p>
-          </div>
-          <div style={statBoxStyle(COLORS.greenSoft, "#bbf7d0")}>
-            <div style={badgeStyle(COLORS.greenSoft, COLORS.green)}>👍 Sì</div>
-            <h3 style={{ marginBottom: 0, fontSize: 28 }}>{summary.yes}</h3>
-            <p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>Ti piacciono</p>
-          </div>
-          <div style={statBoxStyle(COLORS.primarySoft, "#e9d5ff")}>
-            <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>💜 Adoro</div>
-            <h3 style={{ marginBottom: 0, fontSize: 28 }}>{summary.love}</h3>
-            <p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>Top assoluti</p>
-          </div>
-          <div style={statBoxStyle(COLORS.blueSoft, "#bfdbfe")}>
-            <div style={badgeStyle(COLORS.blueSoft, COLORS.blue)}>🤝 Match</div>
-            <h3 style={{ marginBottom: 0, fontSize: 28 }}>{matchedNames.length}</h3>
-            <p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>In comune col partner</p>
-          </div>
-        </div>
-
-        <div style={{ display: "grid", gridTemplateColumns: "minmax(320px, 1.3fr) minmax(280px, 1fr)", gap: 20, alignItems: "start" }}>
-          <div style={{ display: "grid", gap: 20 }}>
-            <div style={cardStyle({ padding: 22, background: "linear-gradient(180deg, #ffffff 0%, #fcfcff 100%)" })}>
-              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap", marginBottom: 14 }}>
+      ) : (
+        <div className="app-shell">
+          <div className="hero-grid">
+            <div className="hover-lift" style={cardStyle({ padding: 24, marginBottom: 20, background: `linear-gradient(135deg, #ffffff 0%, ${COLORS.primarySoft} 100%)` })}>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
                 <div>
-                  <h2 style={{ margin: 0 }}>Deck di voto</h2>
-                  <p style={{ margin: "6px 0 0 0", color: COLORS.muted, fontSize: 14 }}>Focus sul nome + filtri rapidi per deck personalizzato.</p>
+                  <div style={{ ...badgeStyle(COLORS.primarySoft, COLORS.primary), marginBottom: 12 }}>💜 Profilo attivo</div>
+                  <h1 className="hero-title" style={{ margin: 0, fontSize: 34 }}>Il Nome Perfetto</h1>
+                  <p style={{ color: COLORS.muted, marginBottom: 0 }}>
+                    Ciao <strong>{profile.name}</strong> — codice coppia <strong>{profile.couple_code}</strong>
+                  </p>
                 </div>
-                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                  <button onClick={() => setDeckFilter("all")} style={buttonStyle(deckFilter === "all" ? "activePill" : "secondary")}>Tutti</button>
-                  <button onClick={() => setDeckFilter("favorites")} style={buttonStyle(deckFilter === "favorites" ? "activePill" : "secondary")}>Solo preferiti</button>
-                  <button onClick={() => setDeckFilter("matches")} style={buttonStyle(deckFilter === "matches" ? "activePill" : "secondary")}>Solo match</button>
+
+                <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                  <button onClick={refreshMatches} style={buttonStyle("secondary")}>Aggiorna match</button>
+                  <button onClick={logoutProfile} style={buttonStyle("secondary")}>Esci</button>
                 </div>
               </div>
 
-              {votesLoading ? (
-                <p style={{ color: COLORS.muted }}>Caricamento voti...</p>
-              ) : currentName ? (
-                <div style={{ position: "relative", borderRadius: 30, padding: 24, background: `linear-gradient(135deg, ${COLORS.primary} 0%, ${COLORS.primary2} 100%)`, color: "white", minHeight: 340, display: "flex", flexDirection: "column", justifyContent: "space-between", boxShadow: "0 18px 40px rgba(124, 58, 237, 0.22)" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
-                    <div style={{ ...badgeStyle("rgba(255,255,255,0.18)", "#fff") }}>Nome {currentIndex + 1} di {filteredNamePool.length}</div>
-                    <div style={{ ...badgeStyle("rgba(255,255,255,0.18)", "#fff") }}>{deckFilter === "all" ? "Deck completo" : deckFilter === "favorites" ? "Preferiti" : "Match"}</div>
-                  </div>
+              <div style={{ marginTop: 18 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", fontSize: 14, color: COLORS.muted, marginBottom: 8 }}>
+                  <span>Progresso voti</span>
+                  <span>{votedCount} / {totalCount} · {progress}%</span>
+                </div>
+                <div style={{ height: 12, borderRadius: 999, background: "#ede9fe", overflow: "hidden" }}>
+                  <div className="pulse-soft" style={{ width: `${progress}%`, height: "100%", background: `linear-gradient(90deg, ${COLORS.primary} 0%, ${COLORS.primary2} 100%)` }} />
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div className="stats-grid">
+            <div className="hover-lift" style={statBoxStyle(COLORS.redSoft, "#fecaca")}>
+              <div style={badgeStyle(COLORS.redSoft, COLORS.red)}>👎 No</div>
+              <h3 style={{ marginBottom: 0, fontSize: 28 }}>{summary.no}</h3>
+              <p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>Passati oltre</p>
+            </div>
+            <div className="hover-lift" style={statBoxStyle(COLORS.greenSoft, "#bbf7d0")}>
+              <div style={badgeStyle(COLORS.greenSoft, COLORS.green)}>👍 Sì</div>
+              <h3 style={{ marginBottom: 0, fontSize: 28 }}>{summary.yes}</h3>
+              <p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>Ti piacciono</p>
+            </div>
+            <div className="hover-lift" style={statBoxStyle(COLORS.primarySoft, "#e9d5ff")}>
+              <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>💜 Adoro</div>
+              <h3 style={{ marginBottom: 0, fontSize: 28 }}>{summary.love}</h3>
+              <p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>Top assoluti</p>
+            </div>
+            <div className="hover-lift" style={statBoxStyle(COLORS.blueSoft, "#bfdbfe")}>
+              <div style={badgeStyle(COLORS.blueSoft, COLORS.blue)}>🤝 Match</div>
+              <h3 style={{ marginBottom: 0, fontSize: 28 }}>{matchedNames.length}</h3>
+              <p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>In comune col partner</p>
+            </div>
+          </div>
+
+          <div className="main-grid" style={{ marginTop: 20 }}>
+            <div className="stack-grid">
+              <div className="hover-lift" style={cardStyle({ padding: 22, background: "linear-gradient(180deg, #ffffff 0%, #fcfcff 100%)" })}>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap", marginBottom: 14 }}>
                   <div>
-                    <p style={{ opacity: 0.8, marginBottom: 8 }}>Mood del nome</p>
-                    <h2 style={{ fontSize: 44, marginTop: 0, marginBottom: 10 }}>{currentName}</h2>
-                    <p style={{ opacity: 0.85, marginBottom: 0 }}>Scegli il tuo feeling: passa oltre, ti piace o lo ami davvero.</p>
+                    <h2 style={{ margin: 0 }}>Deck di voto</h2>
+                    <p style={{ margin: "6px 0 0 0", color: COLORS.muted, fontSize: 14 }}>Polish premium: card più immersiva, feedback più chiari, esperienza più morbida.</p>
                   </div>
-
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 12 }}>
-                    <button onClick={() => handleVote("no")} disabled={voteSaving} style={{ ...buttonStyle("no"), width: "100%" }}>{voteSaving ? "Salvataggio..." : "👎 No"}</button>
-                    <button onClick={() => handleVote("yes")} disabled={voteSaving} style={{ ...buttonStyle("yes"), width: "100%" }}>{voteSaving ? "Salvataggio..." : "👍 Sì"}</button>
-                    <button onClick={() => handleVote("love")} disabled={voteSaving} style={{ ...buttonStyle("love"), width: "100%", background: "#fff", color: COLORS.primary, border: "none" }}>{voteSaving ? "Salvataggio..." : "💜 Adoro"}</button>
+                  <div className="deck-filter-wrap">
+                    <button onClick={() => setDeckFilter("all")} style={buttonStyle(deckFilter === "all" ? "activePill" : "secondary")}>Tutti</button>
+                    <button onClick={() => setDeckFilter("favorites")} style={buttonStyle(deckFilter === "favorites" ? "activePill" : "secondary")}>Solo preferiti</button>
+                    <button onClick={() => setDeckFilter("matches")} style={buttonStyle(deckFilter === "matches" ? "activePill" : "secondary")}>Solo match</button>
                   </div>
                 </div>
-              ) : (
-                <div style={{ textAlign: "center", padding: 30, borderRadius: 24, background: COLORS.slateSoft, border: `1px solid ${COLORS.border}` }}>
-                  <h2 style={{ marginBottom: 8 }}>Hai finito il deck 🎉</h2>
-                  <p style={{ color: COLORS.muted, marginTop: 0 }}>Puoi generare nuovi nomi, guardare la shortlist o controllare i match col partner.</p>
-                </div>
-              )}
-            </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
-              <div style={cardStyle()}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
-                  <h3 style={{ marginTop: 0, marginBottom: 0 }}>Shortlist</h3>
-                  <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>{shortlist.length}</div>
-                </div>
-                {shortlist.length === 0 ? (
-                  <p style={{ color: COLORS.muted }}>Quando voterai Sì / Adoro, i migliori nomi appariranno qui.</p>
+                {votesLoading ? (
+                  <p style={{ color: COLORS.muted }}>Caricamento voti...</p>
+                ) : currentName ? (
+                  <div style={deckCardStyle}>
+                    <div style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at top right, rgba(255,255,255,0.30), transparent 35%)" }} />
+                    <div style={{ position: "absolute", right: -40, bottom: -56, width: 180, height: 180, borderRadius: "50%", background: "rgba(255,255,255,0.14)", filter: "blur(2px)" }} />
+
+                    <div style={{ position: "relative", display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+                      <div style={{ ...badgeStyle("rgba(255,255,255,0.18)", "#fff") }}>Nome {currentIndex + 1} di {filteredNamePool.length}</div>
+                      <div style={{ ...badgeStyle("rgba(255,255,255,0.18)", "#fff") }}>{deckFilter === "all" ? "Deck completo" : deckFilter === "favorites" ? "Preferiti" : "Match"}</div>
+                    </div>
+
+                    <div style={{ position: "relative" }}>
+                      <p style={{ opacity: 0.82, marginBottom: 8 }}>Mood del nome</p>
+                      <h2 className="deck-name" style={{ fontSize: 48, marginTop: 0, marginBottom: 10 }}>{currentName}</h2>
+                      <p style={{ opacity: 0.90, marginBottom: 0, maxWidth: 560 }}>Scegli il tuo feeling: passa oltre, ti piace o lo ami davvero.</p>
+                    </div>
+
+                    <div className="deck-actions" style={{ position: "relative" }}>
+                      <button onClick={() => handleVote("no")} disabled={voteSaving} style={{ ...buttonStyle("no"), width: "100%" }}>{voteSaving ? "Salvataggio..." : "👎 No"}</button>
+                      <button onClick={() => handleVote("yes")} disabled={voteSaving} style={{ ...buttonStyle("yes"), width: "100%" }}>{voteSaving ? "Salvataggio..." : "👍 Sì"}</button>
+                      <button onClick={() => handleVote("love")} disabled={voteSaving} style={{ ...buttonStyle("love"), width: "100%", background: "#fff", color: COLORS.primary, border: "none" }}>{voteSaving ? "Salvataggio..." : "💜 Adoro"}</button>
+                    </div>
+                  </div>
                 ) : (
-                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 12 }}>
-                    {shortlist.map((babyName, idx) => (
-                      <span key={babyName} style={badgeStyle(votes[babyName] === "love" ? COLORS.primarySoft : COLORS.greenSoft, votes[babyName] === "love" ? COLORS.primary : COLORS.green)}>
-                        #{idx + 1} {babyName}
-                      </span>
-                    ))}
+                  <div style={{ textAlign: "center", padding: 30, borderRadius: 24, background: COLORS.slateSoft, border: `1px solid ${COLORS.border}` }}>
+                    <h2 style={{ marginBottom: 8 }}>Hai finito il deck 🎉</h2>
+                    <p style={{ color: COLORS.muted, marginTop: 0 }}>Puoi generare nuovi nomi, rivedere i preferiti o controllare i match col partner.</p>
                   </div>
                 )}
-                <p style={{ color: COLORS.muted, fontSize: 13, marginTop: 14, marginBottom: 0 }}>La shortlist mette prima i “love”, poi i “yes”.</p>
               </div>
 
-              <div style={cardStyle()}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
-                  <h3 style={{ marginTop: 0, marginBottom: 0 }}>Ultimi voti</h3>
-                  <div style={badgeStyle(COLORS.blueSoft, COLORS.blue)}>{recentVotes.length}</div>
+              <div className="two-col">
+                <div className="hover-lift" style={cardStyle()}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
+                    <h3 style={{ marginTop: 0, marginBottom: 0 }}>Preferiti</h3>
+                    <div style={badgeStyle(COLORS.greenSoft, COLORS.green)}>{favoriteNames.length}</div>
+                  </div>
+                  {favoriteNames.length === 0 ? (
+                    <p style={{ color: COLORS.muted }}>Ancora nessun preferito. Inizia a votare 👍 o 💜.</p>
+                  ) : (
+                    <div className="chip-wrap" style={{ marginTop: 12 }}>
+                      {favoriteNames.map((babyName) => (
+                        <span key={babyName} style={badgeStyle(votes[babyName] === "love" ? COLORS.primarySoft : COLORS.greenSoft, votes[babyName] === "love" ? COLORS.primary : COLORS.green)}>
+                          {babyName}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
-                {recentVotes.length === 0 ? (
-                  <p style={{ color: COLORS.muted }}>I tuoi ultimi voti appariranno qui.</p>
+
+                <div className="hover-lift" style={cardStyle()}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
+                    <h3 style={{ marginTop: 0, marginBottom: 0 }}>Ultimi voti</h3>
+                    <div style={badgeStyle(COLORS.blueSoft, COLORS.blue)}>{recentVotes.length}</div>
+                  </div>
+                  {recentVotes.length === 0 ? (
+                    <p style={{ color: COLORS.muted }}>I tuoi ultimi voti appariranno qui.</p>
+                  ) : (
+                    <div style={{ display: "grid", gap: 10, marginTop: 12 }}>
+                      {recentVotes.map((item) => (
+                        <div key={item.babyName} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: 12, borderRadius: 16, background: COLORS.slateSoft, border: `1px solid ${COLORS.border}` }}>
+                          <span style={{ fontWeight: 600 }}>{item.babyName}</span>
+                          <span style={voteBadgeStyle(item.vote)}>{item.vote}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div className="stack-grid">
+              <div className="hover-lift" style={cardStyle({ background: matchedNames.length ? "linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%)" : "#ffffff" })}>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+                  <h2 style={{ margin: 0 }}>Match di coppia</h2>
+                  {partner ? <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>Partner: {partner.name}</div> : null}
+                </div>
+
+                {matchLoading ? (
+                  <p style={{ color: COLORS.muted, marginTop: 12 }}>Caricamento match...</p>
+                ) : !partner ? (
+                  <div style={{ marginTop: 12 }}>
+                    <p style={{ marginBottom: 8 }}><strong>Nessun partner collegato ancora.</strong></p>
+                    <p style={{ color: COLORS.muted, marginTop: 0 }}>Condividi il tuo codice coppia: <strong>{profile.couple_code}</strong></p>
+                  </div>
+                ) : matchedNames.length === 0 ? (
+                  <p style={{ color: COLORS.muted, marginTop: 12 }}>Per ora nessun match positivo. Appena il partner vota, clicca “Aggiorna match”.</p>
                 ) : (
-                  <div style={{ display: "grid", gap: 10, marginTop: 12 }}>
-                    {recentVotes.map((item) => (
-                      <div key={item.babyName} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: 12, borderRadius: 16, background: COLORS.slateSoft, border: `1px solid ${COLORS.border}` }}>
-                        <span style={{ fontWeight: 600 }}>{item.babyName}</span>
-                        <span style={badgeStyle(item.vote === "love" ? COLORS.primarySoft : item.vote === "yes" ? COLORS.greenSoft : COLORS.redSoft, item.vote === "love" ? COLORS.primary : item.vote === "yes" ? COLORS.green : COLORS.red)}>{item.vote}</span>
-                      </div>
+                  <>
+                    <div style={{ marginTop: 12, marginBottom: 14, padding: 16, borderRadius: 18, background: "rgba(34,197,94,0.08)", border: "1px solid #bbf7d0" }}>
+                      <p style={{ margin: 0, color: COLORS.muted, fontSize: 14 }}>Compatibilità percepita</p>
+                      <h3 style={{ marginTop: 8, marginBottom: 0, fontSize: 34 }}>{Math.min(100, 50 + matchedNames.length * 10)}%</h3>
+                    </div>
+                    <div className="chip-wrap">
+                      {matchedNames.map((babyName) => (
+                        <span key={babyName} style={badgeStyle(COLORS.greenSoft, COLORS.green)}>🤝 {babyName}</span>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+
+              <div className="hover-lift" style={cardStyle()}>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+                  <h2 style={{ margin: 0 }}>Generatore nomi</h2>
+                  <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>{generatedNames.length} extra</div>
+                </div>
+                <p style={{ color: COLORS.muted, marginTop: 10 }}>Genera nuovi nomi femminili e aggiungili subito al deck.</p>
+
+                <label style={{ display: "block", marginBottom: 6, color: COLORS.muted, fontSize: 14 }}>Stile</label>
+                <select value={generatorStyle} onChange={(e) => setGeneratorStyle(e.target.value)} style={{ ...inputStyle(), marginBottom: 12 }}>
+                  <option value="classici">Classici</option>
+                  <option value="moderni">Moderni</option>
+                  <option value="internazionali">Internazionali</option>
+                  <option value="eleganti">Eleganti</option>
+                  <option value="corti">Corti</option>
+                </select>
+
+                <label style={{ display: "block", marginBottom: 6, color: COLORS.muted, fontSize: 14 }}>Iniziale opzionale</label>
+                <input type="text" placeholder="Es. A" value={startsWith} onChange={(e) => setStartsWith(e.target.value)} style={{ ...inputStyle(), marginBottom: 12 }} />
+
+                <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 14 }}>
+                  <button onClick={handleGenerateNames} disabled={generatorLoading} style={buttonStyle("primary")}>
+                    {generatorLoading ? "Generazione..." : "Genera 10 nomi"}
+                  </button>
+                  <button onClick={clearGeneratedNames} style={buttonStyle("secondary")}>Reset nomi extra</button>
+                </div>
+
+                {generatedNames.length === 0 ? (
+                  <p style={{ color: COLORS.muted, marginBottom: 0 }}>Nessun nome extra generato per ora.</p>
+                ) : (
+                  <div className="chip-wrap">
+                    {generatedNames.slice(-18).map((babyName) => (
+                      <span key={babyName} style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>{babyName}</span>
                     ))}
                   </div>
                 )}
+              </div>
+
+              <div className="hover-lift" style={cardStyle()}>
+                <h2 style={{ marginTop: 0 }}>Azioni rapide</h2>
+                <div style={{ display: "grid", gap: 10 }}>
+                  <button onClick={resetMyVotes} disabled={voteSaving} style={buttonStyle("warning")}>Azzera i miei voti</button>
+                  <button onClick={() => { setDeckFilter("all"); setMessage("Filtro deck resettato"); }} style={buttonStyle("secondary")}>Reset filtri deck</button>
+                </div>
+                <p style={{ color: COLORS.muted, fontSize: 13, marginTop: 12, marginBottom: 0 }}>
+                  “Azzera i miei voti” cancella solo i tuoi voti dal database, non quelli del partner.
+                </p>
               </div>
             </div>
           </div>
 
-          <div style={{ display: "grid", gap: 20 }}>
-            <div style={cardStyle({ background: matchedNames.length ? "linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%)" : "#ffffff" })}>
-              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
-                <h2 style={{ margin: 0 }}>Match di coppia</h2>
-                {partner ? <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>Partner: {partner.name}</div> : null}
-              </div>
-
-              {matchLoading ? (
-                <p style={{ color: COLORS.muted, marginTop: 12 }}>Caricamento match...</p>
-              ) : !partner ? (
-                <div style={{ marginTop: 12 }}>
-                  <p style={{ marginBottom: 8 }}><strong>Nessun partner collegato ancora.</strong></p>
-                  <p style={{ color: COLORS.muted, marginTop: 0 }}>Condividi il tuo codice coppia: <strong>{profile.couple_code}</strong></p>
-                </div>
-              ) : matchedNames.length === 0 ? (
-                <p style={{ color: COLORS.muted, marginTop: 12 }}>Per ora nessun match positivo. Appena il partner vota, clicca “Aggiorna match”.</p>
-              ) : (
-                <>
-                  <div style={{ marginTop: 12, marginBottom: 14, padding: 16, borderRadius: 18, background: "rgba(34,197,94,0.08)", border: "1px solid #bbf7d0" }}>
-                    <p style={{ margin: 0, color: COLORS.muted, fontSize: 14 }}>Compatibilità percepita</p>
-                    <h3 style={{ marginTop: 8, marginBottom: 0, fontSize: 34 }}>{Math.min(100, 50 + matchedNames.length * 10)}%</h3>
-                  </div>
-                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                    {matchedNames.map((babyName) => (
-                      <span key={babyName} style={badgeStyle(COLORS.greenSoft, COLORS.green)}>🤝 {babyName}</span>
-                    ))}
-                  </div>
-                </>
-              )}
+          {message ? (
+            <div className="message-bar" style={{ ...cardStyle({ marginTop: 20, padding: 14, backdropFilter: "blur(6px)" }) }}>
+              <span style={{ color: COLORS.muted }}>{message}</span>
             </div>
-
-            <div style={cardStyle()}>
-              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
-                <h2 style={{ margin: 0 }}>Generatore nomi</h2>
-                <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>{generatedNames.length} extra</div>
-              </div>
-              <p style={{ color: COLORS.muted, marginTop: 10 }}>Genera nuovi nomi femminili e aggiungili subito al deck.</p>
-
-              <label style={{ display: "block", marginBottom: 6, color: COLORS.muted, fontSize: 14 }}>Stile</label>
-              <select value={generatorStyle} onChange={(e) => setGeneratorStyle(e.target.value)} style={{ ...inputStyle(), marginBottom: 12 }}>
-                <option value="classici">Classici</option>
-                <option value="moderni">Moderni</option>
-                <option value="internazionali">Internazionali</option>
-                <option value="eleganti">Eleganti</option>
-                <option value="corti">Corti</option>
-              </select>
-
-              <label style={{ display: "block", marginBottom: 6, color: COLORS.muted, fontSize: 14 }}>Iniziale opzionale</label>
-              <input type="text" placeholder="Es. A" value={startsWith} onChange={(e) => setStartsWith(e.target.value)} style={{ ...inputStyle(), marginBottom: 12 }} />
-
-              <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 14 }}>
-                <button onClick={handleGenerateNames} disabled={generatorLoading} style={buttonStyle("primary")}>
-                  {generatorLoading ? "Generazione..." : "Genera 10 nomi"}
-                </button>
-                <button onClick={clearGeneratedNames} style={buttonStyle("secondary")}>Reset nomi extra</button>
-              </div>
-
-              {generatedNames.length === 0 ? (
-                <p style={{ color: COLORS.muted, marginBottom: 0 }}>Nessun nome extra generato per ora.</p>
-              ) : (
-                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                  {generatedNames.slice(-18).map((babyName) => (
-                    <span key={babyName} style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>{babyName}</span>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <div style={cardStyle()}>
-              <h2 style={{ marginTop: 0 }}>Azioni rapide</h2>
-              <div style={{ display: "grid", gap: 10 }}>
-                <button onClick={resetMyVotes} disabled={voteSaving} style={buttonStyle("warning")}>Azzera i miei voti</button>
-                <button onClick={() => { setDeckFilter("all"); setMessage("Filtro deck resettato"); }} style={buttonStyle("secondary")}>Reset filtri deck</button>
-              </div>
-              <p style={{ color: COLORS.muted, fontSize: 13, marginTop: 12, marginBottom: 0 }}>
-                “Azzera i miei voti” cancella solo i tuoi voti dal database, non quelli del partner.
-              </p>
-            </div>
-          </div>
+          ) : null}
         </div>
-
-        {message ? (
-          <div style={{ ...cardStyle({ marginTop: 20, padding: 14 }) }}>
-            <span style={{ color: COLORS.muted }}>{message}</span>
-          </div>
-        ) : null}
-      </div>
+      )}
     </div>
   );
 }
