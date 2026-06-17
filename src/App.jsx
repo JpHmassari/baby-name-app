@@ -2,8 +2,9 @@ import React, { useEffect, useMemo, useState } from "react";
 import { supabase } from "./lib/supabase";
 
 const STORAGE_KEY = "baby_name_app_profile";
+const GENERATED_NAMES_KEY = "baby_name_app_generated_names";
 
-const BABY_NAMES = [
+const DEFAULT_BABY_NAMES = [
   "Sofia",
   "Aurora",
   "Ginevra",
@@ -26,8 +27,64 @@ const BABY_NAMES = [
   "Iris",
 ];
 
+const STYLE_POOLS = {
+  classici: [
+    "Francesca", "Chiara", "Caterina", "Elisabetta", "Eleonora", "Maria", "Lucia", "Anna", "Marta", "Teresa",
+    "Beatrice", "Alessandra", "Vittoria", "Irene", "Serena", "Silvia", "Valentina", "Giulia", "Paola", "Claudia",
+  ],
+  moderni: [
+    "Nina", "Mia", "Greta", "Zoe", "Asia", "Adele", "Noemi", "Emma", "Gaia", "Viola",
+    "Chloe", "Nicole", "Ginevra", "Sole", "Nora", "Marta", "Iris", "Elettra", "Luna", "Maya",
+  ],
+  internazionali: [
+    "Olivia", "Emily", "Sophia", "Amelia", "Isabel", "Charlotte", "Eva", "Mila", "Elena", "Victoria",
+    "Nora", "Julia", "Ariana", "Alice", "Emma", "Sofia", "Lily", "Chloe", "Maya", "Lea",
+  ],
+  eleganti: [
+    "Ginevra", "Vittoria", "Ludovica", "Beatrice", "Bianca", "Cecilia", "Ottavia", "Arianna", "Diana", "Anita",
+    "Costanza", "Leonora", "Angelica", "Lavinia", "Adelaide", "Matilde", "Camilla", "Viola", "Irene", "Carlotta",
+  ],
+  corti: [
+    "Mia", "Eva", "Ada", "Iris", "Nina", "Gaia", "Anna", "Noa", "Lia", "Tea",
+    "Mila", "Lea", "Zoe", "Ava", "Luna", "Emma", "Nora", "Asia", "Maya", "Viola",
+  ],
+};
+
 function isPositiveVote(vote) {
   return vote === "yes" || vote === "love";
+}
+
+function uniqueArray(items) {
+  return Array.from(new Set(items));
+}
+
+function generateNamesByStyle(style, count, startsWith, excludes) {
+  const pool = STYLE_POOLS[style] || [];
+  const cleanedStartsWith = startsWith.trim().toLowerCase();
+
+  let filtered = pool.filter((name) => !excludes.includes(name));
+
+  if (cleanedStartsWith) {
+    filtered = filtered.filter((name) =>
+      name.toLowerCase().startsWith(cleanedStartsWith)
+    );
+  }
+
+  const shuffled = [...filtered].sort(() => Math.random() - 0.5);
+
+  if (shuffled.length >= count) {
+    return shuffled.slice(0, count);
+  }
+
+  const fallbackPool = uniqueArray(Object.values(STYLE_POOLS).flat())
+    .filter((name) => !excludes.includes(name))
+    .filter((name) => {
+      if (!cleanedStartsWith) return true;
+      return name.toLowerCase().startsWith(cleanedStartsWith);
+    })
+    .sort(() => Math.random() - 0.5);
+
+  return uniqueArray([...shuffled, ...fallbackPool]).slice(0, count);
 }
 
 export default function App() {
@@ -45,6 +102,11 @@ export default function App() {
   const [partner, setPartner] = useState(null);
   const [partnerVotes, setPartnerVotes] = useState({});
   const [matchLoading, setMatchLoading] = useState(false);
+
+  const [generatedNames, setGeneratedNames] = useState([]);
+  const [generatorStyle, setGeneratorStyle] = useState("moderni");
+  const [startsWith, setStartsWith] = useState("");
+  const [generatorLoading, setGeneratorLoading] = useState(false);
 
   useEffect(() => {
     try {
@@ -64,12 +126,24 @@ export default function App() {
           );
         }
       }
+
+      const savedGeneratedNames = localStorage.getItem(GENERATED_NAMES_KEY);
+      if (savedGeneratedNames) {
+        const parsedNames = JSON.parse(savedGeneratedNames);
+        if (Array.isArray(parsedNames)) {
+          setGeneratedNames(parsedNames);
+        }
+      }
     } catch (error) {
       console.error("Errore lettura localStorage:", error);
     } finally {
       setCheckingSession(false);
     }
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem(GENERATED_NAMES_KEY, JSON.stringify(generatedNames));
+  }, [generatedNames]);
 
   useEffect(() => {
     if (profile?.id) {
@@ -81,6 +155,10 @@ export default function App() {
       setPartnerVotes({});
     }
   }, [profile]);
+
+  const namePool = useMemo(() => {
+    return uniqueArray([...DEFAULT_BABY_NAMES, ...generatedNames]);
+  }, [generatedNames]);
 
   function saveProfileLocally(profileData) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(profileData));
@@ -327,6 +405,36 @@ export default function App() {
     await loadPartnerAndMatches(profile);
   }
 
+  function handleGenerateNames() {
+    setGeneratorLoading(true);
+    setMessage("");
+
+    try {
+      const newNames = generateNamesByStyle(
+        generatorStyle,
+        10,
+        startsWith,
+        uniqueArray([...DEFAULT_BABY_NAMES, ...generatedNames])
+      );
+
+      if (newNames.length === 0) {
+        setMessage("Nessun nome trovato con questi filtri. Prova a cambiare iniziale o stile.");
+        return;
+      }
+
+      setGeneratedNames((prev) => uniqueArray([...prev, ...newNames]));
+      setMessage(`Generati ${newNames.length} nuovi nomi (${generatorStyle}).`);
+    } finally {
+      setGeneratorLoading(false);
+    }
+  }
+
+  function clearGeneratedNames() {
+    setGeneratedNames([]);
+    localStorage.removeItem(GENERATED_NAMES_KEY);
+    setMessage("Nomi generati rimossi dal dispositivo");
+  }
+
   function logoutProfile() {
     clearSavedProfile();
     setProfile(null);
@@ -339,12 +447,12 @@ export default function App() {
   }
 
   const currentIndex = useMemo(() => {
-    return BABY_NAMES.findIndex((babyName) => !votes[babyName]);
-  }, [votes]);
+    return namePool.findIndex((babyName) => !votes[babyName]);
+  }, [votes, namePool]);
 
-  const currentName = currentIndex >= 0 ? BABY_NAMES[currentIndex] : null;
+  const currentName = currentIndex >= 0 ? namePool[currentIndex] : null;
   const votedCount = Object.keys(votes).length;
-  const totalCount = BABY_NAMES.length;
+  const totalCount = namePool.length;
 
   const summary = useMemo(() => {
     const values = Object.values(votes);
@@ -356,14 +464,14 @@ export default function App() {
   }, [votes]);
 
   const matches = useMemo(() => {
-    return BABY_NAMES.filter((babyName) => {
+    return namePool.filter((babyName) => {
       return isPositiveVote(votes[babyName]) && isPositiveVote(partnerVotes[babyName]);
     });
-  }, [votes, partnerVotes]);
+  }, [votes, partnerVotes, namePool]);
 
   if (checkingSession) {
     return (
-      <div style={{ padding: 24, fontFamily: "Arial, sans-serif", maxWidth: 760, margin: "0 auto" }}>
+      <div style={{ padding: 24, fontFamily: "Arial, sans-serif", maxWidth: 1100, margin: "0 auto" }}>
         <h1>Il Nome Perfetto</h1>
         <p>Caricamento profilo...</p>
       </div>
@@ -419,7 +527,7 @@ export default function App() {
   }
 
   return (
-    <div style={{ padding: 24, fontFamily: "Arial, sans-serif", maxWidth: 760, margin: "0 auto" }}>
+    <div style={{ padding: 24, fontFamily: "Arial, sans-serif", maxWidth: 1100, margin: "0 auto" }}>
       <h1>Il Nome Perfetto</h1>
 
       <div style={{ padding: 16, border: "1px solid #ddd", borderRadius: 12, background: "#fafafa", marginBottom: 20 }}>
@@ -432,14 +540,13 @@ export default function App() {
         </button>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 20, alignItems: "start" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr 1fr", gap: 20, alignItems: "start" }}>
         <div>
           <div style={{ padding: 16, border: "1px solid #ddd", borderRadius: 12, marginBottom: 20 }}>
             <h2 style={{ marginTop: 0 }}>Riepilogo voti</h2>
             <p><strong>Completati:</strong> {votedCount} / {totalCount}</p>
-            <p>
-              <strong>No:</strong> {summary.no} | <strong>Sì:</strong> {summary.yes} | <strong>Adoro:</strong> {summary.love}
-            </p>
+            <p><strong>No:</strong> {summary.no} | <strong>Sì:</strong> {summary.yes} | <strong>Adoro:</strong> {summary.love}</p>
+            <p><strong>Nomi extra generati:</strong> {generatedNames.length}</p>
           </div>
 
           {votesLoading ? (
@@ -478,7 +585,7 @@ export default function App() {
           ) : (
             <div style={{ padding: 24, border: "1px solid #ddd", borderRadius: 16, textAlign: "center", background: "#f0fdf4" }}>
               <h2>Hai completato tutti i voti 🎉</h2>
-              <p>Adesso puoi controllare i match con il partner.</p>
+              <p>Genera nuovi nomi oppure controlla i match con il partner.</p>
             </div>
           )}
         </div>
@@ -523,6 +630,63 @@ export default function App() {
                     <div style={{ fontSize: 14, color: "#555" }}>
                       Tu: {votes[babyName]} | Partner: {partnerVotes[babyName]}
                     </div>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
+
+        <div>
+          <div style={{ padding: 16, border: "1px solid #ddd", borderRadius: 12, background: "#fafafa", marginBottom: 20 }}>
+            <h2 style={{ marginTop: 0 }}>Generazione nomi femminili</h2>
+            <p style={{ marginTop: 0 }}>Generatore locale stile AI, senza API esterne.</p>
+
+            <label style={{ display: "block", marginBottom: 6 }}>Stile</label>
+            <select
+              value={generatorStyle}
+              onChange={(e) => setGeneratorStyle(e.target.value)}
+              style={{ padding: 10, width: "100%", boxSizing: "border-box", marginBottom: 12 }}
+            >
+              <option value="classici">Classici</option>
+              <option value="moderni">Moderni</option>
+              <option value="internazionali">Internazionali</option>
+              <option value="eleganti">Eleganti</option>
+              <option value="corti">Corti</option>
+            </select>
+
+            <label style={{ display: "block", marginBottom: 6 }}>Iniziale opzionale</label>
+            <input
+              type="text"
+              placeholder="Es. A"
+              value={startsWith}
+              onChange={(e) => setStartsWith(e.target.value)}
+              style={{ padding: 10, width: "100%", boxSizing: "border-box", marginBottom: 12 }}
+            />
+
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+              <button onClick={handleGenerateNames} disabled={generatorLoading} style={{ padding: "10px 14px" }}>
+                {generatorLoading ? "Generazione..." : "Genera 10 nomi"}
+              </button>
+
+              <button onClick={clearGeneratedNames} style={{ padding: "10px 14px" }}>
+                Reset nomi extra
+              </button>
+            </div>
+          </div>
+
+          <div style={{ padding: 16, border: "1px solid #ddd", borderRadius: 12 }}>
+            <h3 style={{ marginTop: 0 }}>Nomi extra generati</h3>
+            {generatedNames.length === 0 ? (
+              <p>Nessun nome extra generato per ora.</p>
+            ) : (
+              <ul style={{ paddingLeft: 20, marginBottom: 0, maxHeight: 320, overflowY: "auto" }}>
+                {generatedNames.map((babyName) => (
+                  <li key={babyName} style={{ marginBottom: 8 }}>
+                    <strong>{babyName}</strong>
+                    {votes[babyName] ? (
+                      <span style={{ color: "#555", fontSize: 14 }}> — tuo voto: {votes[babyName]}</span>
+                    ) : null}
                   </li>
                 ))}
               </ul>
