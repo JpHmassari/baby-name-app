@@ -5,49 +5,33 @@ const STORAGE_KEY = "baby_name_app_profile";
 const GENERATED_NAMES_KEY = "baby_name_app_generated_names";
 
 const DEFAULT_BABY_NAMES = [
-  "Sofia",
-  "Aurora",
-  "Ginevra",
-  "Vittoria",
-  "Beatrice",
-  "Emma",
-  "Alice",
-  "Ludovica",
-  "Matilde",
-  "Camilla",
-  "Bianca",
-  "Greta",
-  "Mia",
-  "Anna",
-  "Nina",
-  "Gaia",
-  "Noemi",
-  "Viola",
-  "Adele",
-  "Iris",
+  "Sofia", "Aurora", "Ginevra", "Vittoria", "Beatrice", "Emma", "Alice", "Ludovica", "Matilde", "Camilla",
+  "Bianca", "Greta", "Mia", "Anna", "Nina", "Gaia", "Noemi", "Viola", "Adele", "Iris",
 ];
 
 const STYLE_POOLS = {
-  classici: [
-    "Francesca", "Chiara", "Caterina", "Elisabetta", "Eleonora", "Maria", "Lucia", "Anna", "Marta", "Teresa",
-    "Beatrice", "Alessandra", "Vittoria", "Irene", "Serena", "Silvia", "Valentina", "Giulia", "Paola", "Claudia",
-  ],
-  moderni: [
-    "Nina", "Mia", "Greta", "Zoe", "Asia", "Adele", "Noemi", "Emma", "Gaia", "Viola",
-    "Chloe", "Nicole", "Ginevra", "Sole", "Nora", "Marta", "Iris", "Elettra", "Luna", "Maya",
-  ],
-  internazionali: [
-    "Olivia", "Emily", "Sophia", "Amelia", "Isabel", "Charlotte", "Eva", "Mila", "Elena", "Victoria",
-    "Nora", "Julia", "Ariana", "Alice", "Emma", "Sofia", "Lily", "Chloe", "Maya", "Lea",
-  ],
-  eleganti: [
-    "Ginevra", "Vittoria", "Ludovica", "Beatrice", "Bianca", "Cecilia", "Ottavia", "Arianna", "Diana", "Anita",
-    "Costanza", "Leonora", "Angelica", "Lavinia", "Adelaide", "Matilde", "Camilla", "Viola", "Irene", "Carlotta",
-  ],
-  corti: [
-    "Mia", "Eva", "Ada", "Iris", "Nina", "Gaia", "Anna", "Noa", "Lia", "Tea",
-    "Mila", "Lea", "Zoe", "Ava", "Luna", "Emma", "Nora", "Asia", "Maya", "Viola",
-  ],
+  classici: ["Francesca", "Chiara", "Caterina", "Elisabetta", "Eleonora", "Maria", "Lucia", "Anna", "Marta", "Teresa", "Beatrice", "Alessandra", "Vittoria", "Irene", "Serena", "Silvia", "Valentina", "Giulia", "Paola", "Claudia"],
+  moderni: ["Nina", "Mia", "Greta", "Zoe", "Asia", "Adele", "Noemi", "Emma", "Gaia", "Viola", "Chloe", "Nicole", "Ginevra", "Sole", "Nora", "Marta", "Iris", "Elettra", "Luna", "Maya"],
+  internazionali: ["Olivia", "Emily", "Sophia", "Amelia", "Isabel", "Charlotte", "Eva", "Mila", "Elena", "Victoria", "Nora", "Julia", "Ariana", "Alice", "Emma", "Sofia", "Lily", "Chloe", "Maya", "Lea"],
+  eleganti: ["Ginevra", "Vittoria", "Ludovica", "Beatrice", "Bianca", "Cecilia", "Ottavia", "Arianna", "Diana", "Anita", "Costanza", "Leonora", "Angelica", "Lavinia", "Adelaide", "Matilde", "Camilla", "Viola", "Irene", "Carlotta"],
+  corti: ["Mia", "Eva", "Ada", "Iris", "Nina", "Gaia", "Anna", "Noa", "Lia", "Tea", "Mila", "Lea", "Zoe", "Ava", "Luna", "Emma", "Nora", "Asia", "Maya", "Viola"],
+};
+
+const COLORS = {
+  bg: "#f8f7ff",
+  card: "#ffffff",
+  text: "#1f2430",
+  muted: "#667085",
+  border: "#e8e6f2",
+  primary: "#7c3aed",
+  primarySoft: "#f3e8ff",
+  green: "#16a34a",
+  greenSoft: "#dcfce7",
+  red: "#dc2626",
+  redSoft: "#fee2e2",
+  amber: "#f59e0b",
+  amberSoft: "#fef3c7",
+  blueSoft: "#dbeafe",
 };
 
 function isPositiveVote(vote) {
@@ -65,9 +49,7 @@ function generateNamesByStyle(style, count, startsWith, excludes) {
   let filtered = pool.filter((name) => !excludes.includes(name));
 
   if (cleanedStartsWith) {
-    filtered = filtered.filter((name) =>
-      name.toLowerCase().startsWith(cleanedStartsWith)
-    );
+    filtered = filtered.filter((name) => name.toLowerCase().startsWith(cleanedStartsWith));
   }
 
   const shuffled = [...filtered].sort(() => Math.random() - 0.5);
@@ -78,13 +60,79 @@ function generateNamesByStyle(style, count, startsWith, excludes) {
 
   const fallbackPool = uniqueArray(Object.values(STYLE_POOLS).flat())
     .filter((name) => !excludes.includes(name))
-    .filter((name) => {
-      if (!cleanedStartsWith) return true;
-      return name.toLowerCase().startsWith(cleanedStartsWith);
-    })
+    .filter((name) => !cleanedStartsWith || name.toLowerCase().startsWith(cleanedStartsWith))
     .sort(() => Math.random() - 0.5);
 
   return uniqueArray([...shuffled, ...fallbackPool]).slice(0, count);
+}
+
+function cardStyle(extra = {}) {
+  return {
+    background: COLORS.card,
+    border: `1px solid ${COLORS.border}`,
+    borderRadius: 22,
+    padding: 18,
+    boxShadow: "0 10px 30px rgba(66, 48, 125, 0.06)",
+    ...extra,
+  };
+}
+
+function buttonStyle(kind = "primary") {
+  const map = {
+    primary: {
+      background: "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)",
+      color: "#fff",
+      border: "none",
+    },
+    secondary: {
+      background: "#fff",
+      color: COLORS.text,
+      border: `1px solid ${COLORS.border}`,
+    },
+    yes: {
+      background: COLORS.greenSoft,
+      color: COLORS.green,
+      border: `1px solid #bbf7d0`,
+    },
+    no: {
+      background: COLORS.redSoft,
+      color: COLORS.red,
+      border: `1px solid #fecaca`,
+    },
+    love: {
+      background: COLORS.primarySoft,
+      color: COLORS.primary,
+      border: `1px solid #dfccfb`,
+    },
+    warning: {
+      background: COLORS.amberSoft,
+      color: COLORS.amber,
+      border: `1px solid #fde68a`,
+    },
+  };
+
+  return {
+    padding: "12px 16px",
+    borderRadius: 14,
+    fontWeight: 700,
+    cursor: "pointer",
+    transition: "all 0.2s ease",
+    ...map[kind],
+  };
+}
+
+function badgeStyle(bg, color) {
+  return {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 6,
+    padding: "6px 10px",
+    borderRadius: 999,
+    background: bg,
+    color,
+    fontWeight: 700,
+    fontSize: 13,
+  };
 }
 
 export default function App() {
@@ -107,23 +155,17 @@ export default function App() {
   const [generatorStyle, setGeneratorStyle] = useState("moderni");
   const [startsWith, setStartsWith] = useState("");
   const [generatorLoading, setGeneratorLoading] = useState(false);
+  const [showOnlyFavorites, setShowOnlyFavorites] = useState(false);
+  const [showOnlyMatches, setShowOnlyMatches] = useState(false);
 
   useEffect(() => {
     try {
       const savedProfile = localStorage.getItem(STORAGE_KEY);
       if (savedProfile) {
         const parsedProfile = JSON.parse(savedProfile);
-
-        if (
-          parsedProfile &&
-          parsedProfile.id &&
-          parsedProfile.name &&
-          parsedProfile.couple_code
-        ) {
+        if (parsedProfile?.id && parsedProfile?.name && parsedProfile?.couple_code) {
           setProfile(parsedProfile);
-          setMessage(
-            `Bentornata/o ${parsedProfile.name}! Sei collegata/o alla coppia ${parsedProfile.couple_code}`
-          );
+          setMessage(`Bentornata/o ${parsedProfile.name}! Sei collegata/o alla coppia ${parsedProfile.couple_code}`);
         }
       }
 
@@ -156,9 +198,47 @@ export default function App() {
     }
   }, [profile]);
 
-  const namePool = useMemo(() => {
-    return uniqueArray([...DEFAULT_BABY_NAMES, ...generatedNames]);
-  }, [generatedNames]);
+  const namePool = useMemo(() => uniqueArray([...DEFAULT_BABY_NAMES, ...generatedNames]), [generatedNames]);
+
+  const favoriteNames = useMemo(() => {
+    return namePool.filter((babyName) => votes[babyName] === "yes" || votes[babyName] === "love");
+  }, [votes, namePool]);
+
+  const matchedNames = useMemo(() => {
+    return namePool.filter((babyName) => isPositiveVote(votes[babyName]) && isPositiveVote(partnerVotes[babyName]));
+  }, [votes, partnerVotes, namePool]);
+
+  const filteredNamePool = useMemo(() => {
+    let pool = namePool;
+    if (showOnlyFavorites) {
+      pool = pool.filter((babyName) => votes[babyName] === "yes" || votes[babyName] === "love");
+    } else if (showOnlyMatches) {
+      pool = pool.filter((babyName) => isPositiveVote(votes[babyName]) && isPositiveVote(partnerVotes[babyName]));
+    }
+    return pool;
+  }, [namePool, votes, partnerVotes, showOnlyFavorites, showOnlyMatches]);
+
+  const currentIndex = useMemo(() => filteredNamePool.findIndex((babyName) => !votes[babyName]), [votes, filteredNamePool]);
+  const currentName = currentIndex >= 0 ? filteredNamePool[currentIndex] : null;
+  const votedCount = Object.keys(votes).length;
+  const totalCount = namePool.length;
+  const progress = totalCount ? Math.round((votedCount / totalCount) * 100) : 0;
+
+  const summary = useMemo(() => {
+    const values = Object.values(votes);
+    return {
+      no: values.filter((v) => v === "no").length,
+      yes: values.filter((v) => v === "yes").length,
+      love: values.filter((v) => v === "love").length,
+    };
+  }, [votes]);
+
+  const recentVotes = useMemo(() => {
+    return Object.entries(votes)
+      .map(([babyName, vote]) => ({ babyName, vote }))
+      .reverse()
+      .slice(0, 8);
+  }, [votes]);
 
   function saveProfileLocally(profileData) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(profileData));
@@ -174,27 +254,18 @@ export default function App() {
 
   async function loadVotes(profileId) {
     setVotesLoading(true);
-
     try {
-      const { data, error } = await supabase
-        .from("votes")
-        .select("baby_name, vote")
-        .eq("profile_id", profileId);
-
+      const { data, error } = await supabase.from("votes").select("baby_name, vote").eq("profile_id", profileId);
       if (error) {
-        console.error("SUPABASE LOAD VOTES ERROR:", error);
         setMessage("Errore caricamento voti: " + error.message);
         return;
       }
-
       const mappedVotes = {};
       (data || []).forEach((row) => {
         mappedVotes[row.baby_name] = row.vote;
       });
-
       setVotes(mappedVotes);
     } catch (err) {
-      console.error("UNEXPECTED LOAD VOTES ERROR:", err);
       setMessage("Errore inatteso: " + err.message);
     } finally {
       setVotesLoading(false);
@@ -203,9 +274,7 @@ export default function App() {
 
   async function loadPartnerAndMatches(currentProfile) {
     if (!currentProfile?.id || !currentProfile?.couple_code) return;
-
     setMatchLoading(true);
-
     try {
       const { data: partnerRows, error: partnerError } = await supabase
         .from("profiles")
@@ -216,7 +285,6 @@ export default function App() {
         .limit(1);
 
       if (partnerError) {
-        console.error("SUPABASE LOAD PARTNER ERROR:", partnerError);
         setMessage("Errore caricamento partner: " + partnerError.message);
         return;
       }
@@ -235,7 +303,6 @@ export default function App() {
         .eq("profile_id", foundPartner.id);
 
       if (votesError) {
-        console.error("SUPABASE LOAD PARTNER VOTES ERROR:", votesError);
         setMessage("Errore caricamento voti partner: " + votesError.message);
         return;
       }
@@ -244,10 +311,8 @@ export default function App() {
       (votesRows || []).forEach((row) => {
         mappedVotes[row.baby_name] = row.vote;
       });
-
       setPartnerVotes(mappedVotes);
     } catch (err) {
-      console.error("UNEXPECTED LOAD PARTNER ERROR:", err);
       setMessage("Errore inatteso: " + err.message);
     } finally {
       setMatchLoading(false);
@@ -259,28 +324,19 @@ export default function App() {
       setMessage("Inserisci il tuo nome");
       return;
     }
-
     setLoading(true);
     setMessage("");
-
     try {
       const coupleCode = generateCoupleCode();
-
       const { data, error } = await supabase
         .from("profiles")
-        .insert({
-          name: name.trim(),
-          couple_code: coupleCode,
-        })
+        .insert({ name: name.trim(), couple_code: coupleCode })
         .select()
         .single();
-
       if (error) {
-        console.error("SUPABASE ERROR:", error);
         setMessage("Errore Supabase: " + error.message);
         return;
       }
-
       setProfile(data);
       saveProfileLocally(data);
       setVotes({});
@@ -290,7 +346,6 @@ export default function App() {
       setJoinCode("");
       setName("");
     } catch (err) {
-      console.error("UNEXPECTED ERROR:", err);
       setMessage("Errore inatteso: " + err.message);
     } finally {
       setLoading(false);
@@ -302,14 +357,12 @@ export default function App() {
       setMessage("Inserisci il tuo nome");
       return;
     }
-
     if (!joinCode.trim()) {
       setMessage("Inserisci un codice coppia");
       return;
     }
 
     const normalizedCode = joinCode.trim().toUpperCase();
-
     setLoading(true);
     setMessage("");
 
@@ -321,7 +374,6 @@ export default function App() {
         .limit(1);
 
       if (checkError) {
-        console.error("SUPABASE CHECK ERROR:", checkError);
         setMessage("Errore controllo codice: " + checkError.message);
         return;
       }
@@ -333,15 +385,11 @@ export default function App() {
 
       const { data, error } = await supabase
         .from("profiles")
-        .insert({
-          name: name.trim(),
-          couple_code: normalizedCode,
-        })
+        .insert({ name: name.trim(), couple_code: normalizedCode })
         .select()
         .single();
 
       if (error) {
-        console.error("SUPABASE INSERT ERROR:", error);
         setMessage("Errore Supabase: " + error.message);
         return;
       }
@@ -355,7 +403,6 @@ export default function App() {
       setName("");
       setJoinCode("");
     } catch (err) {
-      console.error("UNEXPECTED ERROR:", err);
       setMessage("Errore inatteso: " + err.message);
     } finally {
       setLoading(false);
@@ -364,36 +411,23 @@ export default function App() {
 
   async function handleVote(voteType) {
     if (!profile?.id || !currentName) return;
-
     setVoteSaving(true);
     setMessage("");
-
     try {
       const { error } = await supabase
         .from("votes")
         .upsert(
-          {
-            profile_id: profile.id,
-            baby_name: currentName,
-            vote: voteType,
-          },
-          {
-            onConflict: "profile_id,baby_name",
-          }
+          { profile_id: profile.id, baby_name: currentName, vote: voteType },
+          { onConflict: "profile_id,baby_name" }
         );
 
       if (error) {
-        console.error("SUPABASE SAVE VOTE ERROR:", error);
         setMessage("Errore salvataggio voto: " + error.message);
         return;
       }
 
-      setVotes((prev) => ({
-        ...prev,
-        [currentName]: voteType,
-      }));
+      setVotes((prev) => ({ ...prev, [currentName]: voteType }));
     } catch (err) {
-      console.error("UNEXPECTED SAVE VOTE ERROR:", err);
       setMessage("Errore inatteso: " + err.message);
     } finally {
       setVoteSaving(false);
@@ -408,7 +442,6 @@ export default function App() {
   function handleGenerateNames() {
     setGeneratorLoading(true);
     setMessage("");
-
     try {
       const newNames = generateNamesByStyle(
         generatorStyle,
@@ -435,6 +468,29 @@ export default function App() {
     setMessage("Nomi generati rimossi dal dispositivo");
   }
 
+  async function resetMyVotes() {
+    if (!profile?.id) return;
+    const confirmed = window.confirm("Vuoi davvero cancellare tutti i tuoi voti? Questa azione non si può annullare.");
+    if (!confirmed) return;
+
+    setMessage("");
+    setVoteSaving(true);
+    try {
+      const { error } = await supabase.from("votes").delete().eq("profile_id", profile.id);
+      if (error) {
+        setMessage("Errore reset voti: " + error.message);
+        return;
+      }
+
+      setVotes({});
+      setMessage("Tutti i tuoi voti sono stati azzerati");
+    } catch (err) {
+      setMessage("Errore inatteso: " + err.message);
+    } finally {
+      setVoteSaving(false);
+    }
+  }
+
   function logoutProfile() {
     clearSavedProfile();
     setProfile(null);
@@ -446,256 +502,222 @@ export default function App() {
     setMessage("Profilo scollegato da questo dispositivo");
   }
 
-  const currentIndex = useMemo(() => {
-    return namePool.findIndex((babyName) => !votes[babyName]);
-  }, [votes, namePool]);
-
-  const currentName = currentIndex >= 0 ? namePool[currentIndex] : null;
-  const votedCount = Object.keys(votes).length;
-  const totalCount = namePool.length;
-
-  const summary = useMemo(() => {
-    const values = Object.values(votes);
-    return {
-      no: values.filter((v) => v === "no").length,
-      yes: values.filter((v) => v === "yes").length,
-      love: values.filter((v) => v === "love").length,
-    };
-  }, [votes]);
-
-  const matches = useMemo(() => {
-    return namePool.filter((babyName) => {
-      return isPositiveVote(votes[babyName]) && isPositiveVote(partnerVotes[babyName]);
-    });
-  }, [votes, partnerVotes, namePool]);
-
   if (checkingSession) {
-    return (
-      <div style={{ padding: 24, fontFamily: "Arial, sans-serif", maxWidth: 1100, margin: "0 auto" }}>
-        <h1>Il Nome Perfetto</h1>
-        <p>Caricamento profilo...</p>
-      </div>
-    );
+    return <div style={{ minHeight: "100vh", background: COLORS.bg, padding: 24, fontFamily: "Inter, Arial, sans-serif" }}><div style={{ maxWidth: 1100, margin: "0 auto" }}><h1 style={{ color: COLORS.text }}>Il Nome Perfetto</h1><p style={{ color: COLORS.muted }}>Caricamento profilo...</p></div></div>;
   }
 
   if (!profile) {
     return (
-      <div style={{ padding: 24, fontFamily: "Arial, sans-serif", maxWidth: 760, margin: "0 auto" }}>
-        <h1>Il Nome Perfetto</h1>
-        <p>Crea una nuova coppia oppure collegati con un codice esistente.</p>
+      <div style={{ minHeight: "100vh", background: "linear-gradient(180deg, #faf5ff 0%, #f8fafc 100%)", padding: 24, fontFamily: "Inter, Arial, sans-serif", color: COLORS.text }}>
+        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <div style={{ ...cardStyle({ padding: 24, marginBottom: 20, background: "linear-gradient(135deg, #ede9fe 0%, #ffffff 100%)" }) }}>
+            <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>✨ Baby Name App</div>
+            <h1 style={{ fontSize: 36, marginBottom: 10 }}>Il Nome Perfetto</h1>
+            <p style={{ color: COLORS.muted, fontSize: 16, lineHeight: 1.5 }}>Crea la tua coppia, vota i nomi, genera nuove idee e scopri i match insieme al partner.</p>
+          </div>
 
-        <div style={{ padding: 16, border: "1px solid #ddd", borderRadius: 12, marginBottom: 20 }}>
-          <h2 style={{ marginTop: 0 }}>Crea nuova coppia</h2>
-          <input
-            type="text"
-            placeholder="Il tuo nome"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            style={{ padding: 10, width: "100%", boxSizing: "border-box", marginBottom: 10 }}
-          />
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 18 }}>
+            <div style={cardStyle()}>
+              <h2 style={{ marginTop: 0 }}>Crea nuova coppia</h2>
+              <input type="text" placeholder="Il tuo nome" value={name} onChange={(e) => setName(e.target.value)} style={{ padding: 14, width: "100%", boxSizing: "border-box", marginBottom: 12, borderRadius: 14, border: `1px solid ${COLORS.border}` }} />
+              <button onClick={createNewCouple} disabled={loading} style={buttonStyle("primary")}>{loading ? "Attendi..." : "Crea nuova coppia"}</button>
+            </div>
 
-          <button onClick={createNewCouple} disabled={loading} style={{ padding: "10px 14px" }}>
-            {loading ? "Attendi..." : "Crea nuova coppia"}
-          </button>
+            <div style={cardStyle()}>
+              <h2 style={{ marginTop: 0 }}>Unisciti a una coppia</h2>
+              <input type="text" placeholder="Il tuo nome" value={name} onChange={(e) => setName(e.target.value)} style={{ padding: 14, width: "100%", boxSizing: "border-box", marginBottom: 12, borderRadius: 14, border: `1px solid ${COLORS.border}` }} />
+              <input type="text" placeholder="Codice coppia esistente" value={joinCode} onChange={(e) => setJoinCode(e.target.value.toUpperCase())} style={{ padding: 14, width: "100%", boxSizing: "border-box", marginBottom: 12, borderRadius: 14, border: `1px solid ${COLORS.border}` }} />
+              <button onClick={joinExistingCouple} disabled={loading} style={buttonStyle("secondary")}>{loading ? "Attendi..." : "Unisciti alla coppia"}</button>
+            </div>
+          </div>
+
+          {message ? <div style={{ ...cardStyle({ marginTop: 20, padding: 14, background: "#fff" }) }}><span style={{ color: COLORS.muted }}>{message}</span></div> : null}
         </div>
-
-        <div style={{ padding: 16, border: "1px solid #ddd", borderRadius: 12 }}>
-          <h2 style={{ marginTop: 0 }}>Unisciti a una coppia</h2>
-          <input
-            type="text"
-            placeholder="Il tuo nome"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            style={{ padding: 10, width: "100%", boxSizing: "border-box", marginBottom: 10 }}
-          />
-          <input
-            type="text"
-            placeholder="Codice coppia esistente"
-            value={joinCode}
-            onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
-            style={{ padding: 10, width: "100%", boxSizing: "border-box", marginBottom: 10 }}
-          />
-
-          <button onClick={joinExistingCouple} disabled={loading} style={{ padding: "10px 14px" }}>
-            {loading ? "Attendi..." : "Unisciti alla coppia"}
-          </button>
-        </div>
-
-        {message ? <p style={{ marginTop: 20 }}>{message}</p> : null}
       </div>
     );
   }
 
   return (
-    <div style={{ padding: 24, fontFamily: "Arial, sans-serif", maxWidth: 1100, margin: "0 auto" }}>
-      <h1>Il Nome Perfetto</h1>
-
-      <div style={{ padding: 16, border: "1px solid #ddd", borderRadius: 12, background: "#fafafa", marginBottom: 20 }}>
-        <h2 style={{ marginTop: 0 }}>Profilo attivo</h2>
-        <p><strong>Nome:</strong> {profile.name}</p>
-        <p><strong>Codice coppia:</strong> {profile.couple_code}</p>
-        <p><strong>ID profilo:</strong> {profile.id}</p>
-        <button onClick={logoutProfile} style={{ padding: "10px 14px" }}>
-          Esci da questo dispositivo
-        </button>
-      </div>
-
-      <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr 1fr", gap: 20, alignItems: "start" }}>
-        <div>
-          <div style={{ padding: 16, border: "1px solid #ddd", borderRadius: 12, marginBottom: 20 }}>
-            <h2 style={{ marginTop: 0 }}>Riepilogo voti</h2>
-            <p><strong>Completati:</strong> {votedCount} / {totalCount}</p>
-            <p><strong>No:</strong> {summary.no} | <strong>Sì:</strong> {summary.yes} | <strong>Adoro:</strong> {summary.love}</p>
-            <p><strong>Nomi extra generati:</strong> {generatedNames.length}</p>
-          </div>
-
-          {votesLoading ? (
-            <p>Caricamento voti...</p>
-          ) : currentName ? (
-            <div style={{ padding: 24, border: "1px solid #ddd", borderRadius: 16, textAlign: "center", background: "#fff" }}>
-              <p style={{ color: "#666", marginBottom: 8 }}>Nome {currentIndex + 1} di {totalCount}</p>
-              <h2 style={{ fontSize: 36, marginTop: 0 }}>{currentName}</h2>
-
-              <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap", marginTop: 20 }}>
-                <button
-                  onClick={() => handleVote("no")}
-                  disabled={voteSaving}
-                  style={{ padding: "12px 18px", borderRadius: 10, border: "1px solid #d1d5db", background: "#fee2e2", cursor: "pointer" }}
-                >
-                  {voteSaving ? "Salvataggio..." : "No"}
-                </button>
-
-                <button
-                  onClick={() => handleVote("yes")}
-                  disabled={voteSaving}
-                  style={{ padding: "12px 18px", borderRadius: 10, border: "1px solid #d1d5db", background: "#dcfce7", cursor: "pointer" }}
-                >
-                  {voteSaving ? "Salvataggio..." : "Sì"}
-                </button>
-
-                <button
-                  onClick={() => handleVote("love")}
-                  disabled={voteSaving}
-                  style={{ padding: "12px 18px", borderRadius: 10, border: "1px solid #d1d5db", background: "#ede9fe", cursor: "pointer" }}
-                >
-                  {voteSaving ? "Salvataggio..." : "Adoro"}
-                </button>
-              </div>
+    <div style={{ minHeight: "100vh", background: "linear-gradient(180deg, #f8f7ff 0%, #f8fafc 100%)", padding: 20, fontFamily: "Inter, Arial, sans-serif", color: COLORS.text }}>
+      <div style={{ maxWidth: 1180, margin: "0 auto" }}>
+        <div style={{ ...cardStyle({ padding: 24, marginBottom: 20, background: "linear-gradient(135deg, #ffffff 0%, #f3e8ff 100%)" }) }}>
+          <div style={{ display: "flex", justifyContent: "space-between", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
+            <div>
+              <div style={{ ...badgeStyle(COLORS.primarySoft, COLORS.primary), marginBottom: 12 }}>💜 Profilo attivo</div>
+              <h1 style={{ margin: 0, fontSize: 34 }}>Il Nome Perfetto</h1>
+              <p style={{ color: COLORS.muted, marginBottom: 0 }}>Ciao <strong>{profile.name}</strong> — codice coppia <strong>{profile.couple_code}</strong></p>
             </div>
-          ) : (
-            <div style={{ padding: 24, border: "1px solid #ddd", borderRadius: 16, textAlign: "center", background: "#f0fdf4" }}>
-              <h2>Hai completato tutti i voti 🎉</h2>
-              <p>Genera nuovi nomi oppure controlla i match con il partner.</p>
-            </div>
-          )}
-        </div>
-
-        <div>
-          <div style={{ padding: 16, border: "1px solid #ddd", borderRadius: 12, marginBottom: 20, background: "#fafafa" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", gap: 10, alignItems: "center" }}>
-              <h2 style={{ marginTop: 0, marginBottom: 0 }}>Match coppia</h2>
-              <button onClick={refreshMatches} style={{ padding: "8px 12px" }}>
-                Aggiorna match
-              </button>
-            </div>
-
-            {matchLoading ? (
-              <p style={{ marginTop: 16 }}>Caricamento match...</p>
-            ) : !partner ? (
-              <div style={{ marginTop: 16 }}>
-                <p><strong>Nessun partner collegato ancora.</strong></p>
-                <p>Condividi il tuo codice coppia: <strong>{profile.couple_code}</strong></p>
-              </div>
-            ) : (
-              <div style={{ marginTop: 16 }}>
-                <p><strong>Partner collegato:</strong> {partner.name}</p>
-                <p><strong>Voti partner caricati:</strong> {Object.keys(partnerVotes).length}</p>
-                <p><strong>Match trovati:</strong> {matches.length}</p>
-              </div>
-            )}
-          </div>
-
-          <div style={{ padding: 16, border: "1px solid #ddd", borderRadius: 12, background: matches.length ? "#f0fdf4" : "#fff" }}>
-            <h3 style={{ marginTop: 0 }}>Nomi in match</h3>
-
-            {!partner ? (
-              <p>Appena il partner si collega e vota, qui vedrai i match automatici.</p>
-            ) : matches.length === 0 ? (
-              <p>Nessun match positivo per ora.</p>
-            ) : (
-              <ul style={{ paddingLeft: 20, marginBottom: 0 }}>
-                {matches.map((babyName) => (
-                  <li key={babyName} style={{ marginBottom: 8 }}>
-                    <strong>{babyName}</strong>
-                    <div style={{ fontSize: 14, color: "#555" }}>
-                      Tu: {votes[babyName]} | Partner: {partnerVotes[babyName]}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        </div>
-
-        <div>
-          <div style={{ padding: 16, border: "1px solid #ddd", borderRadius: 12, background: "#fafafa", marginBottom: 20 }}>
-            <h2 style={{ marginTop: 0 }}>Generazione nomi femminili</h2>
-            <p style={{ marginTop: 0 }}>Generatore locale stile AI, senza API esterne.</p>
-
-            <label style={{ display: "block", marginBottom: 6 }}>Stile</label>
-            <select
-              value={generatorStyle}
-              onChange={(e) => setGeneratorStyle(e.target.value)}
-              style={{ padding: 10, width: "100%", boxSizing: "border-box", marginBottom: 12 }}
-            >
-              <option value="classici">Classici</option>
-              <option value="moderni">Moderni</option>
-              <option value="internazionali">Internazionali</option>
-              <option value="eleganti">Eleganti</option>
-              <option value="corti">Corti</option>
-            </select>
-
-            <label style={{ display: "block", marginBottom: 6 }}>Iniziale opzionale</label>
-            <input
-              type="text"
-              placeholder="Es. A"
-              value={startsWith}
-              onChange={(e) => setStartsWith(e.target.value)}
-              style={{ padding: 10, width: "100%", boxSizing: "border-box", marginBottom: 12 }}
-            />
-
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-              <button onClick={handleGenerateNames} disabled={generatorLoading} style={{ padding: "10px 14px" }}>
-                {generatorLoading ? "Generazione..." : "Genera 10 nomi"}
-              </button>
-
-              <button onClick={clearGeneratedNames} style={{ padding: "10px 14px" }}>
-                Reset nomi extra
-              </button>
+              <button onClick={refreshMatches} style={buttonStyle("secondary")}>Aggiorna match</button>
+              <button onClick={logoutProfile} style={buttonStyle("secondary")}>Esci</button>
             </div>
           </div>
 
-          <div style={{ padding: 16, border: "1px solid #ddd", borderRadius: 12 }}>
-            <h3 style={{ marginTop: 0 }}>Nomi extra generati</h3>
-            {generatedNames.length === 0 ? (
-              <p>Nessun nome extra generato per ora.</p>
-            ) : (
-              <ul style={{ paddingLeft: 20, marginBottom: 0, maxHeight: 320, overflowY: "auto" }}>
-                {generatedNames.map((babyName) => (
-                  <li key={babyName} style={{ marginBottom: 8 }}>
-                    <strong>{babyName}</strong>
-                    {votes[babyName] ? (
-                      <span style={{ color: "#555", fontSize: 14 }}> — tuo voto: {votes[babyName]}</span>
-                    ) : null}
-                  </li>
-                ))}
-              </ul>
-            )}
+          <div style={{ marginTop: 18 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", fontSize: 14, color: COLORS.muted, marginBottom: 8 }}>
+              <span>Progresso voti</span>
+              <span>{votedCount} / {totalCount} · {progress}%</span>
+            </div>
+            <div style={{ height: 12, borderRadius: 999, background: "#ede9fe", overflow: "hidden" }}>
+              <div style={{ width: `${progress}%`, height: "100%", background: "linear-gradient(90deg, #8b5cf6 0%, #c084fc 100%)" }} />
+            </div>
           </div>
         </div>
-      </div>
 
-      {message ? <p style={{ marginTop: 20 }}>{message}</p> : null}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14, marginBottom: 20 }}>
+          <div style={cardStyle()}><div style={badgeStyle(COLORS.redSoft, COLORS.red)}>👎 No</div><h3 style={{ marginBottom: 0 }}>{summary.no}</h3></div>
+          <div style={cardStyle()}><div style={badgeStyle(COLORS.greenSoft, COLORS.green)}>👍 Sì</div><h3 style={{ marginBottom: 0 }}>{summary.yes}</h3></div>
+          <div style={cardStyle()}><div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>💜 Adoro</div><h3 style={{ marginBottom: 0 }}>{summary.love}</h3></div>
+          <div style={cardStyle()}><div style={badgeStyle(COLORS.blueSoft, "#1d4ed8")}>🤝 Match</div><h3 style={{ marginBottom: 0 }}>{matchedNames.length}</h3></div>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "minmax(320px, 1.3fr) minmax(280px, 1fr)", gap: 20, alignItems: "start" }}>
+          <div style={{ display: "grid", gap: 20 }}>
+            <div style={cardStyle({ background: "linear-gradient(180deg, #ffffff 0%, #fcfcff 100%)" })}>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap", marginBottom: 14 }}>
+                <h2 style={{ margin: 0 }}>Area voto</h2>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  <button onClick={() => { setShowOnlyFavorites(false); setShowOnlyMatches(false); }} style={buttonStyle(showOnlyFavorites || showOnlyMatches ? "secondary" : "primary")}>Tutti</button>
+                  <button onClick={() => { setShowOnlyFavorites(true); setShowOnlyMatches(false); }} style={buttonStyle(showOnlyFavorites ? "primary" : "secondary")}>Solo preferiti</button>
+                  <button onClick={() => { setShowOnlyFavorites(false); setShowOnlyMatches(true); }} style={buttonStyle(showOnlyMatches ? "primary" : "secondary")}>Solo match</button>
+                </div>
+              </div>
+
+              {votesLoading ? (
+                <p style={{ color: COLORS.muted }}>Caricamento voti...</p>
+              ) : currentName ? (
+                <div style={{ textAlign: "center", padding: "8px 0 4px" }}>
+                  <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>Nome {currentIndex + 1} di {filteredNamePool.length}</div>
+                  <h2 style={{ fontSize: 42, marginTop: 18, marginBottom: 12 }}>{currentName}</h2>
+                  <p style={{ color: COLORS.muted, marginTop: 0 }}>Scegli il tuo feeling: passa oltre, ti piace o lo ami davvero.</p>
+                  <div style={{ display: "flex", justifyContent: "center", gap: 12, flexWrap: "wrap", marginTop: 10 }}>
+                    <button onClick={() => handleVote("no")} disabled={voteSaving} style={buttonStyle("no")}>{voteSaving ? "Salvataggio..." : "👎 No"}</button>
+                    <button onClick={() => handleVote("yes")} disabled={voteSaving} style={buttonStyle("yes")}>{voteSaving ? "Salvataggio..." : "👍 Sì"}</button>
+                    <button onClick={() => handleVote("love")} disabled={voteSaving} style={buttonStyle("love")}>{voteSaving ? "Salvataggio..." : "💜 Adoro"}</button>
+                  </div>
+                </div>
+              ) : (
+                <div style={{ textAlign: "center", padding: "8px 0 4px" }}>
+                  <h2 style={{ marginBottom: 8 }}>Hai finito il deck 🎉</h2>
+                  <p style={{ color: COLORS.muted }}>Puoi generare nuovi nomi, vedere i tuoi preferiti o controllare i match della coppia.</p>
+                </div>
+              )}
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
+              <div style={cardStyle()}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
+                  <h3 style={{ marginTop: 0, marginBottom: 0 }}>Preferiti</h3>
+                  <div style={badgeStyle(COLORS.greenSoft, COLORS.green)}>{favoriteNames.length}</div>
+                </div>
+                {favoriteNames.length === 0 ? (
+                  <p style={{ color: COLORS.muted }}>Ancora nessun preferito. Inizia a votare 👍 o 💜.</p>
+                ) : (
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 12 }}>
+                    {favoriteNames.map((babyName) => (
+                      <span key={babyName} style={badgeStyle(votes[babyName] === "love" ? COLORS.primarySoft : COLORS.greenSoft, votes[babyName] === "love" ? COLORS.primary : COLORS.green)}>{babyName}</span>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div style={cardStyle()}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
+                  <h3 style={{ marginTop: 0, marginBottom: 0 }}>Ultimi voti</h3>
+                  <div style={badgeStyle(COLORS.blueSoft, "#1d4ed8")}>{recentVotes.length}</div>
+                </div>
+                {recentVotes.length === 0 ? (
+                  <p style={{ color: COLORS.muted }}>I tuoi ultimi voti appariranno qui.</p>
+                ) : (
+                  <ul style={{ listStyle: "none", paddingLeft: 0, margin: "12px 0 0 0" }}>
+                    {recentVotes.map((item) => (
+                      <li key={item.babyName} style={{ display: "flex", justifyContent: "space-between", padding: "8px 0", borderBottom: `1px solid ${COLORS.border}` }}>
+                        <span>{item.babyName}</span>
+                        <strong style={{ color: item.vote === "love" ? COLORS.primary : item.vote === "yes" ? COLORS.green : COLORS.red }}>{item.vote}</strong>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+          </div>
+
+          <div style={{ display: "grid", gap: 20 }}>
+            <div style={cardStyle({ background: matchLoading ? "#fff" : matchedNames.length ? "linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%)" : "#ffffff" })}>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+                <h2 style={{ margin: 0 }}>Match di coppia</h2>
+                {partner ? <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>Partner: {partner.name}</div> : null}
+              </div>
+              {matchLoading ? (
+                <p style={{ color: COLORS.muted, marginTop: 12 }}>Caricamento match...</p>
+              ) : !partner ? (
+                <div style={{ marginTop: 12 }}>
+                  <p style={{ marginBottom: 8 }}><strong>Nessun partner collegato ancora.</strong></p>
+                  <p style={{ color: COLORS.muted, marginTop: 0 }}>Condividi il tuo codice coppia: <strong>{profile.couple_code}</strong></p>
+                </div>
+              ) : matchedNames.length === 0 ? (
+                <p style={{ color: COLORS.muted, marginTop: 12 }}>Per ora nessun match positivo. Appena il partner vota, clicca “Aggiorna match”.</p>
+              ) : (
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 14 }}>
+                  {matchedNames.map((babyName) => (
+                    <span key={babyName} style={badgeStyle(COLORS.greenSoft, COLORS.green)}>🤝 {babyName}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div style={cardStyle()}>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+                <h2 style={{ margin: 0 }}>Generatore nomi</h2>
+                <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>{generatedNames.length} extra</div>
+              </div>
+              <p style={{ color: COLORS.muted, marginTop: 10 }}>Crea un nuovo blocco di nomi femminili e aggiungilo subito all’esperienza di voto.</p>
+
+              <label style={{ display: "block", fontSize: 14, color: COLORS.muted, marginBottom: 6 }}>Stile</label>
+              <select value={generatorStyle} onChange={(e) => setGeneratorStyle(e.target.value)} style={{ padding: 14, width: "100%", boxSizing: "border-box", marginBottom: 12, borderRadius: 14, border: `1px solid ${COLORS.border}` }}>
+                <option value="classici">Classici</option>
+                <option value="moderni">Moderni</option>
+                <option value="internazionali">Internazionali</option>
+                <option value="eleganti">Eleganti</option>
+                <option value="corti">Corti</option>
+              </select>
+
+              <label style={{ display: "block", fontSize: 14, color: COLORS.muted, marginBottom: 6 }}>Iniziale opzionale</label>
+              <input type="text" placeholder="Es. A" value={startsWith} onChange={(e) => setStartsWith(e.target.value)} style={{ padding: 14, width: "100%", boxSizing: "border-box", marginBottom: 12, borderRadius: 14, border: `1px solid ${COLORS.border}` }} />
+
+              <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 14 }}>
+                <button onClick={handleGenerateNames} disabled={generatorLoading} style={buttonStyle("primary")}>{generatorLoading ? "Generazione..." : "Genera 10 nomi"}</button>
+                <button onClick={clearGeneratedNames} style={buttonStyle("secondary")}>Reset nomi extra</button>
+              </div>
+
+              {generatedNames.length === 0 ? (
+                <p style={{ color: COLORS.muted, marginBottom: 0 }}>Nessun nome extra generato per ora.</p>
+              ) : (
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  {generatedNames.slice(-18).map((babyName) => (
+                    <span key={babyName} style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>{babyName}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div style={cardStyle()}>
+              <h2 style={{ marginTop: 0 }}>Azioni rapide</h2>
+              <div style={{ display: "grid", gap: 10 }}>
+                <button onClick={resetMyVotes} disabled={voteSaving} style={buttonStyle("warning")}>Azzera i miei voti</button>
+                <button onClick={() => { setShowOnlyFavorites(false); setShowOnlyMatches(false); setMessage("Filtro deck resettato"); }} style={buttonStyle("secondary")}>Reset filtri deck</button>
+              </div>
+              <p style={{ color: COLORS.muted, fontSize: 13, marginTop: 12, marginBottom: 0 }}>“Azzera i miei voti” cancella i tuoi voti dal database, ma non tocca quelli del partner.</p>
+            </div>
+          </div>
+        </div>
+
+        {message ? (
+          <div style={{ ...cardStyle({ marginTop: 20, padding: 14, background: "#fff" }) }}>
+            <span style={{ color: COLORS.muted }}>{message}</span>
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 }
