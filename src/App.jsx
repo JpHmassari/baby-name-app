@@ -136,20 +136,26 @@ function voteBadgeStyle(vote) {
 
 function scoreCandidate(candidate, likedMeta) {
   if (!likedMeta.length) return 0;
+
   let score = 0;
+
   likedMeta.forEach((meta) => {
     meta.styles.forEach((style) => {
       if (candidate.styles.includes(style)) score += meta.weight * 3;
     });
+
     meta.tags.forEach((tag) => {
       if (candidate.tags.includes(tag)) score += meta.weight * 2;
     });
+
     if (candidate.origin === meta.origin) score += meta.weight * 2;
     if (candidate.length === meta.length) score += meta.weight;
     if (candidate.initial === meta.initial) score += 1;
   });
+
   if (candidate.popularity === "alta") score += 0.25;
   if (candidate.international) score += 0.25;
+
   return score;
 }
 
@@ -181,9 +187,15 @@ export default function App() {
       const savedProfile = localStorage.getItem(STORAGE_KEY);
       if (savedProfile) {
         const parsedProfile = JSON.parse(savedProfile);
-        if (parsedProfile?.id && parsedProfile?.name && parsedProfile?.couple_code) {
+        if (
+          parsedProfile?.id &&
+          parsedProfile?.name &&
+          parsedProfile?.couple_code
+        ) {
           setProfile(parsedProfile);
-          setMessage(`Bentornata/o ${parsedProfile.name}! Sei collegata/o alla coppia ${parsedProfile.couple_code}`);
+          setMessage(
+            `Bentornata/o ${parsedProfile.name}! Sei collegata/o alla coppia ${parsedProfile.couple_code}`
+          );
         }
       }
     } catch (error) {
@@ -213,15 +225,26 @@ export default function App() {
   }, []);
 
   const namePool = useMemo(() => NAMES_DATABASE.map((item) => item.name), []);
-  const allStyles = useMemo(() => [...new Set(NAMES_DATABASE.flatMap((item) => item.styles))].sort(), []);
-  const allOrigins = useMemo(() => [...new Set(NAMES_DATABASE.map((item) => item.origin))].sort(), []);
+  const allStyles = useMemo(
+    () => [...new Set(NAMES_DATABASE.flatMap((item) => item.styles))].sort(),
+    []
+  );
+  const allOrigins = useMemo(
+    () => [...new Set(NAMES_DATABASE.map((item) => item.origin))].sort(),
+    []
+  );
 
   const favoriteNames = useMemo(() => {
-    return namePool.filter((babyName) => votes[babyName] === "yes" || votes[babyName] === "love");
+    return namePool.filter(
+      (babyName) => votes[babyName] === "yes" || votes[babyName] === "love"
+    );
   }, [votes, namePool]);
 
   const matchedNames = useMemo(() => {
-    return namePool.filter((babyName) => isPositiveVote(votes[babyName]) && isPositiveVote(partnerVotes[babyName]));
+    return namePool.filter(
+      (babyName) =>
+        isPositiveVote(votes[babyName]) && isPositiveVote(partnerVotes[babyName])
+    );
   }, [votes, partnerVotes, namePool]);
 
   const filteredNamePool = useMemo(() => {
@@ -230,7 +253,10 @@ export default function App() {
     return namePool;
   }, [deckFilter, favoriteNames, matchedNames, namePool]);
 
-  const currentIndex = useMemo(() => filteredNamePool.findIndex((babyName) => !votes[babyName]), [votes, filteredNamePool]);
+  const currentIndex = useMemo(() => {
+    return filteredNamePool.findIndex((babyName) => !votes[babyName]);
+  }, [votes, filteredNamePool]);
+
   const currentName = currentIndex >= 0 ? filteredNamePool[currentIndex] : null;
   const currentMeta = currentName ? namesMap[currentName] : null;
 
@@ -256,7 +282,9 @@ export default function App() {
 
   const likedMeta = useMemo(() => {
     return namePool
-      .filter((babyName) => votes[babyName] === "yes" || votes[babyName] === "love")
+      .filter(
+        (babyName) => votes[babyName] === "yes" || votes[babyName] === "love"
+      )
       .map((babyName) => ({
         ...namesMap[babyName],
         weight: votes[babyName] === "love" ? 2 : 1,
@@ -272,17 +300,24 @@ export default function App() {
     let candidates = NAMES_DATABASE.filter((item) => !votes[item.name]);
 
     if (exploreStyle !== "all") {
-      candidates = candidates.filter((item) => item.styles.includes(exploreStyle));
+      candidates = candidates.filter((item) =>
+        item.styles.includes(exploreStyle)
+      );
     }
+
     if (exploreOrigin !== "all") {
       candidates = candidates.filter((item) => item.origin === exploreOrigin);
     }
+
     if (initial) {
       candidates = candidates.filter((item) => item.initial === initial);
     }
 
     const sorted = [...candidates]
-      .map((item) => ({ ...item, score: scoreCandidate(item, likedMeta) }))
+      .map((item) => ({
+        ...item,
+        score: scoreCandidate(item, likedMeta),
+      }))
       .sort((a, b) => b.score - a.score || a.name.localeCompare(b.name))
       .slice(0, 10);
 
@@ -303,8 +338,13 @@ export default function App() {
 
   async function loadVotes(profileId) {
     setVotesLoading(true);
+
     try {
-      const { data, error } = await supabase.from("votes").select("baby_name, vote").eq("profile_id", profileId);
+      const { data, error } = await supabase
+        .from("votes")
+        .select("baby_name, vote")
+        .eq("profile_id", profileId);
+
       if (error) {
         setMessage("Errore caricamento voti: " + error.message);
         return;
@@ -314,6 +354,7 @@ export default function App() {
       (data || []).forEach((row) => {
         mappedVotes[row.baby_name] = row.vote;
       });
+
       setVotes(mappedVotes);
     } catch (err) {
       setMessage("Errore inatteso: " + err.message);
@@ -324,7 +365,9 @@ export default function App() {
 
   async function loadPartnerAndMatches(currentProfile) {
     if (!currentProfile?.id || !currentProfile?.couple_code) return;
+
     setMatchLoading(true);
+
     try {
       const { data: partnerRows, error: partnerError } = await supabase
         .from("profiles")
@@ -339,7 +382,8 @@ export default function App() {
         return;
       }
 
-      const foundPartner = partnerRows && partnerRows.length > 0 ? partnerRows[0] : null;
+      const foundPartner =
+        partnerRows && partnerRows.length > 0 ? partnerRows[0] : null;
       setPartner(foundPartner);
 
       if (!foundPartner) {
@@ -361,6 +405,7 @@ export default function App() {
       (votesRows || []).forEach((row) => {
         mappedVotes[row.baby_name] = row.vote;
       });
+
       setPartnerVotes(mappedVotes);
     } catch (err) {
       setMessage("Errore inatteso: " + err.message);
@@ -377,11 +422,16 @@ export default function App() {
 
     setLoading(true);
     setMessage("");
+
     try {
       const coupleCode = generateCoupleCode();
+
       const { data, error } = await supabase
         .from("profiles")
-        .insert({ name: name.trim(), couple_code: coupleCode })
+        .insert({
+          name: name.trim(),
+          couple_code: coupleCode,
+        })
         .select()
         .single();
 
@@ -410,6 +460,7 @@ export default function App() {
       setMessage("Inserisci il tuo nome");
       return;
     }
+
     if (!joinCode.trim()) {
       setMessage("Inserisci un codice coppia");
       return;
@@ -425,10 +476,12 @@ export default function App() {
         .select("id, couple_code")
         .eq("couple_code", normalizedCode)
         .limit(1);
+
       if (checkError) {
         setMessage("Errore controllo codice: " + checkError.message);
         return;
       }
+
       if (!existingProfiles || existingProfiles.length === 0) {
         setMessage("Codice coppia non trovato");
         return;
@@ -436,9 +489,13 @@ export default function App() {
 
       const { data, error } = await supabase
         .from("profiles")
-        .insert({ name: name.trim(), couple_code: normalizedCode })
+        .insert({
+          name: name.trim(),
+          couple_code: normalizedCode,
+        })
         .select()
         .single();
+
       if (error) {
         setMessage("Errore Supabase: " + error.message);
         return;
@@ -449,7 +506,9 @@ export default function App() {
       setVotes({});
       setPartner(null);
       setPartnerVotes({});
-      setMessage("Profilo collegato correttamente alla coppia " + normalizedCode);
+      setMessage(
+        "Profilo collegato correttamente alla coppia " + normalizedCode
+      );
       setName("");
       setJoinCode("");
     } catch (err) {
@@ -461,6 +520,7 @@ export default function App() {
 
   async function handleVote(voteType) {
     if (!profile?.id || !currentName) return;
+
     setVoteSaving(true);
     setMessage("");
 
@@ -468,13 +528,21 @@ export default function App() {
       const { error } = await supabase
         .from("votes")
         .upsert(
-          { profile_id: profile.id, baby_name: currentName, vote: voteType },
-          { onConflict: "profile_id,baby_name" }
+          {
+            profile_id: profile.id,
+            baby_name: currentName,
+            vote: voteType,
+          },
+          {
+            onConflict: "profile_id,baby_name",
+          }
         );
+
       if (error) {
         setMessage("Errore salvataggio voto: " + error.message);
         return;
       }
+
       setVotes((prev) => ({ ...prev, [currentName]: voteType }));
     } catch (err) {
       setMessage("Errore inatteso: " + err.message);
@@ -483,18 +551,33 @@ export default function App() {
     }
   }
 
+  async function refreshMatches() {
+    if (!profile) return;
+    await loadPartnerAndMatches(profile);
+  }
+
   async function resetMyVotes() {
     if (!profile?.id) return;
-    const confirmed = window.confirm("Vuoi davvero cancellare tutti i tuoi voti? Questa azione non si può annullare.");
+
+    const confirmed = window.confirm(
+      "Vuoi davvero cancellare tutti i tuoi voti? Questa azione non si può annullare."
+    );
     if (!confirmed) return;
+
     setMessage("");
     setVoteSaving(true);
+
     try {
-      const { error } = await supabase.from("votes").delete().eq("profile_id", profile.id);
+      const { error } = await supabase
+        .from("votes")
+        .delete()
+        .eq("profile_id", profile.id);
+
       if (error) {
         setMessage("Errore reset voti: " + error.message);
         return;
       }
+
       setVotes({});
       setDeckFilter("all");
       setMessage("Tutti i tuoi voti sono stati azzerati");
@@ -546,152 +629,526 @@ export default function App() {
         </div>
       ) : !profile ? (
         <div className="app-shell" style={{ maxWidth: 780 }}>
-          <div className="hover-lift" style={cardStyle({ padding: 28, marginBottom: 20, background: `linear-gradient(135deg, ${COLORS.primarySoft} 0%, #ffffff 100%)` })}>
-            <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>✨ V9 Free Smart Catalog</div>
+          <div
+            className="hover-lift"
+            style={cardStyle({
+              padding: 28,
+              marginBottom: 20,
+              background: `linear-gradient(135deg, ${COLORS.primarySoft} 0%, #ffffff 100%)`,
+            })}
+          >
+            <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>
+              ✨ V9 Free Smart Catalog
+            </div>
             <h1 style={{ fontSize: 38, marginBottom: 10 }}>Il Nome Perfetto</h1>
-            <p style={{ color: COLORS.muted, fontSize: 16, lineHeight: 1.6, marginBottom: 0 }}>
-              500 nomi precaricati con meta-dati, storia stilistica e significato breve. Zero costi AI, ma un catalogo molto più ricco e intelligente.
+            <p
+              style={{
+                color: COLORS.muted,
+                fontSize: 16,
+                lineHeight: 1.6,
+                marginBottom: 0,
+              }}
+            >
+              500 nomi precaricati con meta-dati, storia stilistica e
+              significato breve. Zero costi AI, ma un catalogo molto più ricco e
+              intelligente.
             </p>
           </div>
 
           <div className="auth-grid">
             <div className="hover-lift" style={cardStyle()}>
               <h2 style={{ marginTop: 0 }}>Crea nuova coppia</h2>
-              <input type="text" placeholder="Il tuo nome" value={name} onChange={(e) => setName(e.target.value)} style={{ ...inputStyle(), marginBottom: 12 }} />
-              <button onClick={createNewCouple} disabled={loading} style={buttonStyle("primary")}>{loading ? "Attendi..." : "Crea nuova coppia"}</button>
+              <input
+                type="text"
+                placeholder="Il tuo nome"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                style={{ ...inputStyle(), marginBottom: 12 }}
+              />
+              <button
+                onClick={createNewCouple}
+                disabled={loading}
+                style={buttonStyle("primary")}
+              >
+                {loading ? "Attendi..." : "Crea nuova coppia"}
+              </button>
             </div>
+
             <div className="hover-lift" style={cardStyle()}>
               <h2 style={{ marginTop: 0 }}>Unisciti a una coppia</h2>
-              <input type="text" placeholder="Il tuo nome" value={name} onChange={(e) => setName(e.target.value)} style={{ ...inputStyle(), marginBottom: 12 }} />
-              <input type="text" placeholder="Codice coppia esistente" value={joinCode} onChange={(e) => setJoinCode(e.target.value.toUpperCase())} style={{ ...inputStyle(), marginBottom: 12 }} />
-              <button onClick={joinExistingCouple} disabled={loading} style={buttonStyle("secondary")}>{loading ? "Attendi..." : "Unisciti alla coppia"}</button>
+              <input
+                type="text"
+                placeholder="Il tuo nome"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                style={{ ...inputStyle(), marginBottom: 12 }}
+              />
+              <input
+                type="text"
+                placeholder="Codice coppia esistente"
+                value={joinCode}
+                onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
+                style={{ ...inputStyle(), marginBottom: 12 }}
+              />
+              <button
+                onClick={joinExistingCouple}
+                disabled={loading}
+                style={buttonStyle("secondary")}
+              >
+                {loading ? "Attendi..." : "Unisciti alla coppia"}
+              </button>
             </div>
           </div>
 
-          {message ? <div style={{ ...cardStyle({ marginTop: 20, padding: 14 }) }}><span style={{ color: COLORS.muted }}>{message}</span></div> : null}
+          {message ? (
+            <div style={{ ...cardStyle({ marginTop: 20, padding: 14 }) }}>
+              <span style={{ color: COLORS.muted }}>{message}</span>
+            </div>
+          ) : null}
         </div>
       ) : (
         <div className="app-shell">
-          <div className="hover-lift" style={cardStyle({ padding: 24, marginBottom: 20, background: `linear-gradient(135deg, #ffffff 0%, ${COLORS.primarySoft} 100%)` })}>
-            <div style={{ display: "flex", justifyContent: "space-between", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
+          <div
+            className="hover-lift"
+            style={cardStyle({
+              padding: 24,
+              marginBottom: 20,
+              background: `linear-gradient(135deg, #ffffff 0%, ${COLORS.primarySoft} 100%)`,
+            })}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                gap: 16,
+                flexWrap: "wrap",
+                alignItems: "center",
+              }}
+            >
               <div>
-                <div style={{ ...badgeStyle(COLORS.primarySoft, COLORS.primary), marginBottom: 12 }}>📚 Catalogo smart attivo</div>
+                <div
+                  style={{
+                    ...badgeStyle(COLORS.primarySoft, COLORS.primary),
+                    marginBottom: 12,
+                  }}
+                >
+                  📚 Catalogo smart attivo
+                </div>
                 <h1 style={{ margin: 0, fontSize: 34 }}>Il Nome Perfetto</h1>
                 <p style={{ color: COLORS.muted, marginBottom: 0 }}>
-                  Ciao <strong>{profile.name}</strong> — codice coppia <strong>{profile.couple_code}</strong> — catalogo precaricato: <strong>{NAMES_DATABASE.length} nomi</strong>
+                  Ciao <strong>{profile.name}</strong> — codice coppia{" "}
+                  <strong>{profile.couple_code}</strong> — catalogo precaricato:{" "}
+                  <strong>{NAMES_DATABASE.length} nomi</strong>
                 </p>
               </div>
+
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                <button onClick={refreshMatches} style={buttonStyle("secondary")}>Aggiorna match</button>
-                <button onClick={logoutProfile} style={buttonStyle("secondary")}>Esci</button>
+                <button
+                  onClick={refreshMatches}
+                  style={buttonStyle("secondary")}
+                >
+                  Aggiorna match
+                </button>
+                <button onClick={logoutProfile} style={buttonStyle("secondary")}>
+                  Esci
+                </button>
               </div>
             </div>
 
             <div style={{ marginTop: 18 }}>
-              <div style={{ display: "flex", justifyContent: "space-between", fontSize: 14, color: COLORS.muted, marginBottom: 8 }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  fontSize: 14,
+                  color: COLORS.muted,
+                  marginBottom: 8,
+                }}
+              >
                 <span>Progresso voti</span>
-                <span>{votedCount} / {totalCount} · {progress}%</span>
+                <span>
+                  {votedCount} / {totalCount} · {progress}%
+                </span>
               </div>
-              <div style={{ height: 12, borderRadius: 999, background: "#ede9fe", overflow: "hidden" }}>
-                <div style={{ width: `${progress}%`, height: "100%", background: `linear-gradient(90deg, ${COLORS.primary} 0%, ${COLORS.primary2} 100%)` }} />
+              <div
+                style={{
+                  height: 12,
+                  borderRadius: 999,
+                  background: "#ede9fe",
+                  overflow: "hidden",
+                }}
+              >
+                <div
+                  style={{
+                    width: `${progress}%`,
+                    height: "100%",
+                    background: `linear-gradient(90deg, ${COLORS.primary} 0%, ${COLORS.primary2} 100%)`,
+                  }}
+                />
               </div>
             </div>
           </div>
 
           <div className="stats-grid">
-            <div className="hover-lift" style={cardStyle({ background: COLORS.redSoft, border: "1px solid #fecaca" })}><div style={badgeStyle(COLORS.redSoft, COLORS.red)}>👎 No</div><h3 style={{ marginBottom: 0, fontSize: 28 }}>{summary.no}</h3><p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>Passati oltre</p></div>
-            <div className="hover-lift" style={cardStyle({ background: COLORS.greenSoft, border: "1px solid #bbf7d0" })}><div style={badgeStyle(COLORS.greenSoft, COLORS.green)}>👍 Sì</div><h3 style={{ marginBottom: 0, fontSize: 28 }}>{summary.yes}</h3><p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>Ti piacciono</p></div>
-            <div className="hover-lift" style={cardStyle({ background: COLORS.primarySoft, border: "1px solid #e9d5ff" })}><div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>💜 Adoro</div><h3 style={{ marginBottom: 0, fontSize: 28 }}>{summary.love}</h3><p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>Top assoluti</p></div>
-            <div className="hover-lift" style={cardStyle({ background: COLORS.blueSoft, border: "1px solid #bfdbfe" })}><div style={badgeStyle(COLORS.blueSoft, COLORS.blue)}>🤝 Match</div><h3 style={{ marginBottom: 0, fontSize: 28 }}>{matchedNames.length}</h3><p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>In comune col partner</p></div>
+            <div
+              className="hover-lift"
+              style={cardStyle({
+                background: COLORS.redSoft,
+                border: "1px solid #fecaca",
+              })}
+            >
+              <div style={badgeStyle(COLORS.redSoft, COLORS.red)}>👎 No</div>
+              <h3 style={{ marginBottom: 0, fontSize: 28 }}>{summary.no}</h3>
+              <p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>
+                Passati oltre
+              </p>
+            </div>
+
+            <div
+              className="hover-lift"
+              style={cardStyle({
+                background: COLORS.greenSoft,
+                border: "1px solid #bbf7d0",
+              })}
+            >
+              <div style={badgeStyle(COLORS.greenSoft, COLORS.green)}>👍 Sì</div>
+              <h3 style={{ marginBottom: 0, fontSize: 28 }}>{summary.yes}</h3>
+              <p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>
+                Ti piacciono
+              </p>
+            </div>
+
+            <div
+              className="hover-lift"
+              style={cardStyle({
+                background: COLORS.primarySoft,
+                border: "1px solid #e9d5ff",
+              })}
+            >
+              <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>
+                💜 Adoro
+              </div>
+              <h3 style={{ marginBottom: 0, fontSize: 28 }}>{summary.love}</h3>
+              <p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>
+                Top assoluti
+              </p>
+            </div>
+
+            <div
+              className="hover-lift"
+              style={cardStyle({
+                background: COLORS.blueSoft,
+                border: "1px solid #bfdbfe",
+              })}
+            >
+              <div style={badgeStyle(COLORS.blueSoft, COLORS.blue)}>
+                🤝 Match
+              </div>
+              <h3 style={{ marginBottom: 0, fontSize: 28 }}>
+                {matchedNames.length}
+              </h3>
+              <p style={{ marginBottom: 0, color: COLORS.muted, fontSize: 13 }}>
+                In comune col partner
+              </p>
+            </div>
           </div>
 
           <div className="main-grid" style={{ marginTop: 20 }}>
             <div className="stack-grid">
-              <div className="hover-lift" style={cardStyle({ padding: 22, background: "linear-gradient(180deg, #ffffff 0%, #fcfcff 100%)" })}>
-                <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap", marginBottom: 14 }}>
+              <div
+                className="hover-lift"
+                style={cardStyle({
+                  padding: 22,
+                  background: "linear-gradient(180deg, #ffffff 0%, #fcfcff 100%)",
+                })}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    gap: 12,
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                    marginBottom: 14,
+                  }}
+                >
                   <div>
                     <h2 style={{ margin: 0 }}>Deck con significato</h2>
-                    <p style={{ margin: "6px 0 0 0", color: COLORS.muted, fontSize: 14 }}>Ogni nome mostra significato, origine e categorie. Niente AI esterna, ma un catalogo curato e smart.</p>
+                    <p
+                      style={{
+                        margin: "6px 0 0 0",
+                        color: COLORS.muted,
+                        fontSize: 14,
+                      }}
+                    >
+                      Ogni nome mostra significato, origine e categorie. Niente
+                      AI esterna, ma un catalogo curato e smart.
+                    </p>
                   </div>
+
                   <div className="chip-wrap">
-                    <button onClick={() => setDeckFilter("all")} style={buttonStyle(deckFilter === "all" ? "activePill" : "secondary")}>Tutti</button>
-                    <button onClick={() => setDeckFilter("favorites")} style={buttonStyle(deckFilter === "favorites" ? "activePill" : "secondary")}>Solo preferiti</button>
-                    <button onClick={() => setDeckFilter("matches")} style={buttonStyle(deckFilter === "matches" ? "activePill" : "secondary")}>Solo match</button>
+                    <button
+                      onClick={() => setDeckFilter("all")}
+                      style={buttonStyle(
+                        deckFilter === "all" ? "activePill" : "secondary"
+                      )}
+                    >
+                      Tutti
+                    </button>
+                    <button
+                      onClick={() => setDeckFilter("favorites")}
+                      style={buttonStyle(
+                        deckFilter === "favorites" ? "activePill" : "secondary"
+                      )}
+                    >
+                      Solo preferiti
+                    </button>
+                    <button
+                      onClick={() => setDeckFilter("matches")}
+                      style={buttonStyle(
+                        deckFilter === "matches" ? "activePill" : "secondary"
+                      )}
+                    >
+                      Solo match
+                    </button>
                   </div>
                 </div>
 
                 {votesLoading ? (
                   <p style={{ color: COLORS.muted }}>Caricamento voti...</p>
                 ) : currentName && currentMeta ? (
-                  <div style={{ position: "relative", borderRadius: 30, padding: 24, background: `linear-gradient(135deg, ${COLORS.primary} 0%, ${COLORS.primary2} 56%, ${COLORS.primary3} 100%)`, color: "white", minHeight: 380, display: "flex", flexDirection: "column", justifyContent: "space-between", boxShadow: "0 24px 50px rgba(124, 58, 237, 0.24)", overflow: "hidden" }}>
-                    <div style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at top right, rgba(255,255,255,0.30), transparent 35%)" }} />
-                    <div style={{ position: "absolute", right: -40, bottom: -56, width: 180, height: 180, borderRadius: "50%", background: "rgba(255,255,255,0.14)" }} />
+                  <div
+                    style={{
+                      position: "relative",
+                      borderRadius: 30,
+                      padding: 24,
+                      background: `linear-gradient(135deg, ${COLORS.primary} 0%, ${COLORS.primary2} 56%, ${COLORS.primary3} 100%)`,
+                      color: "white",
+                      minHeight: 380,
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      boxShadow: "0 24px 50px rgba(124, 58, 237, 0.24)",
+                      overflow: "hidden",
+                    }}
+                  >
+                    <div
+                      style={{
+                        position: "absolute",
+                        inset: 0,
+                        background:
+                          "radial-gradient(circle at top right, rgba(255,255,255,0.30), transparent 35%)",
+                      }}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        right: -40,
+                        bottom: -56,
+                        width: 180,
+                        height: 180,
+                        borderRadius: "50%",
+                        background: "rgba(255,255,255,0.14)",
+                      }}
+                    />
 
-                    <div style={{ position: "relative", display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
-                      <div style={{ ...badgeStyle("rgba(255,255,255,0.18)", "#fff") }}>Nome {currentIndex + 1} di {filteredNamePool.length}</div>
-                      <div style={{ ...badgeStyle("rgba(255,255,255,0.18)", "#fff") }}>{currentMeta.origin}</div>
+                    <div
+                      style={{
+                        position: "relative",
+                        display: "flex",
+                        justifyContent: "space-between",
+                        gap: 12,
+                        alignItems: "center",
+                        flexWrap: "wrap",
+                      }}
+                    >
+                      <div
+                        style={{
+                          ...badgeStyle("rgba(255,255,255,0.18)", "#fff"),
+                        }}
+                      >
+                        Nome {currentIndex + 1} di {filteredNamePool.length}
+                      </div>
+                      <div
+                        style={{
+                          ...badgeStyle("rgba(255,255,255,0.18)", "#fff"),
+                        }}
+                      >
+                        {currentMeta.origin}
+                      </div>
                     </div>
 
                     <div style={{ position: "relative" }}>
                       <p style={{ opacity: 0.82, marginBottom: 8 }}>Meaning</p>
-                      <h2 style={{ fontSize: 48, marginTop: 0, marginBottom: 10 }}>{currentName}</h2>
-                      <p style={{ opacity: 0.94, fontSize: 16, lineHeight: 1.6, marginBottom: 14 }}>{currentMeta.meaning}</p>
+                      <h2 style={{ fontSize: 48, marginTop: 0, marginBottom: 10 }}>
+                        {currentName}
+                      </h2>
+                      <p
+                        style={{
+                          opacity: 0.94,
+                          fontSize: 16,
+                          lineHeight: 1.6,
+                          marginBottom: 14,
+                        }}
+                      >
+                        {currentMeta.meaning}
+                      </p>
+
                       <div className="chip-wrap" style={{ marginBottom: 8 }}>
                         {currentMeta.styles.slice(0, 4).map((style) => (
-                          <span key={style} style={{ ...badgeStyle("rgba(255,255,255,0.18)", "#fff") }}>{style}</span>
+                          <span
+                            key={style}
+                            style={{
+                              ...badgeStyle("rgba(255,255,255,0.18)", "#fff"),
+                            }}
+                          >
+                            {style}
+                          </span>
                         ))}
                       </div>
+
                       <div className="chip-wrap">
                         {currentMeta.tags.slice(0, 4).map((tag) => (
-                          <span key={tag} style={{ ...badgeStyle("rgba(255,255,255,0.12)", "#fff") }}>{tag}</span>
+                          <span
+                            key={tag}
+                            style={{
+                              ...badgeStyle("rgba(255,255,255,0.12)", "#fff"),
+                            }}
+                          >
+                            {tag}
+                          </span>
                         ))}
                       </div>
                     </div>
 
                     <div className="deck-actions" style={{ position: "relative" }}>
-                      <button onClick={() => handleVote("no")} disabled={voteSaving} style={{ ...buttonStyle("no"), width: "100%" }}>{voteSaving ? "Salvataggio..." : "👎 No"}</button>
-                      <button onClick={() => handleVote("yes")} disabled={voteSaving} style={{ ...buttonStyle("yes"), width: "100%" }}>{voteSaving ? "Salvataggio..." : "👍 Sì"}</button>
-                      <button onClick={() => handleVote("love")} disabled={voteSaving} style={{ ...buttonStyle("love"), width: "100%", background: "#fff", color: COLORS.primary, border: "none" }}>{voteSaving ? "Salvataggio..." : "💜 Adoro"}</button>
+                      <button
+                        onClick={() => handleVote("no")}
+                        disabled={voteSaving}
+                        style={{ ...buttonStyle("no"), width: "100%" }}
+                      >
+                        {voteSaving ? "Salvataggio..." : "👎 No"}
+                      </button>
+                      <button
+                        onClick={() => handleVote("yes")}
+                        disabled={voteSaving}
+                        style={{ ...buttonStyle("yes"), width: "100%" }}
+                      >
+                        {voteSaving ? "Salvataggio..." : "👍 Sì"}
+                      </button>
+                      <button
+                        onClick={() => handleVote("love")}
+                        disabled={voteSaving}
+                        style={{
+                          ...buttonStyle("love"),
+                          width: "100%",
+                          background: "#fff",
+                          color: COLORS.primary,
+                          border: "none",
+                        }}
+                      >
+                        {voteSaving ? "Salvataggio..." : "💜 Adoro"}
+                      </button>
                     </div>
                   </div>
                 ) : (
-                  <div style={{ textAlign: "center", padding: 30, borderRadius: 24, background: COLORS.slateSoft, border: `1px solid ${COLORS.border}` }}>
+                  <div
+                    style={{
+                      textAlign: "center",
+                      padding: 30,
+                      borderRadius: 24,
+                      background: COLORS.slateSoft,
+                      border: `1px solid ${COLORS.border}`,
+                    }}
+                  >
                     <h2 style={{ marginBottom: 8 }}>Hai finito il deck 🎉</h2>
-                    <p style={{ color: COLORS.muted, marginTop: 0 }}>Puoi usare i suggerimenti smart, rivedere i preferiti o controllare i match col partner.</p>
+                    <p style={{ color: COLORS.muted, marginTop: 0 }}>
+                      Puoi usare i suggerimenti smart, rivedere i preferiti o
+                      controllare i match col partner.
+                    </p>
                   </div>
                 )}
               </div>
 
               <div className="two-col">
                 <div className="hover-lift" style={cardStyle()}>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      gap: 12,
+                    }}
+                  >
                     <h3 style={{ marginTop: 0, marginBottom: 0 }}>Preferiti</h3>
-                    <div style={badgeStyle(COLORS.greenSoft, COLORS.green)}>{favoriteNames.length}</div>
+                    <div style={badgeStyle(COLORS.greenSoft, COLORS.green)}>
+                      {favoriteNames.length}
+                    </div>
                   </div>
+
                   {favoriteNames.length === 0 ? (
-                    <p style={{ color: COLORS.muted }}>Ancora nessun preferito. Inizia a votare 👍 o 💜.</p>
+                    <p style={{ color: COLORS.muted }}>
+                      Ancora nessun preferito. Inizia a votare 👍 o 💜.
+                    </p>
                   ) : (
                     <div className="chip-wrap" style={{ marginTop: 12 }}>
                       {favoriteNames.slice(0, 18).map((babyName) => (
-                        <span key={babyName} style={badgeStyle(votes[babyName] === "love" ? COLORS.primarySoft : COLORS.greenSoft, votes[babyName] === "love" ? COLORS.primary : COLORS.green)}>{babyName}</span>
+                        <span
+                          key={babyName}
+                          style={badgeStyle(
+                            votes[babyName] === "love"
+                              ? COLORS.primarySoft
+                              : COLORS.greenSoft,
+                            votes[babyName] === "love"
+                              ? COLORS.primary
+                              : COLORS.green
+                          )}
+                        >
+                          {babyName}
+                        </span>
                       ))}
                     </div>
                   )}
                 </div>
 
                 <div className="hover-lift" style={cardStyle()}>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      gap: 12,
+                    }}
+                  >
                     <h3 style={{ marginTop: 0, marginBottom: 0 }}>Ultimi voti</h3>
-                    <div style={badgeStyle(COLORS.blueSoft, COLORS.blue)}>{recentVotes.length}</div>
+                    <div style={badgeStyle(COLORS.blueSoft, COLORS.blue)}>
+                      {recentVotes.length}
+                    </div>
                   </div>
+
                   {recentVotes.length === 0 ? (
-                    <p style={{ color: COLORS.muted }}>I tuoi ultimi voti appariranno qui.</p>
+                    <p style={{ color: COLORS.muted }}>
+                      I tuoi ultimi voti appariranno qui.
+                    </p>
                   ) : (
                     <div style={{ display: "grid", gap: 10, marginTop: 12 }}>
                       {recentVotes.map((item) => (
-                        <div key={item.babyName} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: 12, borderRadius: 16, background: COLORS.slateSoft, border: `1px solid ${COLORS.border}` }}>
+                        <div
+                          key={item.babyName}
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            padding: 12,
+                            borderRadius: 16,
+                            background: COLORS.slateSoft,
+                            border: `1px solid ${COLORS.border}`,
+                          }}
+                        >
                           <span style={{ fontWeight: 600 }}>{item.babyName}</span>
-                          <span style={voteBadgeStyle(item.vote)}>{item.vote}</span>
+                          <span style={voteBadgeStyle(item.vote)}>
+                            {item.vote}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -701,29 +1158,84 @@ export default function App() {
             </div>
 
             <div className="stack-grid">
-              <div className="hover-lift" style={cardStyle({ background: matchedNames.length ? "linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%)" : "#ffffff" })}>
-                <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+              <div
+                className="hover-lift"
+                style={cardStyle({
+                  background: matchedNames.length
+                    ? "linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%)"
+                    : "#ffffff",
+                })}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    gap: 12,
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
                   <h2 style={{ margin: 0 }}>Match di coppia</h2>
-                  {partner ? <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>Partner: {partner.name}</div> : null}
+                  {partner ? (
+                    <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>
+                      Partner: {partner.name}
+                    </div>
+                  ) : null}
                 </div>
+
                 {matchLoading ? (
-                  <p style={{ color: COLORS.muted, marginTop: 12 }}>Caricamento match...</p>
+                  <p style={{ color: COLORS.muted, marginTop: 12 }}>
+                    Caricamento match...
+                  </p>
                 ) : !partner ? (
                   <div style={{ marginTop: 12 }}>
-                    <p style={{ marginBottom: 8 }}><strong>Nessun partner collegato ancora.</strong></p>
-                    <p style={{ color: COLORS.muted, marginTop: 0 }}>Condividi il tuo codice coppia: <strong>{profile.couple_code}</strong></p>
+                    <p style={{ marginBottom: 8 }}>
+                      <strong>Nessun partner collegato ancora.</strong>
+                    </p>
+                    <p style={{ color: COLORS.muted, marginTop: 0 }}>
+                      Condividi il tuo codice coppia:{" "}
+                      <strong>{profile.couple_code}</strong>
+                    </p>
                   </div>
                 ) : matchedNames.length === 0 ? (
-                  <p style={{ color: COLORS.muted, marginTop: 12 }}>Per ora nessun match positivo. Appena il partner vota, clicca “Aggiorna match”.</p>
+                  <p style={{ color: COLORS.muted, marginTop: 12 }}>
+                    Per ora nessun match positivo. Appena il partner vota,
+                    clicca “Aggiorna match”.
+                  </p>
                 ) : (
                   <>
-                    <div style={{ marginTop: 12, marginBottom: 14, padding: 16, borderRadius: 18, background: "rgba(34,197,94,0.08)", border: "1px solid #bbf7d0" }}>
-                      <p style={{ margin: 0, color: COLORS.muted, fontSize: 14 }}>Compatibilità percepita</p>
-                      <h3 style={{ marginTop: 8, marginBottom: 0, fontSize: 34 }}>{Math.min(100, 50 + matchedNames.length * 10)}%</h3>
+                    <div
+                      style={{
+                        marginTop: 12,
+                        marginBottom: 14,
+                        padding: 16,
+                        borderRadius: 18,
+                        background: "rgba(34,197,94,0.08)",
+                        border: "1px solid #bbf7d0",
+                      }}
+                    >
+                      <p
+                        style={{
+                          margin: 0,
+                          color: COLORS.muted,
+                          fontSize: 14,
+                        }}
+                      >
+                        Compatibilità percepita
+                      </p>
+                      <h3 style={{ marginTop: 8, marginBottom: 0, fontSize: 34 }}>
+                        {Math.min(100, 50 + matchedNames.length * 10)}%
+                      </h3>
                     </div>
+
                     <div className="chip-wrap">
                       {matchedNames.slice(0, 18).map((babyName) => (
-                        <span key={babyName} style={badgeStyle(COLORS.greenSoft, COLORS.green)}>🤝 {babyName}</span>
+                        <span
+                          key={babyName}
+                          style={badgeStyle(COLORS.greenSoft, COLORS.green)}
+                        >
+                          🤝 {babyName}
+                        </span>
                       ))}
                     </div>
                   </>
@@ -731,44 +1243,157 @@ export default function App() {
               </div>
 
               <div className="hover-lift" style={cardStyle()}>
-                <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    gap: 12,
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
                   <h2 style={{ margin: 0 }}>Catalogo smart (gratis)</h2>
-                  <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>{smartSuggestions.length} suggerimenti</div>
+                  <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>
+                    {smartSuggestions.length} suggerimenti
+                  </div>
                 </div>
-                <p style={{ color: COLORS.muted, marginTop: 10 }}>Usa filtri e gusto personale per scoprire 10 nomi consigliati dal catalogo precaricato.</p>
 
-                <label style={{ display: "block", marginBottom: 6, color: COLORS.muted, fontSize: 14 }}>Stile</label>
-                <select value={exploreStyle} onChange={(e) => setExploreStyle(e.target.value)} style={{ ...inputStyle(), marginBottom: 12 }}>
+                <p style={{ color: COLORS.muted, marginTop: 10 }}>
+                  Usa filtri e gusto personale per scoprire 10 nomi consigliati
+                  dal catalogo precaricato.
+                </p>
+
+                <label
+                  style={{
+                    display: "block",
+                    marginBottom: 6,
+                    color: COLORS.muted,
+                    fontSize: 14,
+                  }}
+                >
+                  Stile
+                </label>
+                <select
+                  value={exploreStyle}
+                  onChange={(e) => setExploreStyle(e.target.value)}
+                  style={{ ...inputStyle(), marginBottom: 12 }}
+                >
                   <option value="all">Tutti gli stili</option>
-                  {allStyles.map((style) => <option key={style} value={style}>{style}</option>)}
+                  {allStyles.map((style) => (
+                    <option key={style} value={style}>
+                      {style}
+                    </option>
+                  ))}
                 </select>
 
-                <label style={{ display: "block", marginBottom: 6, color: COLORS.muted, fontSize: 14 }}>Origine</label>
-                <select value={exploreOrigin} onChange={(e) => setExploreOrigin(e.target.value)} style={{ ...inputStyle(), marginBottom: 12 }}>
+                <label
+                  style={{
+                    display: "block",
+                    marginBottom: 6,
+                    color: COLORS.muted,
+                    fontSize: 14,
+                  }}
+                >
+                  Origine
+                </label>
+                <select
+                  value={exploreOrigin}
+                  onChange={(e) => setExploreOrigin(e.target.value)}
+                  style={{ ...inputStyle(), marginBottom: 12 }}
+                >
                   <option value="all">Tutte le origini</option>
-                  {allOrigins.map((origin) => <option key={origin} value={origin}>{origin}</option>)}
+                  {allOrigins.map((origin) => (
+                    <option key={origin} value={origin}>
+                      {origin}
+                    </option>
+                  ))}
                 </select>
 
-                <label style={{ display: "block", marginBottom: 6, color: COLORS.muted, fontSize: 14 }}>Iniziale opzionale</label>
-                <input type="text" maxLength={1} placeholder="Es. A" value={exploreInitial} onChange={(e) => setExploreInitial(e.target.value.toUpperCase())} style={{ ...inputStyle(), marginBottom: 12 }} />
+                <label
+                  style={{
+                    display: "block",
+                    marginBottom: 6,
+                    color: COLORS.muted,
+                    fontSize: 14,
+                  }}
+                >
+                  Iniziale opzionale
+                </label>
+                <input
+                  type="text"
+                  maxLength={1}
+                  placeholder="Es. A"
+                  value={exploreInitial}
+                  onChange={(e) => setExploreInitial(e.target.value.toUpperCase())}
+                  style={{ ...inputStyle(), marginBottom: 12 }}
+                />
 
-                <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 14 }}>
-                  <button onClick={refreshSmartSuggestions} style={buttonStyle("primary")}>Aggiorna suggerimenti</button>
+                <div
+                  style={{
+                    display: "flex",
+                    gap: 10,
+                    flexWrap: "wrap",
+                    marginBottom: 14,
+                  }}
+                >
+                  <button
+                    onClick={refreshSmartSuggestions}
+                    style={buttonStyle("primary")}
+                  >
+                    Aggiorna suggerimenti
+                  </button>
                 </div>
 
                 {smartSuggestions.length === 0 ? (
-                  <p style={{ color: COLORS.muted, marginBottom: 0 }}>Nessun risultato con questi filtri.</p>
+                  <p style={{ color: COLORS.muted, marginBottom: 0 }}>
+                    Nessun risultato con questi filtri.
+                  </p>
                 ) : (
                   <div style={{ display: "grid", gap: 10 }}>
                     {smartSuggestions.map((item) => (
-                      <div key={item.name} style={{ padding: 12, borderRadius: 16, background: COLORS.slateSoft, border: `1px solid ${COLORS.border}` }}>
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 10, marginBottom: 6 }}>
+                      <div
+                        key={item.name}
+                        style={{
+                          padding: 12,
+                          borderRadius: 16,
+                          background: COLORS.slateSoft,
+                          border: `1px solid ${COLORS.border}`,
+                        }}
+                      >
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            gap: 10,
+                            marginBottom: 6,
+                          }}
+                        >
                           <strong>{item.name}</strong>
-                          <span style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>{item.origin}</span>
+                          <span
+                            style={badgeStyle(COLORS.primarySoft, COLORS.primary)}
+                          >
+                            {item.origin}
+                          </span>
                         </div>
-                        <div style={{ color: COLORS.muted, fontSize: 13, lineHeight: 1.45 }}>{item.meaning}</div>
+                        <div
+                          style={{
+                            color: COLORS.muted,
+                            fontSize: 13,
+                            lineHeight: 1.45,
+                          }}
+                        >
+                          {item.meaning}
+                        </div>
                         <div className="chip-wrap" style={{ marginTop: 8 }}>
-                          {item.styles.slice(0, 3).map((style) => <span key={style} style={badgeStyle(COLORS.greenSoft, COLORS.green)}>{style}</span>)}
+                          {item.styles.slice(0, 3).map((style) => (
+                            <span
+                              key={style}
+                              style={badgeStyle(COLORS.greenSoft, COLORS.green)}
+                            >
+                              {style}
+                            </span>
+                          ))}
                         </div>
                       </div>
                     ))}
@@ -779,15 +1404,46 @@ export default function App() {
               <div className="hover-lift" style={cardStyle()}>
                 <h2 style={{ marginTop: 0 }}>Azioni rapide</h2>
                 <div style={{ display: "grid", gap: 10 }}>
-                  <button onClick={resetMyVotes} disabled={voteSaving} style={buttonStyle("warning")}>Azzera i miei voti</button>
-                  <button onClick={() => { setDeckFilter("all"); setMessage("Filtro deck resettato"); }} style={buttonStyle("secondary")}>Reset filtri deck</button>
+                  <button
+                    onClick={resetMyVotes}
+                    disabled={voteSaving}
+                    style={buttonStyle("warning")}
+                  >
+                    Azzera i miei voti
+                  </button>
+                  <button
+                    onClick={() => {
+                      setDeckFilter("all");
+                      setMessage("Filtro deck resettato");
+                    }}
+                    style={buttonStyle("secondary")}
+                  >
+                    Reset filtri deck
+                  </button>
                 </div>
-                <p style={{ color: COLORS.muted, fontSize: 13, marginTop: 12, marginBottom: 0 }}>“Azzera i miei voti” cancella solo i tuoi voti dal database, non quelli del partner.</p>
+                <p
+                  style={{
+                    color: COLORS.muted,
+                    fontSize: 13,
+                    marginTop: 12,
+                    marginBottom: 0,
+                  }}
+                >
+                  “Azzera i miei voti” cancella solo i tuoi voti dal database,
+                  non quelli del partner.
+                </p>
               </div>
             </div>
           </div>
 
-          {message ? <div className="message-bar" style={{ ...cardStyle({ marginTop: 20, padding: 14 }) }}><span style={{ color: COLORS.muted }}>{message}</span></div> : null}
+          {message ? (
+            <div
+              className="message-bar"
+              style={{ ...cardStyle({ marginTop: 20, padding: 14 }) }}
+            >
+              <span style={{ color: COLORS.muted }}>{message}</span>
+            </div>
+          ) : null}
         </div>
       )}
     </div>
