@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { supabase } from "./lib/supabase";
+
+const STORAGE_KEY = "baby_name_app_profile";
 
 export default function App() {
   const [name, setName] = useState("");
@@ -7,6 +9,34 @@ export default function App() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [profile, setProfile] = useState(null);
+  const [checkingSession, setCheckingSession] = useState(true);
+
+  useEffect(() => {
+    try {
+      const savedProfile = localStorage.getItem(STORAGE_KEY);
+      if (savedProfile) {
+        const parsedProfile = JSON.parse(savedProfile);
+        if (parsedProfile && parsedProfile.id && parsedProfile.name && parsedProfile.couple_code) {
+          setProfile(parsedProfile);
+          setMessage(
+            `Bentornata/o ${parsedProfile.name}! Sei collegata/o alla coppia ${parsedProfile.couple_code}`
+          );
+        }
+      }
+    } catch (error) {
+      console.error("Errore lettura localStorage:", error);
+    } finally {
+      setCheckingSession(false);
+    }
+  }, []);
+
+  function saveProfileLocally(profileData) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(profileData));
+  }
+
+  function clearSavedProfile() {
+    localStorage.removeItem(STORAGE_KEY);
+  }
 
   function generateCoupleCode() {
     return Math.random().toString(36).substring(2, 8).toUpperCase();
@@ -40,8 +70,10 @@ export default function App() {
       }
 
       setProfile(data);
+      saveProfileLocally(data);
       setMessage("Profilo creato! Il tuo codice coppia è: " + coupleCode);
       setJoinCode("");
+      setName("");
     } catch (err) {
       console.error("UNEXPECTED ERROR:", err);
       setMessage("Errore inatteso: " + err.message);
@@ -100,7 +132,10 @@ export default function App() {
       }
 
       setProfile(data);
+      saveProfileLocally(data);
       setMessage("Profilo collegato correttamente alla coppia " + normalizedCode);
+      setName("");
+      setJoinCode("");
     } catch (err) {
       console.error("UNEXPECTED ERROR:", err);
       setMessage("Errore inatteso: " + err.message);
@@ -109,11 +144,51 @@ export default function App() {
     }
   }
 
-  function resetForm() {
+  function logoutProfile() {
+    clearSavedProfile();
+    setProfile(null);
     setName("");
     setJoinCode("");
-    setMessage("");
-    setProfile(null);
+    setMessage("Profilo scollegato da questo dispositivo");
+  }
+
+  if (checkingSession) {
+    return (
+      <div style={{ padding: 24, fontFamily: "Arial, sans-serif", maxWidth: 560, margin: "0 auto" }}>
+        <h1>Il Nome Perfetto</h1>
+        <p>Caricamento profilo...</p>
+      </div>
+    );
+  }
+
+  if (profile) {
+    return (
+      <div style={{ padding: 24, fontFamily: "Arial, sans-serif", maxWidth: 560, margin: "0 auto" }}>
+        <h1>Il Nome Perfetto</h1>
+        <p>Profilo già attivo su questo dispositivo.</p>
+
+        {message ? <p style={{ marginTop: 20 }}>{message}</p> : null}
+
+        <div
+          style={{
+            marginTop: 24,
+            padding: 16,
+            border: "1px solid #ddd",
+            borderRadius: 12,
+            background: "#fafafa",
+          }}
+        >
+          <h2 style={{ marginTop: 0 }}>Profilo attivo</h2>
+          <p><strong>Nome:</strong> {profile.name}</p>
+          <p><strong>Codice coppia:</strong> {profile.couple_code}</p>
+          <p><strong>ID profilo:</strong> {profile.id}</p>
+
+          <button onClick={logoutProfile} style={{ padding: "10px 14px" }}>
+            Esci da questo dispositivo
+          </button>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -154,27 +229,6 @@ export default function App() {
       </div>
 
       {message ? <p style={{ marginTop: 20 }}>{message}</p> : null}
-
-      {profile ? (
-        <div
-          style={{
-            marginTop: 24,
-            padding: 16,
-            border: "1px solid #ddd",
-            borderRadius: 12,
-            background: "#fafafa",
-          }}
-        >
-          <h2 style={{ marginTop: 0 }}>Profilo attivo</h2>
-          <p><strong>Nome:</strong> {profile.name}</p>
-          <p><strong>Codice coppia:</strong> {profile.couple_code}</p>
-          <p><strong>ID profilo:</strong> {profile.id}</p>
-
-          <button onClick={resetForm} style={{ padding: "10px 14px" }}>
-            Reset schermata
-          </button>
-        </div>
-      ) : null}
     </div>
   );
 }
