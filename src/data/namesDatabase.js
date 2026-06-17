@@ -1,6 +1,7 @@
 export const NAMES_DATABASE = [
   {
     "name": "Sofia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -8,17 +9,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "S",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Aurora",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -28,15 +31,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "A",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Ginevra",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -44,17 +48,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "G",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Vittoria",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -64,15 +70,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "V",
     "length": "lungo",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Beatrice",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -80,17 +87,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "B",
     "length": "lungo",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Emma",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante",
@@ -101,15 +110,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "E",
     "length": "corto",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Alice",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -117,17 +127,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "A",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Ludovica",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -137,15 +149,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "L",
     "length": "lungo",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Matilde",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -153,17 +166,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "M",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Camilla",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -173,15 +188,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "C",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Bianca",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -189,17 +205,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "B",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Greta",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -209,15 +227,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "G",
     "length": "medio",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Mia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante",
@@ -226,17 +245,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "M",
     "length": "corto",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Anna",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante",
@@ -247,15 +268,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "A",
     "length": "corto",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Gaia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante",
@@ -264,17 +286,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "G",
     "length": "corto",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Noemi",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -284,15 +308,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "N",
     "length": "medio",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Viola",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -300,17 +325,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "V",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Adele",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -320,15 +347,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "A",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Cecilia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -336,17 +364,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "C",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Anita",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -356,15 +386,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "A",
     "length": "medio",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Angelica",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -372,17 +403,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "A",
     "length": "lungo",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Arianna",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -392,15 +425,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "A",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Carlotta",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -408,17 +442,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "C",
     "length": "lungo",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Chiara",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -428,15 +464,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "C",
     "length": "medio",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Claudia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -444,17 +481,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "C",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Costanza",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -464,15 +503,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "C",
     "length": "lungo",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Diana",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -480,17 +520,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "D",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Eleonora",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -500,15 +542,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "E",
     "length": "lungo",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Elisa",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -516,17 +559,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "E",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Elisabetta",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -536,15 +581,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "E",
     "length": "lungo",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Erica",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -552,17 +598,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "E",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Flavia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -572,15 +620,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "F",
     "length": "medio",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Francesca",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -588,17 +637,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "F",
     "length": "lungo",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Giada",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -608,15 +659,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "G",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Giorgia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -624,17 +676,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "G",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Gloria",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -644,15 +698,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "G",
     "length": "medio",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Giulia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -660,17 +715,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "G",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Ilaria",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -680,15 +737,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "I",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Irene",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -696,17 +754,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "I",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Lavinia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -716,15 +776,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "L",
     "length": "medio",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Letizia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -732,17 +793,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "L",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Lidia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -752,15 +815,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "L",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Livia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -768,17 +832,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "L",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Maddalena",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -788,15 +854,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "M",
     "length": "lungo",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Margherita",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -804,17 +871,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "M",
     "length": "lungo",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Marta",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -824,15 +893,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "M",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Melissa",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -840,17 +910,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "raffinato",
-      "tradizionale"
+      "tradizionale",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "M",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Monica",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -860,15 +932,36 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "M",
     "length": "medio",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Nicole",
+    "origin": "Italiano",
+    "styles": [
+      "classico",
+      "elegante"
+    ],
+    "tags": [
+      "italiano",
+      "raffinato",
+      "tradizionale",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "N",
+    "length": "medio",
+    "international": false,
+    "popularity": "alta",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Paola",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -878,15 +971,16 @@ export const NAMES_DATABASE = [
       "raffinato",
       "tradizionale"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
-    "initial": "N",
+    "vibe": "raffinato",
+    "initial": "P",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Nina",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante",
@@ -895,17 +989,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "N",
     "length": "corto",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Olga",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante",
@@ -914,35 +1010,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "O",
     "length": "corto",
     "international": false,
-    "popularity": "media"
-  },
-  {
-    "name": "Paola",
-    "styles": [
-      "classico",
-      "elegante"
-    ],
-    "tags": [
-      "italiano",
-      "dolce",
-      "luminoso"
-    ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
-    "initial": "P",
-    "length": "medio",
-    "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Rebecca",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -950,17 +1030,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "R",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Rosa",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante",
@@ -969,17 +1051,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "R",
     "length": "corto",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Serena",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -987,17 +1071,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "S",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Silvia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1005,17 +1091,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "S",
     "length": "medio",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Simona",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1023,17 +1111,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "S",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Sveva",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1041,17 +1131,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "S",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Teresa",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1059,17 +1151,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "T",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Valentina",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1077,17 +1171,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "V",
     "length": "lungo",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Vanessa",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1095,17 +1191,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "V",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Veronica",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1113,17 +1211,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "V",
     "length": "lungo",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Virginia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1131,17 +1231,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "V",
     "length": "lungo",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Zoe",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante",
@@ -1150,17 +1252,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "Z",
     "length": "corto",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Agnese",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1168,17 +1272,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "A",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Alessandra",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1186,17 +1292,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "A",
     "length": "lungo",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Ambra",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1204,35 +1312,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "A",
     "length": "medio",
     "international": false,
-    "popularity": "media"
-  },
-  {
-    "name": "Ariela",
-    "styles": [
-      "classico",
-      "elegante"
-    ],
-    "tags": [
-      "italiano",
-      "dolce",
-      "luminoso"
-    ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
-    "initial": "A",
-    "length": "medio",
-    "international": false,
-    "popularity": "bassa"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Asia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante",
@@ -1241,17 +1333,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "A",
     "length": "corto",
     "international": false,
-    "popularity": "alta"
+    "popularity": "bassa",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Assunta",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1259,17 +1353,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "A",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "alta",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Caterina",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1277,17 +1373,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "C",
     "length": "lungo",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Debora",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1295,17 +1393,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "D",
     "length": "medio",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Donatella",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1313,17 +1413,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "D",
     "length": "lungo",
     "international": false,
-    "popularity": "alta"
+    "popularity": "bassa",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Elettra",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1331,17 +1433,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "E",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "alta",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Elena",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1349,17 +1453,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "E",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Fiorella",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1367,17 +1473,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "F",
     "length": "lungo",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Federica",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1385,35 +1493,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "F",
     "length": "lungo",
     "international": false,
-    "popularity": "alta"
-  },
-  {
-    "name": "Gaetana",
-    "styles": [
-      "classico",
-      "elegante"
-    ],
-    "tags": [
-      "italiano",
-      "dolce",
-      "luminoso"
-    ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
-    "initial": "G",
-    "length": "medio",
-    "international": false,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Gemma",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1421,35 +1513,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "G",
     "length": "medio",
     "international": false,
-    "popularity": "media"
-  },
-  {
-    "name": "Immacolata",
-    "styles": [
-      "classico",
-      "elegante"
-    ],
-    "tags": [
-      "italiano",
-      "dolce",
-      "luminoso"
-    ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
-    "initial": "I",
-    "length": "lungo",
-    "international": false,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Laura",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1457,17 +1533,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "L",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Lucrezia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1475,17 +1553,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "L",
     "length": "lungo",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Luna",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante",
@@ -1494,17 +1574,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "L",
     "length": "corto",
     "international": false,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Marianna",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1512,17 +1594,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "M",
     "length": "lungo",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Michela",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1530,17 +1614,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "M",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Miriana",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1548,17 +1634,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "M",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Nadia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1566,17 +1654,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "N",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Nicoletta",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1584,17 +1674,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "N",
     "length": "lungo",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Ornella",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1602,17 +1694,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "O",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Patrizia",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1620,17 +1714,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "P",
     "length": "lungo",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Petra",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1638,17 +1734,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "P",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Rachele",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1656,17 +1754,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "R",
     "length": "medio",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Romina",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1674,17 +1774,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "R",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Samanta",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1692,17 +1794,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "S",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Selene",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1710,17 +1814,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "S",
     "length": "medio",
     "international": false,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Stella",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1728,17 +1834,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Evoca raffinatezza, calore e una bellezza senza tempo. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "S",
     "length": "medio",
     "international": false,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Tania",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante"
@@ -1746,17 +1854,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Associato a luce, grazia o nobiltà nella tradizione italiana. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "raffinato",
     "initial": "T",
     "length": "medio",
     "international": false,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Tea",
+    "origin": "Italiano",
     "styles": [
       "classico",
       "elegante",
@@ -1765,108 +1875,120 @@ export const NAMES_DATABASE = [
     "tags": [
       "italiano",
       "dolce",
-      "luminoso"
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Nome dal gusto classico, spesso legato a eleganza e dolcezza. Vibe classico e rassicurante.",
-    "origin": "Italiano",
+    "vibe": "rassicurante",
     "initial": "T",
     "length": "corto",
     "international": false,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Adelaide",
+    "origin": "Italiano",
     "styles": [
-      "elegante",
-      "internazionale"
+      "classico",
+      "elegante"
     ],
     "tags": [
-      "raffinato",
-      "classico",
-      "luminoso"
+      "italiano",
+      "dolce",
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "A",
     "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Adriana",
-    "styles": [
-      "elegante",
-      "internazionale"
-    ],
-    "tags": [
-      "raffinato",
-      "classico",
-      "luminoso"
-    ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
+    "international": false,
+    "popularity": "bassa",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Agata",
+    "origin": "Italiano",
     "styles": [
-      "elegante",
-      "internazionale"
+      "classico",
+      "elegante"
     ],
     "tags": [
-      "raffinato",
-      "classico",
-      "luminoso"
+      "italiano",
+      "dolce",
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "rassicurante",
     "initial": "A",
     "length": "medio",
-    "international": true,
-    "popularity": "alta"
+    "international": false,
+    "popularity": "alta",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Trasmette equilibrio e familiarità."
   },
   {
     "name": "Alba",
+    "origin": "Italiano",
     "styles": [
+      "classico",
       "elegante",
-      "internazionale",
       "corto"
     ],
     "tags": [
-      "raffinato",
-      "classico",
-      "luminoso"
+      "italiano",
+      "dolce",
+      "luminoso",
+      "raffinato"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "A",
     "length": "corto",
-    "international": true,
-    "popularity": "media"
+    "international": false,
+    "popularity": "media",
+    "meaning": "Evoca calore, grazia e una femminilità elegante. Lascia un’impressione curata e di classe."
   },
   {
-    "name": "Alessia",
+    "name": "Ariela",
+    "origin": "Italiano",
     "styles": [
-      "elegante",
-      "internazionale"
+      "classico",
+      "elegante"
     ],
     "tags": [
-      "raffinato",
-      "classico",
-      "luminoso"
+      "italiano",
+      "dolce",
+      "luminoso",
+      "rassicurante"
     ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "rassicurante",
     "initial": "A",
     "length": "medio",
-    "international": true,
-    "popularity": "media"
+    "international": false,
+    "popularity": "media",
+    "meaning": "Richiama tradizione, dolcezza e naturale raffinatezza. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Adriana",
+    "origin": "Italiano",
+    "styles": [
+      "classico",
+      "elegante"
+    ],
+    "tags": [
+      "italiano",
+      "dolce",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "A",
+    "length": "medio",
+    "international": false,
+    "popularity": "bassa",
+    "meaning": "Nome dal gusto italiano, armonioso e senza tempo. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Amalia",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -1874,17 +1996,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "A",
     "length": "medio",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Ha un sapore colto e raffinato. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Amelia",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -1894,15 +2018,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "A",
     "length": "medio",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Anastasia",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -1910,17 +2035,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "A",
     "length": "lungo",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama radici classiche ed equilibrio. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Angela",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -1930,15 +2057,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "A",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Ha un sapore colto e raffinato. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Annamaria",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -1946,17 +2074,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "A",
     "length": "lungo",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Antonella",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -1966,15 +2096,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "A",
     "length": "lungo",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Richiama radici classiche ed equilibrio. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Arabella",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -1982,17 +2113,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "A",
     "length": "lungo",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Ha un sapore colto e raffinato. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Aurelia",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2002,15 +2135,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "A",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Benedetta",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2018,17 +2152,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "B",
     "length": "lungo",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Richiama radici classiche ed equilibrio. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Cristina",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2038,15 +2174,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "C",
     "length": "lungo",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Ha un sapore colto e raffinato. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Delfina",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2054,17 +2191,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "D",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Demetra",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2074,15 +2213,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "D",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Richiama radici classiche ed equilibrio. Lascia un’impressione curata e di classe."
   },
   {
-    "name": "Desirée",
+    "name": "Desiree",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2090,17 +2230,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "D",
     "length": "medio",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Ha un sapore colto e raffinato. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Emanuela",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2110,15 +2252,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "E",
     "length": "lungo",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Emilia",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2126,17 +2269,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "E",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama radici classiche ed equilibrio. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Eugenia",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2146,15 +2291,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "E",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Ha un sapore colto e raffinato. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Eva",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale",
@@ -2163,17 +2309,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "E",
     "length": "corto",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Fabiola",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2183,15 +2331,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "F",
     "length": "medio",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Richiama radici classiche ed equilibrio. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Felicia",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2199,17 +2348,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "F",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Ha un sapore colto e raffinato. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Filippa",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2219,15 +2370,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "F",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Fortuna",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2235,17 +2387,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "F",
     "length": "medio",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Richiama radici classiche ed equilibrio. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Gisella",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2255,15 +2409,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "G",
     "length": "medio",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Ha un sapore colto e raffinato. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Helena",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2271,17 +2426,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "H",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Isabella",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2291,15 +2448,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "I",
     "length": "lungo",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Richiama radici classiche ed equilibrio. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Iside",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2307,17 +2465,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "I",
     "length": "medio",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Ha un sapore colto e raffinato. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Lea",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale",
@@ -2328,15 +2488,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "L",
     "length": "corto",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Leonora",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2344,17 +2505,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "L",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama radici classiche ed equilibrio. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Lia",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale",
@@ -2365,15 +2528,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "L",
     "length": "corto",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Ha un sapore colto e raffinato. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Liliana",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2381,17 +2545,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "L",
     "length": "medio",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Lucia",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2401,15 +2567,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "L",
     "length": "medio",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Richiama radici classiche ed equilibrio. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Magdalena",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2417,17 +2584,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "M",
     "length": "lungo",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Ha un sapore colto e raffinato. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Marcella",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2437,15 +2606,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "M",
     "length": "lungo",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Marina",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2453,17 +2623,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "M",
     "length": "medio",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Richiama radici classiche ed equilibrio. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Medea",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2473,15 +2645,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "M",
     "length": "medio",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Ha un sapore colto e raffinato. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Nora",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale",
@@ -2490,17 +2663,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "N",
     "length": "corto",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Olivia",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2510,15 +2685,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "O",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Richiama radici classiche ed equilibrio. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Ottavia",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2526,17 +2702,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "O",
     "length": "medio",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Ha un sapore colto e raffinato. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Priscilla",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2546,15 +2724,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "P",
     "length": "lungo",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Regina",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2562,17 +2741,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "R",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama radici classiche ed equilibrio. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Renata",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2582,15 +2763,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "R",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Ha un sapore colto e raffinato. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Rita",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale",
@@ -2599,17 +2781,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "R",
     "length": "corto",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Romilda",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2619,15 +2803,16 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Richiama idee di saggezza, armonia e forza interiore. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "raffinato",
     "initial": "R",
     "length": "medio",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Richiama radici classiche ed equilibrio. Lascia un’impressione curata e di classe."
   },
   {
     "name": "Sabina",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2635,17 +2820,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "raffinato",
       "classico",
-      "luminoso"
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Tradizionalmente collegato a bellezza, equilibrio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Greco/Latino",
+    "vibe": "sofisticato",
     "initial": "S",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Ha un sapore colto e raffinato. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Valeria",
+    "origin": "Greco/Latino",
     "styles": [
       "elegante",
       "internazionale"
@@ -2655,6352 +2842,6693 @@ export const NAMES_DATABASE = [
       "classico",
       "luminoso"
     ],
-    "meaning": "Evoca un carattere luminoso, colto e raffinato. Percepito come elegante e raffinato.",
+    "vibe": "raffinato",
+    "initial": "V",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Alessia",
     "origin": "Greco/Latino",
-    "initial": "V",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Abigail",
     "styles": [
-      "moderno",
+      "elegante",
       "internazionale"
     ],
     "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Addison",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Adeline",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Aileen",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Ainsley",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Alana",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Alexa",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Alexis",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Alina",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Alison",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Alyssa",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Amaya",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Amber",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Amira",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Andrea",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Anika",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Aria",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "corto",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Ariel",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Aubrey",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Audrey",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Ava",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "corto",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Bella",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "B",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Brianna",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "B",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Brooklyn",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "B",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Candice",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "C",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Cara",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "C",
-    "length": "corto",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Carmen",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "C",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Carolina",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "C",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Cassidy",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "C",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Charlotte",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "C",
-    "length": "lungo",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Chelsea",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "C",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Chloe",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "C",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Claire",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "C",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Daisy",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "D",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Daphne",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "D",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Delilah",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "D",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Ella",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "E",
-    "length": "corto",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Ellie",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "E",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Emily",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "E",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Erin",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "E",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Estelle",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "E",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Evelyn",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "E",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Fiona",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "F",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Gabrielle",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "G",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Grace",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "G",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Hannah",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "H",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Harper",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "H",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Hazel",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "H",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Heidi",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "H",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Hope",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "contemporaneo",
-      "smart"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "H",
-    "length": "corto",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Isla",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "I",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Jane",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "J",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Jasmine",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "J",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Jenna",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "J",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Jessica",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "J",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Joanna",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "J",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Jocelyn",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "J",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Jolie",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "J",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Josephine",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "J",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Joy",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "J",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Julia",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "J",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "June",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "J",
-    "length": "corto",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Karen",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "K",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Kate",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "K",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Katie",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "K",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Kayla",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "K",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Keira",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "K",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Kelly",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "K",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Kimberly",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "K",
-    "length": "lungo",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Kylie",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "K",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Lana",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "L",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Lauraine",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "L",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Lauren",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "L",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Layla",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "L",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Leah",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "L",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Leona",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "L",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Lexi",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "L",
-    "length": "corto",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Lila",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "L",
-    "length": "corto",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Lillian",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "L",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Lily",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "L",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Linda",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "L",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Lindsay",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "L",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Logan",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "L",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Lucy",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "L",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Madeline",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "M",
-    "length": "lungo",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Madison",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Makenna",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Mallory",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Marilyn",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Marissa",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Melanie",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Naomi",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "N",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Natalie",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "N",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Paige",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "P",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Pamela",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "P",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Penelope",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "P",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Piper",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "P",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Quinn",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "Q",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Riley",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "bright",
-      "friendly"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "R",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Ruby",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "R",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Sabrina",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Sadie",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Samantha",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Sandra",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Sara",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "corto",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Savannah",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "lungo",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Scarlett",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Selena",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Sharon",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Sheila",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Sienna",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Skylar",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Sophia",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Sophie",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Stacy",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Summer",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Sydney",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Tamara",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "T",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Taylor",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "T",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Thea",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "T",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Tiffany",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "T",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Tracy",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "T",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Valerie",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "V",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Victoria",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "V",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Violet",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "V",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Whitney",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "W",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Willa",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "W",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Yasmin",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "Y",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Zara",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "Z",
-    "length": "corto",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Zelda",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "Z",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Zoey",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "Z",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Aaliyah",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Aimee",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Ashley",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Brenda",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "B",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Britney",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "B",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Camille",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "C",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Celine",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "C",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Cindy",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "C",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Danielle",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "D",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Elsa",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "E",
-    "length": "corto",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Esme",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "E",
-    "length": "corto",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Farah",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "F",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Genevieve",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "G",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Ines",
-    "styles": [
-      "moderno",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Nome versatile e contemporaneo, percepito come fresco e internazionale. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "I",
-    "length": "corto",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Juliette",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Spesso associato a modernità, semplicità e grande adattabilità. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "J",
-    "length": "lungo",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Kendall",
-    "styles": [
-      "moderno",
-      "internazionale"
-    ],
-    "tags": [
-      "internazionale",
-      "pop",
-      "fresh"
-    ],
-    "meaning": "Ha un suono attuale e una personalità brillante e aperta. Ha un tono moderno e fresco.",
-    "origin": "Internazionale",
-    "initial": "K",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Abigael",
-    "styles": [
+      "raffinato",
       "classico",
-      "internazionale"
+      "luminoso",
+      "sofisticato"
     ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Tradizionalmente legato a vita, dono, speranza o protezione. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
+    "vibe": "sofisticato",
     "initial": "A",
     "length": "medio",
     "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Adina",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Richiama una dimensione profonda e luminosa della tradizione biblica. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Richiama radici classiche ed equilibrio. Ha un’eleganza più ricercata e distintiva."
   },
   {
     "name": "Alma",
+    "origin": "Greco/Latino",
     "styles": [
-      "classico",
+      "elegante",
       "internazionale",
       "corto"
     ],
     "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
+      "raffinato",
+      "classico",
+      "luminoso"
     ],
-    "meaning": "Spesso associato a grazia, gioia e significati spirituali positivi. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
+    "vibe": "raffinato",
     "initial": "A",
     "length": "corto",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Ha un sapore colto e raffinato. Lascia un’impressione curata e di classe."
   },
   {
-    "name": "Anael",
+    "name": "Corinna",
+    "origin": "Greco/Latino",
     "styles": [
-      "classico",
+      "elegante",
       "internazionale"
     ],
     "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
+      "raffinato",
+      "classico",
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Tradizionalmente legato a vita, dono, speranza o protezione. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "A",
+    "vibe": "sofisticato",
+    "initial": "C",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Ha un’eleganza più ricercata e distintiva."
   },
   {
-    "name": "Arielle",
+    "name": "Clio",
+    "origin": "Greco/Latino",
     "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Richiama una dimensione profonda e luminosa della tradizione biblica. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Batya",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Spesso associato a grazia, gioia e significati spirituali positivi. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "B",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Daniela",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Tradizionalmente legato a vita, dono, speranza o protezione. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "D",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Dalia",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Richiama una dimensione profonda e luminosa della tradizione biblica. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "D",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Deborah",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Spesso associato a grazia, gioia e significati spirituali positivi. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "D",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Dinah",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Tradizionalmente legato a vita, dono, speranza o protezione. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "D",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Eden",
-    "styles": [
-      "classico",
+      "elegante",
       "internazionale",
       "corto"
     ],
     "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
+      "raffinato",
+      "classico",
+      "luminoso"
     ],
-    "meaning": "Richiama una dimensione profonda e luminosa della tradizione biblica. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "E",
+    "vibe": "raffinato",
+    "initial": "C",
     "length": "corto",
     "international": true,
-    "popularity": "alta"
+    "popularity": "bassa",
+    "meaning": "Richiama radici classiche ed equilibrio. Lascia un’impressione curata e di classe."
   },
   {
-    "name": "Eliana",
+    "name": "Penelope",
+    "origin": "Greco/Latino",
     "styles": [
-      "classico",
+      "elegante",
       "internazionale"
     ],
     "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
+      "raffinato",
+      "classico",
+      "luminoso",
+      "sofisticato"
     ],
-    "meaning": "Spesso associato a grazia, gioia e significati spirituali positivi. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "E",
-    "length": "medio",
+    "vibe": "sofisticato",
+    "initial": "P",
+    "length": "lungo",
     "international": true,
-    "popularity": "media"
+    "popularity": "alta",
+    "meaning": "Ha un sapore colto e raffinato. Ha un’eleganza più ricercata e distintiva."
   },
   {
-    "name": "Elina",
+    "name": "Gaetana",
+    "origin": "Greco/Latino",
     "styles": [
-      "classico",
+      "elegante",
       "internazionale"
     ],
     "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Tradizionalmente legato a vita, dono, speranza o protezione. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "E",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Elise",
-    "styles": [
+      "raffinato",
       "classico",
-      "internazionale"
+      "luminoso"
     ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Richiama una dimensione profonda e luminosa della tradizione biblica. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "E",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Esther",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Spesso associato a grazia, gioia e significati spirituali positivi. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "E",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Gabriela",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Tradizionalmente legato a vita, dono, speranza o protezione. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
+    "vibe": "raffinato",
     "initial": "G",
-    "length": "lungo",
+    "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca eleganza, storia e forza tranquilla. Lascia un’impressione curata e di classe."
   },
   {
-    "name": "Hadas",
+    "name": "Abigail",
+    "origin": "Internazionale",
     "styles": [
-      "classico",
+      "moderno",
       "internazionale"
     ],
     "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
     ],
-    "meaning": "Richiama una dimensione profonda e luminosa della tradizione biblica. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "H",
+    "vibe": "fresco",
+    "initial": "A",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Hanna",
+    "name": "Addison",
+    "origin": "Internazionale",
     "styles": [
-      "classico",
+      "moderno",
       "internazionale"
     ],
     "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
+      "internazionale",
+      "contemporaneo",
+      "smart"
     ],
-    "meaning": "Spesso associato a grazia, gioia e significati spirituali positivi. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "H",
+    "vibe": "smart",
+    "initial": "A",
     "length": "medio",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
   },
   {
-    "name": "Ilana",
+    "name": "Adeline",
+    "origin": "Internazionale",
     "styles": [
-      "classico",
+      "moderno",
       "internazionale"
     ],
     "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
     ],
-    "meaning": "Tradizionalmente legato a vita, dono, speranza o protezione. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "I",
+    "vibe": "fresco",
+    "initial": "A",
     "length": "medio",
     "international": true,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Jael",
+    "name": "Aileen",
+    "origin": "Internazionale",
     "styles": [
-      "classico",
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Ainsley",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Alana",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Alexa",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Alexis",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Alina",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Alison",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Alyssa",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Amaya",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Amber",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Amira",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Andrea",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Anika",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Aria",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
       "internazionale",
       "corto"
     ],
     "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
     ],
-    "meaning": "Richiama una dimensione profonda e luminosa della tradizione biblica. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "J",
+    "vibe": "fresco",
+    "initial": "A",
     "length": "corto",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Judith",
+    "name": "Ariel",
+    "origin": "Internazionale",
     "styles": [
-      "classico",
+      "moderno",
       "internazionale"
     ],
     "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
+      "internazionale",
+      "contemporaneo",
+      "smart"
     ],
-    "meaning": "Spesso associato a grazia, gioia e significati spirituali positivi. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "J",
+    "vibe": "smart",
+    "initial": "A",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
   },
   {
-    "name": "Keren",
+    "name": "Aubrey",
+    "origin": "Internazionale",
     "styles": [
-      "classico",
+      "moderno",
       "internazionale"
     ],
     "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
     ],
-    "meaning": "Tradizionalmente legato a vita, dono, speranza o protezione. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "K",
+    "vibe": "fresco",
+    "initial": "A",
     "length": "medio",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Liora",
+    "name": "Audrey",
+    "origin": "Internazionale",
     "styles": [
-      "classico",
+      "moderno",
       "internazionale"
     ],
     "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
+      "internazionale",
+      "contemporaneo",
+      "smart"
     ],
-    "meaning": "Richiama una dimensione profonda e luminosa della tradizione biblica. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "L",
+    "vibe": "smart",
+    "initial": "A",
     "length": "medio",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
   },
   {
-    "name": "Maayan",
+    "name": "Ava",
+    "origin": "Internazionale",
     "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Spesso associato a grazia, gioia e significati spirituali positivi. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Magali",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Tradizionalmente legato a vita, dono, speranza o protezione. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Mariah",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Richiama una dimensione profonda e luminosa della tradizione biblica. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Michelle",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Spesso associato a grazia, gioia e significati spirituali positivi. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "M",
-    "length": "lungo",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Miriam",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Tradizionalmente legato a vita, dono, speranza o protezione. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Naama",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Richiama una dimensione profonda e luminosa della tradizione biblica. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "N",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Noa",
-    "styles": [
-      "classico",
+      "moderno",
       "internazionale",
       "corto"
     ],
     "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Spesso associato a grazia, gioia e significati spirituali positivi. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "N",
-    "length": "corto",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Orly",
-    "styles": [
-      "classico",
       "internazionale",
-      "corto"
+      "contemporaneo",
+      "smart",
+      "fresco"
     ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Tradizionalmente legato a vita, dono, speranza o protezione. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "O",
+    "vibe": "fresco",
+    "initial": "A",
     "length": "corto",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Rahel",
+    "name": "Bella",
+    "origin": "Internazionale",
     "styles": [
-      "classico",
+      "moderno",
       "internazionale"
     ],
     "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Richiama una dimensione profonda e luminosa della tradizione biblica. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "R",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Rivka",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Spesso associato a grazia, gioia e significati spirituali positivi. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "R",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Ruth",
-    "styles": [
-      "classico",
       "internazionale",
-      "corto"
+      "contemporaneo",
+      "smart"
     ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Tradizionalmente legato a vita, dono, speranza o protezione. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "R",
-    "length": "corto",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Shira",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Richiama una dimensione profonda e luminosa della tradizione biblica. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Simcha",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Spesso associato a grazia, gioia e significati spirituali positivi. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Tamar",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Tradizionalmente legato a vita, dono, speranza o protezione. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "T",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Yael",
-    "styles": [
-      "classico",
-      "internazionale",
-      "corto"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Richiama una dimensione profonda e luminosa della tradizione biblica. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "Y",
-    "length": "corto",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Yarden",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Spesso associato a grazia, gioia e significati spirituali positivi. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "Y",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Elodie",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Tradizionalmente legato a vita, dono, speranza o protezione. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "E",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Joelle",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Richiama una dimensione profonda e luminosa della tradizione biblica. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "J",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Myriam",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Spesso associato a grazia, gioia e significati spirituali positivi. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Salome",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Tradizionalmente legato a vita, dono, speranza o protezione. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Samira",
-    "styles": [
-      "classico",
-      "internazionale"
-    ],
-    "tags": [
-      "spirituale",
-      "delicato",
-      "classico"
-    ],
-    "meaning": "Richiama una dimensione profonda e luminosa della tradizione biblica. Vibe classico e rassicurante.",
-    "origin": "Ebraico/Biblico",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Adelina",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "A",
-    "length": "medio",
-    "international": false,
-    "popularity": "media"
-  },
-  {
-    "name": "Albertina",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Spesso collegato a forza, protezione, coraggio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "A",
-    "length": "lungo",
-    "international": false,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Alda",
-    "styles": [
-      "elegante",
-      "forte",
-      "corto"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Evoca carattere deciso, eleganza e radici antiche. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "A",
-    "length": "corto",
-    "international": false,
-    "popularity": "alta"
-  },
-  {
-    "name": "Annika",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "A",
-    "length": "medio",
-    "international": false,
-    "popularity": "media"
-  },
-  {
-    "name": "Astrid",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Spesso collegato a forza, protezione, coraggio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "A",
-    "length": "medio",
-    "international": false,
-    "popularity": "media"
-  },
-  {
-    "name": "Brigitte",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Evoca carattere deciso, eleganza e radici antiche. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "B",
-    "length": "lungo",
-    "international": false,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Bruna",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "smart",
     "initial": "B",
     "length": "medio",
-    "international": false,
-    "popularity": "alta"
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
   },
   {
-    "name": "Carina",
+    "name": "Brianna",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
     ],
-    "meaning": "Spesso collegato a forza, protezione, coraggio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "fresco",
+    "initial": "B",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Brooklyn",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "B",
+    "length": "lungo",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Candice",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
+    ],
+    "vibe": "fresco",
     "initial": "C",
     "length": "medio",
-    "international": false,
-    "popularity": "media"
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Carla",
+    "name": "Cara",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale",
+      "corto"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "contemporaneo",
+      "smart"
     ],
-    "meaning": "Evoca carattere deciso, eleganza e radici antiche. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "smart",
+    "initial": "C",
+    "length": "corto",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Carmen",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
+    ],
+    "vibe": "fresco",
     "initial": "C",
     "length": "medio",
-    "international": false,
-    "popularity": "media"
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Corinne",
+    "name": "Carolina",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "contemporaneo",
+      "smart"
     ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "smart",
+    "initial": "C",
+    "length": "lungo",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Cassidy",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
+    ],
+    "vibe": "fresco",
     "initial": "C",
     "length": "medio",
-    "international": false,
-    "popularity": "bassa"
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Dagmar",
+    "name": "Charlotte",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "contemporaneo",
+      "smart"
     ],
-    "meaning": "Spesso collegato a forza, protezione, coraggio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "smart",
+    "initial": "C",
+    "length": "lungo",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Chelsea",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "C",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Chloe",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "C",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Claire",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "C",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Daisy",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart"
+    ],
+    "vibe": "smart",
     "initial": "D",
     "length": "medio",
-    "international": false,
-    "popularity": "alta"
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
   },
   {
-    "name": "Edda",
+    "name": "Daphne",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte",
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "D",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Delilah",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "D",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Ella",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
       "corto"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
     ],
-    "meaning": "Evoca carattere deciso, eleganza e radici antiche. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "fresco",
     "initial": "E",
     "length": "corto",
-    "international": false,
-    "popularity": "media"
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Elga",
+    "name": "Ellie",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte",
-      "corto"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "contemporaneo",
+      "smart"
     ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "E",
-    "length": "corto",
-    "international": false,
-    "popularity": "media"
-  },
-  {
-    "name": "Erika",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Spesso collegato a forza, protezione, coraggio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "smart",
     "initial": "E",
     "length": "medio",
-    "international": false,
-    "popularity": "bassa"
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
   },
   {
-    "name": "Frieda",
+    "name": "Emily",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
     ],
-    "meaning": "Evoca carattere deciso, eleganza e radici antiche. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "fresco",
+    "initial": "E",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Erin",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "E",
+    "length": "corto",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Estelle",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "E",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Evelyn",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "E",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Fiona",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
+    ],
+    "vibe": "fresco",
     "initial": "F",
     "length": "medio",
-    "international": false,
-    "popularity": "alta"
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Geraldine",
+    "name": "Gabrielle",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "contemporaneo",
+      "smart"
     ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "smart",
     "initial": "G",
     "length": "lungo",
-    "international": false,
-    "popularity": "media"
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
   },
   {
-    "name": "Gertrude",
+    "name": "Grace",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
     ],
-    "meaning": "Spesso collegato a forza, protezione, coraggio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "G",
-    "length": "lungo",
-    "international": false,
-    "popularity": "media"
-  },
-  {
-    "name": "Gisela",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Evoca carattere deciso, eleganza e radici antiche. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "fresco",
     "initial": "G",
     "length": "medio",
-    "international": false,
-    "popularity": "bassa"
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Hedda",
+    "name": "Hannah",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "contemporaneo",
+      "smart"
     ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "smart",
     "initial": "H",
     "length": "medio",
-    "international": false,
-    "popularity": "alta"
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
   },
   {
-    "name": "Hilda",
+    "name": "Harper",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
     ],
-    "meaning": "Spesso collegato a forza, protezione, coraggio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "fresco",
     "initial": "H",
     "length": "medio",
-    "international": false,
-    "popularity": "media"
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Ida",
+    "name": "Hazel",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte",
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "H",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Heidi",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "contemporaneo",
+      "smart",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "H",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Hope",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
       "corto"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "contemporaneo",
+      "smart"
     ],
-    "meaning": "Evoca carattere deciso, eleganza e radici antiche. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "I",
+    "vibe": "smart",
+    "initial": "H",
     "length": "corto",
-    "international": false,
-    "popularity": "media"
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
   },
   {
-    "name": "Ingrid",
+    "name": "Isla",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "I",
-    "length": "medio",
-    "international": false,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Irma",
-    "styles": [
-      "elegante",
-      "forte",
+      "moderno",
+      "internazionale",
       "corto"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
     ],
-    "meaning": "Spesso collegato a forza, protezione, coraggio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "fresco",
     "initial": "I",
     "length": "corto",
-    "international": false,
-    "popularity": "alta"
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Karina",
+    "name": "Jane",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale",
+      "corto"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
     ],
-    "meaning": "Evoca carattere deciso, eleganza e radici antiche. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "smart",
+    "initial": "J",
+    "length": "corto",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Jasmine",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "J",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Jenna",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "J",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Jessica",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "J",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Joanna",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "J",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Jocelyn",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "J",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Jolie",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "J",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Josephine",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "J",
+    "length": "lungo",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Joy",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "J",
+    "length": "corto",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Julia",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "J",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "June",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "J",
+    "length": "corto",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Karen",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
     "initial": "K",
     "length": "medio",
-    "international": false,
-    "popularity": "media"
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Lorelei",
+    "name": "Kate",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "L",
-    "length": "medio",
-    "international": false,
-    "popularity": "media"
-  },
-  {
-    "name": "Mafalda",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Spesso collegato a forza, protezione, coraggio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "M",
-    "length": "medio",
-    "international": false,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Mattea",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Evoca carattere deciso, eleganza e radici antiche. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "M",
-    "length": "medio",
-    "international": false,
-    "popularity": "alta"
-  },
-  {
-    "name": "Minerva",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "M",
-    "length": "medio",
-    "international": false,
-    "popularity": "media"
-  },
-  {
-    "name": "Norah",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Spesso collegato a forza, protezione, coraggio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "N",
-    "length": "medio",
-    "international": false,
-    "popularity": "media"
-  },
-  {
-    "name": "Odette",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Evoca carattere deciso, eleganza e radici antiche. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "O",
-    "length": "medio",
-    "international": false,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Ramona",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "R",
-    "length": "medio",
-    "international": false,
-    "popularity": "alta"
-  },
-  {
-    "name": "Rosamund",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Spesso collegato a forza, protezione, coraggio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "R",
-    "length": "lungo",
-    "international": false,
-    "popularity": "media"
-  },
-  {
-    "name": "Runa",
-    "styles": [
-      "elegante",
-      "forte",
+      "moderno",
+      "internazionale",
       "corto"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
     ],
-    "meaning": "Evoca carattere deciso, eleganza e radici antiche. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "smart",
+    "initial": "K",
+    "length": "corto",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Katie",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "K",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Kayla",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "K",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Keira",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "K",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Kelly",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "K",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Kimberly",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "K",
+    "length": "lungo",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Kylie",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "K",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Lana",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "L",
+    "length": "corto",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Lauren",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "L",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Layla",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "L",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Leah",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "L",
+    "length": "corto",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Leona",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "L",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Lexi",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "L",
+    "length": "corto",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Lila",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "L",
+    "length": "corto",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Lillian",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "L",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Lily",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "L",
+    "length": "corto",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Linda",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "L",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Lindsay",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "L",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Logan",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "L",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Lucy",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "L",
+    "length": "corto",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Madeline",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "M",
+    "length": "lungo",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Madison",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Makenna",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Mallory",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Marilyn",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Marissa",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Melanie",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Naomi",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "N",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Natalie",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "N",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Paige",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "P",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Pamela",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "P",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Piper",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "P",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Quinn",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "Q",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Riley",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "R",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Ruby",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
+    ],
+    "vibe": "smart",
     "initial": "R",
     "length": "corto",
-    "international": false,
-    "popularity": "media"
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
   },
   {
-    "name": "Saskia",
+    "name": "Sabrina",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "bright",
+      "friendly",
+      "fresco"
     ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "fresco",
     "initial": "S",
     "length": "medio",
-    "international": false,
-    "popularity": "bassa"
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Sigrid",
+    "name": "Savannah",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "bright",
+      "friendly",
+      "smart"
     ],
-    "meaning": "Spesso collegato a forza, protezione, coraggio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "smart",
     "initial": "S",
-    "length": "medio",
-    "international": false,
-    "popularity": "alta"
-  },
-  {
-    "name": "Sonia",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Evoca carattere deciso, eleganza e radici antiche. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "S",
-    "length": "medio",
-    "international": false,
-    "popularity": "media"
-  },
-  {
-    "name": "Tabitha",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "T",
-    "length": "medio",
-    "international": false,
-    "popularity": "media"
-  },
-  {
-    "name": "Thalia",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Spesso collegato a forza, protezione, coraggio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "T",
-    "length": "medio",
-    "international": false,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Theodora",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Evoca carattere deciso, eleganza e radici antiche. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "T",
     "length": "lungo",
-    "international": false,
-    "popularity": "alta"
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
   },
   {
-    "name": "Ulrica",
+    "name": "Sadie",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
     ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "U",
+    "vibe": "fresco",
+    "initial": "S",
     "length": "medio",
-    "international": false,
-    "popularity": "media"
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Vanda",
+    "name": "Samantha",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
     ],
-    "meaning": "Spesso collegato a forza, protezione, coraggio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "smart",
+    "initial": "S",
+    "length": "lungo",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Sandra",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Sara",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "S",
+    "length": "corto",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Scarlett",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "S",
+    "length": "lungo",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Selena",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Sharon",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Sheila",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Sienna",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Skylar",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Sophia",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Sophie",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Stacy",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Summer",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Sydney",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Tamara",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "T",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Taylor",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "T",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Thea",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "T",
+    "length": "corto",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Tiffany",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "T",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Tracy",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "T",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Valerie",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
     "initial": "V",
     "length": "medio",
-    "international": false,
-    "popularity": "media"
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Wilma",
+    "name": "Victoria",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
     ],
-    "meaning": "Evoca carattere deciso, eleganza e radici antiche. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "smart",
+    "initial": "V",
+    "length": "lungo",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Violet",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "V",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Whitney",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
     "initial": "W",
     "length": "medio",
-    "international": false,
-    "popularity": "bassa"
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
   },
   {
-    "name": "Ylvie",
+    "name": "Willa",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
     ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "fresco",
+    "initial": "W",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Yasmin",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
     "initial": "Y",
     "length": "medio",
-    "international": false,
-    "popularity": "alta"
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
   },
   {
-    "name": "Ariana",
+    "name": "Zara",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale",
+      "corto"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
     ],
-    "meaning": "Spesso collegato a forza, protezione, coraggio o nobiltà. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "fresco",
+    "initial": "Z",
+    "length": "corto",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Zelda",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "Z",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Zoey",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "Z",
+    "length": "corto",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Aaliyah",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
     "initial": "A",
     "length": "medio",
-    "international": false,
-    "popularity": "media"
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
   },
   {
-    "name": "Blair",
+    "name": "Aimee",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "forte"
+      "moderno",
+      "internazionale"
     ],
     "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
     ],
-    "meaning": "Evoca carattere deciso, eleganza e radici antiche. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
+    "vibe": "fresco",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Ashley",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Brenda",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
     "initial": "B",
     "length": "medio",
-    "international": false,
-    "popularity": "media"
-  },
-  {
-    "name": "Doris",
-    "styles": [
-      "elegante",
-      "forte"
-    ],
-    "tags": [
-      "deciso",
-      "nobile",
-      "luminoso"
-    ],
-    "meaning": "Nome dal suono forte, con sfumature di prestigio e solidità. Percepito come elegante e raffinato.",
-    "origin": "Germanico/Celtico",
-    "initial": "D",
-    "length": "medio",
-    "international": false,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Aimée",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Richiama fascino, romanticismo e una femminilità sofisticata. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "A",
-    "length": "medio",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Alizée",
+    "name": "Britney",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
+      "moderno",
       "internazionale"
     ],
-    "meaning": "Spesso percepito come elegante, dolce e ricco di charme. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Amandine",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
     "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
     ],
-    "meaning": "Ha una musicalità delicata, con un tocco raffinato e internazionale. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "A",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Anais",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Richiama fascino, romanticismo e una femminilità sofisticata. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Antoinette",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Spesso percepito come elegante, dolce e ricco di charme. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "A",
-    "length": "lungo",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Aurelie",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Ha una musicalità delicata, con un tocco raffinato e internazionale. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Berenice",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Richiama fascino, romanticismo e una femminilità sofisticata. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
+    "vibe": "smart",
     "initial": "B",
-    "length": "lungo",
+    "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
   },
   {
-    "name": "Celeste",
+    "name": "Camille",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
+      "moderno",
       "internazionale"
     ],
-    "meaning": "Spesso percepito come elegante, dolce e ricco di charme. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
     "initial": "C",
     "length": "medio",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Clarisse",
+    "name": "Celine",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
+      "moderno",
       "internazionale"
     ],
-    "meaning": "Ha una musicalità delicata, con un tocco raffinato e internazionale. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "C",
-    "length": "lungo",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Colette",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
     "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
     ],
-    "meaning": "Richiama fascino, romanticismo e una femminilità sofisticata. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
+    "vibe": "smart",
     "initial": "C",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
   },
   {
-    "name": "Delphine",
+    "name": "Cindy",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
+      "moderno",
       "internazionale"
     ],
-    "meaning": "Spesso percepito come elegante, dolce e ricco di charme. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "C",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Danielle",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
     "initial": "D",
     "length": "lungo",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
   },
   {
-    "name": "Emmanuelle",
+    "name": "Elsa",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "romantico"
+      "moderno",
+      "internazionale",
+      "corto"
     ],
     "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
     ],
-    "meaning": "Ha una musicalità delicata, con un tocco raffinato e internazionale. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
+    "vibe": "fresco",
     "initial": "E",
-    "length": "lungo",
+    "length": "corto",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Esmée",
+    "name": "Esme",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "romantico"
+      "moderno",
+      "internazionale",
+      "corto"
     ],
     "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
     ],
-    "meaning": "Richiama fascino, romanticismo e una femminilità sofisticata. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
+    "vibe": "smart",
     "initial": "E",
-    "length": "medio",
+    "length": "corto",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
   },
   {
-    "name": "Florence",
+    "name": "Farah",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
+      "moderno",
       "internazionale"
     ],
-    "meaning": "Spesso percepito come elegante, dolce e ricco di charme. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
     "initial": "F",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Jacqueline",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Ha una musicalità delicata, con un tocco raffinato e internazionale. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "J",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Jeanne",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Richiama fascino, romanticismo e una femminilità sofisticata. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "J",
     "length": "medio",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Joséphine",
+    "name": "Genevieve",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
+      "moderno",
       "internazionale"
     ],
-    "meaning": "Spesso percepito come elegante, dolce e ricco di charme. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "G",
+    "length": "lungo",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Ines",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "I",
+    "length": "corto",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Juliette",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
     "initial": "J",
     "length": "lungo",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Ha un tono attuale e brillante."
   },
   {
-    "name": "Louise",
+    "name": "Kendall",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
+      "moderno",
       "internazionale"
     ],
-    "meaning": "Ha una musicalità delicata, con un tocco raffinato e internazionale. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
+    "initial": "K",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Suona giovane, contemporaneo e leggero."
+  },
+  {
+    "name": "Kim",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
+    ],
+    "vibe": "smart",
+    "initial": "K",
+    "length": "corto",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha un suono fresco e contemporaneo. Ha un tono attuale e brillante."
+  },
+  {
+    "name": "Leonie",
+    "origin": "Internazionale",
+    "styles": [
+      "moderno",
+      "internazionale"
+    ],
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
     "initial": "L",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "alta",
+    "meaning": "Percepito come attuale, semplice e molto adattabile. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Lucille",
+    "name": "Maya",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "romantico"
+      "moderno",
+      "internazionale",
+      "corto"
     ],
     "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
+      "internazionale",
+      "pop",
+      "fresh",
+      "smart"
     ],
-    "meaning": "Richiama fascino, romanticismo e una femminilità sofisticata. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "L",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Madeleine",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Spesso percepito come elegante, dolce e ricco di charme. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
+    "vibe": "smart",
     "initial": "M",
-    "length": "lungo",
+    "length": "corto",
     "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Manon",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Ha una musicalità delicata, con un tocco raffinato e internazionale. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Margaux",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Richiama fascino, romanticismo e una femminilità sofisticata. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Marielle",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Spesso percepito come elegante, dolce e ricco di charme. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "M",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Mathilde",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Ha una musicalità delicata, con un tocco raffinato e internazionale. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "M",
-    "length": "lungo",
-    "international": true,
-    "popularity": "bassa"
+    "popularity": "media",
+    "meaning": "Nome moderno e versatile, facile da immaginare in contesti internazionali. Ha un tono attuale e brillante."
   },
   {
     "name": "Noelle",
+    "origin": "Internazionale",
     "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
+      "moderno",
       "internazionale"
     ],
-    "meaning": "Richiama fascino, romanticismo e una femminilità sofisticata. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
+    "tags": [
+      "internazionale",
+      "pop",
+      "fresh",
+      "fresco"
+    ],
+    "vibe": "fresco",
     "initial": "N",
     "length": "medio",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Ha un suono fresco e contemporaneo. Suona giovane, contemporaneo e leggero."
   },
   {
-    "name": "Océane",
+    "name": "Abigael",
+    "origin": "Ebraico/Biblico",
     "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
+      "classico",
       "internazionale"
     ],
-    "meaning": "Spesso percepito come elegante, dolce e ricco di charme. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "O",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Pauline",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
     "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
     ],
-    "meaning": "Ha una musicalità delicata, con un tocco raffinato e internazionale. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "P",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Solène",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Richiama fascino, romanticismo e una femminilità sofisticata. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Yvette",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Spesso percepito come elegante, dolce e ricco di charme. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "Y",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Amparo",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Ha una musicalità delicata, con un tocco raffinato e internazionale. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
+    "vibe": "raffinato",
     "initial": "A",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Lascia un’impressione curata e di classe."
   },
   {
-    "name": "Beatriz",
+    "name": "Adina",
+    "origin": "Ebraico/Biblico",
     "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
+      "classico",
       "internazionale"
     ],
-    "meaning": "Richiama fascino, romanticismo e una femminilità sofisticata. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Tradizionalmente associato a luce, speranza o benedizione. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Anael",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Richiama una dimensione profonda e positiva. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Arielle",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Batya",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
     "initial": "B",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Tradizionalmente associato a luce, speranza o benedizione. Lascia un’impressione curata e di classe."
   },
   {
-    "name": "Belén",
+    "name": "Daniela",
+    "origin": "Ebraico/Biblico",
     "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
+      "classico",
       "internazionale"
     ],
-    "meaning": "Spesso percepito come elegante, dolce e ricco di charme. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "B",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Camila",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
     "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
     ],
-    "meaning": "Ha una musicalità delicata, con un tocco raffinato e internazionale. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "C",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Consuelo",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Richiama fascino, romanticismo e una femminilità sofisticata. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "C",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Dolores",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Spesso percepito come elegante, dolce e ricco di charme. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
+    "vibe": "rassicurante",
     "initial": "D",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "alta",
+    "meaning": "Richiama una dimensione profonda e positiva. Trasmette equilibrio e familiarità."
   },
   {
-    "name": "Elvira",
+    "name": "Dalia",
+    "origin": "Ebraico/Biblico",
     "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
+      "classico",
       "internazionale"
     ],
-    "meaning": "Ha una musicalità delicata, con un tocco raffinato e internazionale. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "E",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Esperanza",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
     "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Richiama fascino, romanticismo e una femminilità sofisticata. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "E",
-    "length": "lungo",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Jimena",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Spesso percepito come elegante, dolce e ricco di charme. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "J",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Luciana",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Ha una musicalità delicata, con un tocco raffinato e internazionale. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "L",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Marisol",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Richiama fascino, romanticismo e una femminilità sofisticata. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Paloma",
-    "styles": [
-      "elegante",
-      "romantico"
-    ],
-    "tags": [
-      "romantico",
-      "sofisticato",
-      "internazionale"
-    ],
-    "meaning": "Spesso percepito come elegante, dolce e ricco di charme. Percepito come elegante e raffinato.",
-    "origin": "Francese/Spagnolo",
-    "initial": "P",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Paz",
-    "styles": [
-      "internazionale",
-      "dolce",
-      "corto"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Evoca un carattere caldo, aperto e pieno di personalità. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "P",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Rosario",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Trasmette energia solare, calore e una bellezza vivace. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "R",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Soledad",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Nome spesso associato a intensità, dolcezza e luce. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Vega",
-    "styles": [
-      "internazionale",
-      "dolce",
-      "corto"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Evoca un carattere caldo, aperto e pieno di personalità. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "V",
-    "length": "corto",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Ximena",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Trasmette energia solare, calore e una bellezza vivace. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "X",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Yolanda",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Nome spesso associato a intensità, dolcezza e luce. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "Y",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Adela",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Evoca un carattere caldo, aperto e pieno di personalità. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Aitana",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Trasmette energia solare, calore e una bellezza vivace. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Almudena",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Nome spesso associato a intensità, dolcezza e luce. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "A",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Araceli",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Evoca un carattere caldo, aperto e pieno di personalità. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Blanca",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Trasmette energia solare, calore e una bellezza vivace. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "B",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Brisa",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Nome spesso associato a intensità, dolcezza e luce. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "B",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Catalina",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Evoca un carattere caldo, aperto e pieno di personalità. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "C",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Estrella",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Trasmette energia solare, calore e una bellezza vivace. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "E",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Juana",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Nome spesso associato a intensità, dolcezza e luce. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "J",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Leocadia",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Evoca un carattere caldo, aperto e pieno di personalità. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "L",
-    "length": "lungo",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Leonor",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Trasmette energia solare, calore e una bellezza vivace. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "L",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Leticia",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Nome spesso associato a intensità, dolcezza e luce. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "L",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Lola",
-    "styles": [
-      "internazionale",
-      "dolce",
-      "corto"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Evoca un carattere caldo, aperto e pieno di personalità. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "L",
-    "length": "corto",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Macarena",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Trasmette energia solare, calore e una bellezza vivace. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "M",
-    "length": "lungo",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Milagros",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Nome spesso associato a intensità, dolcezza e luce. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "M",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Montserrat",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Evoca un carattere caldo, aperto e pieno di personalità. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "M",
-    "length": "lungo",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Nerea",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Trasmette energia solare, calore e una bellezza vivace. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "N",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Paula",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Nome spesso associato a intensità, dolcezza e luce. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "P",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Rocio",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Evoca un carattere caldo, aperto e pieno di personalità. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "R",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Salma",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Trasmette energia solare, calore e una bellezza vivace. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Tatiana",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Nome spesso associato a intensità, dolcezza e luce. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "T",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Violeta",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Evoca un carattere caldo, aperto e pieno di personalità. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "V",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Yadira",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Trasmette energia solare, calore e una bellezza vivace. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "Y",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Ana",
-    "styles": [
-      "internazionale",
-      "dolce",
-      "corto"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Nome spesso associato a intensità, dolcezza e luce. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "A",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Catarina",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Evoca un carattere caldo, aperto e pieno di personalità. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "C",
-    "length": "lungo",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Dulce",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Trasmette energia solare, calore e una bellezza vivace. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
     "initial": "D",
     "length": "medio",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Lascia un’impressione curata e di classe."
   },
   {
-    "name": "Filomena",
+    "name": "Deborah",
+    "origin": "Ebraico/Biblico",
     "styles": [
-      "internazionale",
-      "dolce"
+      "classico",
+      "internazionale"
     ],
     "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
     ],
-    "meaning": "Nome spesso associato a intensità, dolcezza e luce. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "F",
+    "vibe": "rassicurante",
+    "initial": "D",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Tradizionalmente associato a luce, speranza o benedizione. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Dinah",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "D",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Richiama una dimensione profonda e positiva. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Eden",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "E",
+    "length": "corto",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Eliana",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "E",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Tradizionalmente associato a luce, speranza o benedizione. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Elina",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "E",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Richiama una dimensione profonda e positiva. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Elise",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "E",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Esther",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "E",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Tradizionalmente associato a luce, speranza o benedizione. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Gabriela",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "G",
     "length": "lungo",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama una dimensione profonda e positiva. Lascia un’impressione curata e di classe."
   },
   {
-    "name": "Isabel",
+    "name": "Hadas",
+    "origin": "Ebraico/Biblico",
     "styles": [
-      "internazionale",
-      "dolce"
+      "classico",
+      "internazionale"
     ],
     "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
     ],
-    "meaning": "Evoca un carattere caldo, aperto e pieno di personalità. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "I",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Mariana",
-    "styles": [
-      "internazionale",
-      "dolce"
-    ],
-    "tags": [
-      "solare",
-      "internazionale",
-      "femminile"
-    ],
-    "meaning": "Trasmette energia solare, calore e una bellezza vivace. Funziona bene anche in contesti internazionali.",
-    "origin": "Spagnolo/Portoghese",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Aisha",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Richiama eleganza morbida, intensità e fascino delicato. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Aliyah",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Evoca grazia, armonia e una forte identità internazionale. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Amal",
-    "styles": [
-      "internazionale",
-      "moderno",
-      "corto"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Solitamente associato a luce, bellezza, purezza o prosperità. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "A",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Amina",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Richiama eleganza morbida, intensità e fascino delicato. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Aya",
-    "styles": [
-      "internazionale",
-      "moderno",
-      "corto"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Evoca grazia, armonia e una forte identità internazionale. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "A",
-    "length": "corto",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Dina",
-    "styles": [
-      "internazionale",
-      "moderno",
-      "corto"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Solitamente associato a luce, bellezza, purezza o prosperità. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "D",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Habiba",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Richiama eleganza morbida, intensità e fascino delicato. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
+    "vibe": "rassicurante",
     "initial": "H",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Trasmette equilibrio e familiarità."
   },
   {
-    "name": "Hana",
+    "name": "Hanna",
+    "origin": "Ebraico/Biblico",
     "styles": [
-      "internazionale",
-      "moderno",
-      "corto"
+      "classico",
+      "internazionale"
     ],
     "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
     ],
-    "meaning": "Evoca grazia, armonia e una forte identità internazionale. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
+    "vibe": "raffinato",
     "initial": "H",
-    "length": "corto",
+    "length": "medio",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "bassa",
+    "meaning": "Tradizionalmente associato a luce, speranza o benedizione. Lascia un’impressione curata e di classe."
   },
   {
-    "name": "Iman",
+    "name": "Ilana",
+    "origin": "Ebraico/Biblico",
     "styles": [
-      "internazionale",
-      "moderno",
-      "corto"
+      "classico",
+      "internazionale"
     ],
     "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
     ],
-    "meaning": "Solitamente associato a luce, bellezza, purezza o prosperità. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
+    "vibe": "rassicurante",
     "initial": "I",
-    "length": "corto",
+    "length": "medio",
     "international": true,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Richiama una dimensione profonda e positiva. Trasmette equilibrio e familiarità."
   },
   {
-    "name": "Jana",
+    "name": "Jael",
+    "origin": "Ebraico/Biblico",
     "styles": [
+      "classico",
       "internazionale",
-      "moderno",
       "corto"
     ],
     "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
     ],
-    "meaning": "Richiama eleganza morbida, intensità e fascino delicato. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
+    "vibe": "raffinato",
     "initial": "J",
     "length": "corto",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Lascia un’impressione curata e di classe."
   },
   {
-    "name": "Laila",
+    "name": "Judith",
+    "origin": "Ebraico/Biblico",
     "styles": [
-      "internazionale",
-      "moderno"
+      "classico",
+      "internazionale"
     ],
     "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
     ],
-    "meaning": "Evoca grazia, armonia e una forte identità internazionale. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "L",
+    "vibe": "rassicurante",
+    "initial": "J",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Tradizionalmente associato a luce, speranza o benedizione. Trasmette equilibrio e familiarità."
   },
   {
-    "name": "Leila",
+    "name": "Keren",
+    "origin": "Ebraico/Biblico",
     "styles": [
-      "internazionale",
-      "moderno"
+      "classico",
+      "internazionale"
     ],
     "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
     ],
-    "meaning": "Solitamente associato a luce, bellezza, purezza o prosperità. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "L",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Maha",
-    "styles": [
-      "internazionale",
-      "moderno",
-      "corto"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Richiama eleganza morbida, intensità e fascino delicato. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "M",
-    "length": "corto",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Malika",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Evoca grazia, armonia e una forte identità internazionale. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Mariam",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Solitamente associato a luce, bellezza, purezza o prosperità. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "M",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Mina",
-    "styles": [
-      "internazionale",
-      "moderno",
-      "corto"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Richiama eleganza morbida, intensità e fascino delicato. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "M",
-    "length": "corto",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Naila",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Evoca grazia, armonia e una forte identità internazionale. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "N",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Nour",
-    "styles": [
-      "internazionale",
-      "moderno",
-      "corto"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Solitamente associato a luce, bellezza, purezza o prosperità. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "N",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Rania",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Richiama eleganza morbida, intensità e fascino delicato. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "R",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Rasha",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Evoca grazia, armonia e una forte identità internazionale. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "R",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Safiya",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Solitamente associato a luce, bellezza, purezza o prosperità. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "S",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Zahra",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Richiama eleganza morbida, intensità e fascino delicato. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "Z",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Zaina",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Evoca grazia, armonia e una forte identità internazionale. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "Z",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Zeinab",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Solitamente associato a luce, bellezza, purezza o prosperità. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "Z",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Anisa",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Richiama eleganza morbida, intensità e fascino delicato. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "A",
-    "length": "medio",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Azra",
-    "styles": [
-      "internazionale",
-      "moderno",
-      "corto"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Evoca grazia, armonia e una forte identità internazionale. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "A",
-    "length": "corto",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Basma",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Solitamente associato a luce, bellezza, purezza o prosperità. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "B",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Elham",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Richiama eleganza morbida, intensità e fascino delicato. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "E",
-    "length": "medio",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Esra",
-    "styles": [
-      "internazionale",
-      "moderno",
-      "corto"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Evoca grazia, armonia e una forte identità internazionale. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "E",
-    "length": "corto",
-    "international": true,
-    "popularity": "alta"
-  },
-  {
-    "name": "Fatma",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Solitamente associato a luce, bellezza, purezza o prosperità. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "F",
-    "length": "medio",
-    "international": true,
-    "popularity": "media"
-  },
-  {
-    "name": "Karima",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Richiama eleganza morbida, intensità e fascino delicato. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
+    "vibe": "raffinato",
     "initial": "K",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Richiama una dimensione profonda e positiva. Lascia un’impressione curata e di classe."
   },
   {
-    "name": "Lina",
+    "name": "Liora",
+    "origin": "Ebraico/Biblico",
     "styles": [
-      "internazionale",
-      "moderno",
-      "corto"
+      "classico",
+      "internazionale"
     ],
     "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
     ],
-    "meaning": "Evoca grazia, armonia e una forte identità internazionale. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "L",
-    "length": "corto",
-    "international": true,
-    "popularity": "bassa"
-  },
-  {
-    "name": "Lubna",
-    "styles": [
-      "internazionale",
-      "moderno"
-    ],
-    "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
-    ],
-    "meaning": "Solitamente associato a luce, bellezza, purezza o prosperità. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
+    "vibe": "rassicurante",
     "initial": "L",
     "length": "medio",
     "international": true,
-    "popularity": "alta"
+    "popularity": "alta",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Trasmette equilibrio e familiarità."
   },
   {
-    "name": "Madina",
+    "name": "Maayan",
+    "origin": "Ebraico/Biblico",
     "styles": [
-      "internazionale",
-      "moderno"
+      "classico",
+      "internazionale"
     ],
     "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
     ],
-    "meaning": "Richiama eleganza morbida, intensità e fascino delicato. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
+    "vibe": "raffinato",
     "initial": "M",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Tradizionalmente associato a luce, speranza o benedizione. Lascia un’impressione curata e di classe."
   },
   {
-    "name": "Mona",
+    "name": "Magali",
+    "origin": "Ebraico/Biblico",
     "styles": [
-      "internazionale",
-      "moderno",
-      "corto"
+      "classico",
+      "internazionale"
     ],
     "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
     ],
-    "meaning": "Evoca grazia, armonia e una forte identità internazionale. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
+    "vibe": "rassicurante",
     "initial": "M",
-    "length": "corto",
+    "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Richiama una dimensione profonda e positiva. Trasmette equilibrio e familiarità."
   },
   {
-    "name": "Naima",
+    "name": "Mariah",
+    "origin": "Ebraico/Biblico",
     "styles": [
-      "internazionale",
-      "moderno"
+      "classico",
+      "internazionale"
     ],
     "tags": [
-      "morbido",
-      "luminoso",
-      "raro"
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
     ],
-    "meaning": "Solitamente associato a luce, bellezza, purezza o prosperità. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
+    "vibe": "raffinato",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Michelle",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "M",
+    "length": "lungo",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Tradizionalmente associato a luce, speranza o benedizione. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Miriam",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Richiama una dimensione profonda e positiva. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Naama",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
     "initial": "N",
     "length": "medio",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "media",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Trasmette equilibrio e familiarità."
   },
   {
-    "name": "Rim",
+    "name": "Noa",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "N",
+    "length": "corto",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Tradizionalmente associato a luce, speranza o benedizione. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Orly",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "O",
+    "length": "corto",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Richiama una dimensione profonda e positiva. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Rahel",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "R",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Rivka",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "R",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Tradizionalmente associato a luce, speranza o benedizione. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Ruth",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "R",
+    "length": "corto",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Richiama una dimensione profonda e positiva. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Shira",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Simcha",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Tradizionalmente associato a luce, speranza o benedizione. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Tamar",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "T",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Richiama una dimensione profonda e positiva. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Yael",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "Y",
+    "length": "corto",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Yarden",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "Y",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Tradizionalmente associato a luce, speranza o benedizione. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Joelle",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "J",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Richiama una dimensione profonda e positiva. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Myriam",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Salome",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Tradizionalmente associato a luce, speranza o benedizione. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Samira",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Richiama una dimensione profonda e positiva. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Adah",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale",
+      "corto"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "A",
+    "length": "corto",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Abital",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Tradizionalmente associato a luce, speranza o benedizione. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Moriah",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Richiama una dimensione profonda e positiva. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Elodie",
+    "origin": "Ebraico/Biblico",
+    "styles": [
+      "classico",
+      "internazionale"
+    ],
+    "tags": [
+      "spirituale",
+      "delicato",
+      "classico",
+      "rassicurante"
+    ],
+    "vibe": "rassicurante",
+    "initial": "E",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Evoca grazia, protezione e bellezza interiore. Trasmette equilibrio e familiarità."
+  },
+  {
+    "name": "Adelina",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "A",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Albertina",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "A",
+    "length": "lungo",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Ha un suono autorevole e distintivo. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Alda",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte",
+      "corto"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "A",
+    "length": "corto",
+    "international": false,
+    "popularity": "bassa",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Annika",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "A",
+    "length": "medio",
+    "international": false,
+    "popularity": "alta",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Astrid",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "A",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Ha un suono autorevole e distintivo. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Brigitte",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "B",
+    "length": "lungo",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Bruna",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "B",
+    "length": "medio",
+    "international": false,
+    "popularity": "bassa",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Carina",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "C",
+    "length": "medio",
+    "international": false,
+    "popularity": "alta",
+    "meaning": "Ha un suono autorevole e distintivo. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Carla",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "C",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Corinne",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "C",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Dagmar",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "D",
+    "length": "medio",
+    "international": false,
+    "popularity": "bassa",
+    "meaning": "Ha un suono autorevole e distintivo. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Edda",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte",
+      "corto"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "E",
+    "length": "corto",
+    "international": false,
+    "popularity": "alta",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Elga",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte",
+      "corto"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "E",
+    "length": "corto",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Erika",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "E",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Ha un suono autorevole e distintivo. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Frieda",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "F",
+    "length": "medio",
+    "international": false,
+    "popularity": "bassa",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Geraldine",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "G",
+    "length": "lungo",
+    "international": false,
+    "popularity": "alta",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Gertrude",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "G",
+    "length": "lungo",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Ha un suono autorevole e distintivo. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Hedda",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "H",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Hilda",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "H",
+    "length": "medio",
+    "international": false,
+    "popularity": "bassa",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Ida",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte",
+      "corto"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "I",
+    "length": "corto",
+    "international": false,
+    "popularity": "alta",
+    "meaning": "Ha un suono autorevole e distintivo. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Ingrid",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "I",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Irma",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte",
+      "corto"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "I",
+    "length": "corto",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Karina",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "K",
+    "length": "medio",
+    "international": false,
+    "popularity": "bassa",
+    "meaning": "Ha un suono autorevole e distintivo. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Lorelei",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "L",
+    "length": "medio",
+    "international": false,
+    "popularity": "alta",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Mafalda",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "M",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Mattea",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "M",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Ha un suono autorevole e distintivo. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Minerva",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "M",
+    "length": "medio",
+    "international": false,
+    "popularity": "bassa",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Norah",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "N",
+    "length": "medio",
+    "international": false,
+    "popularity": "alta",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Odette",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "O",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Ha un suono autorevole e distintivo. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Ramona",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "R",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Rosamund",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "R",
+    "length": "lungo",
+    "international": false,
+    "popularity": "bassa",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Runa",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte",
+      "corto"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "R",
+    "length": "corto",
+    "international": false,
+    "popularity": "alta",
+    "meaning": "Ha un suono autorevole e distintivo. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Saskia",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "S",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Sigrid",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "S",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Sonia",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "S",
+    "length": "medio",
+    "international": false,
+    "popularity": "bassa",
+    "meaning": "Ha un suono autorevole e distintivo. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Tabitha",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "T",
+    "length": "medio",
+    "international": false,
+    "popularity": "alta",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Thalia",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "T",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Theodora",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "T",
+    "length": "lungo",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Ha un suono autorevole e distintivo. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Ulrica",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "U",
+    "length": "medio",
+    "international": false,
+    "popularity": "bassa",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Vanda",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "V",
+    "length": "medio",
+    "international": false,
+    "popularity": "alta",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Wilma",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "W",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Ha un suono autorevole e distintivo. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Ylvie",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "Y",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Blair",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "B",
+    "length": "medio",
+    "international": false,
+    "popularity": "bassa",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Doris",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "D",
+    "length": "medio",
+    "international": false,
+    "popularity": "alta",
+    "meaning": "Ha un suono autorevole e distintivo. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Elvira",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "E",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Freya",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "F",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Helga",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "H",
+    "length": "medio",
+    "international": false,
+    "popularity": "bassa",
+    "meaning": "Ha un suono autorevole e distintivo. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Moira",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "sofisticato"
+    ],
+    "vibe": "sofisticato",
+    "initial": "M",
+    "length": "medio",
+    "international": false,
+    "popularity": "alta",
+    "meaning": "Evoca coraggio, indipendenza e una bellezza intensa. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Rowena",
+    "origin": "Germanico/Celtico",
+    "styles": [
+      "elegante",
+      "forte"
+    ],
+    "tags": [
+      "deciso",
+      "nobile",
+      "luminoso",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "R",
+    "length": "medio",
+    "international": false,
+    "popularity": "media",
+    "meaning": "Spesso associato a forza, nobiltà e carattere deciso. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Alizee",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha una musicalità morbida e sofisticata. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Amandine",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "A",
+    "length": "lungo",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Evoca charme, sensibilità e gusto elegante. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Anais",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Richiama fascino, romanticismo e raffinatezza. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Antoinette",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "A",
+    "length": "lungo",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha una musicalità morbida e sofisticata. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Aurelie",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca charme, sensibilità e gusto elegante. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Berenice",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "B",
+    "length": "lungo",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Richiama fascino, romanticismo e raffinatezza. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Celeste",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "C",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha una musicalità morbida e sofisticata. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Clarisse",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "C",
+    "length": "lungo",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca charme, sensibilità e gusto elegante. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Colette",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "C",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Richiama fascino, romanticismo e raffinatezza. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Delphine",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "D",
+    "length": "lungo",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha una musicalità morbida e sofisticata. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Emmanuelle",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "E",
+    "length": "lungo",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Evoca charme, sensibilità e gusto elegante. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Esmee",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "E",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Richiama fascino, romanticismo e raffinatezza. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Florence",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "F",
+    "length": "lungo",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha una musicalità morbida e sofisticata. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Jacqueline",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "J",
+    "length": "lungo",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Evoca charme, sensibilità e gusto elegante. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Jeanne",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "J",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Richiama fascino, romanticismo e raffinatezza. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Louise",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "L",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha una musicalità morbida e sofisticata. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Lucille",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "L",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca charme, sensibilità e gusto elegante. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Madeleine",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "M",
+    "length": "lungo",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Richiama fascino, romanticismo e raffinatezza. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Manon",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha una musicalità morbida e sofisticata. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Margaux",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca charme, sensibilità e gusto elegante. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Marielle",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "M",
+    "length": "lungo",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Richiama fascino, romanticismo e raffinatezza. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Mathilde",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "M",
+    "length": "lungo",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha una musicalità morbida e sofisticata. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Oceane",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "O",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Evoca charme, sensibilità e gusto elegante. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Pauline",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "P",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Richiama fascino, romanticismo e raffinatezza. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Solene",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha una musicalità morbida e sofisticata. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Yvette",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "Y",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Evoca charme, sensibilità e gusto elegante. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Amparo",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Richiama fascino, romanticismo e raffinatezza. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Beatriz",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "B",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha una musicalità morbida e sofisticata. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Belen",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "B",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca charme, sensibilità e gusto elegante. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Camila",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "C",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Richiama fascino, romanticismo e raffinatezza. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Consuelo",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "C",
+    "length": "lungo",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha una musicalità morbida e sofisticata. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Dolores",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "D",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca charme, sensibilità e gusto elegante. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Esperanza",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "E",
+    "length": "lungo",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Richiama fascino, romanticismo e raffinatezza. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Jimena",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "J",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha una musicalità morbida e sofisticata. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Luciana",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "L",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Evoca charme, sensibilità e gusto elegante. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Marisol",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Richiama fascino, romanticismo e raffinatezza. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Paloma",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "P",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha una musicalità morbida e sofisticata. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Salma",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Evoca charme, sensibilità e gusto elegante. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Violeta",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "V",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Richiama fascino, romanticismo e raffinatezza. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Amelie",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha una musicalità morbida e sofisticata. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Carole",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "C",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca charme, sensibilità e gusto elegante. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Fleur",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "F",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Richiama fascino, romanticismo e raffinatezza. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Maelle",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha una musicalità morbida e sofisticata. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Noemie",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "N",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca charme, sensibilità e gusto elegante. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Cecile",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale"
+    ],
+    "vibe": "sofisticato",
+    "initial": "C",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Richiama fascino, romanticismo e raffinatezza. Ha un’eleganza più ricercata e distintiva."
+  },
+  {
+    "name": "Celina",
+    "origin": "Francese/Spagnolo",
+    "styles": [
+      "elegante",
+      "romantico"
+    ],
+    "tags": [
+      "romantico",
+      "sofisticato",
+      "internazionale",
+      "raffinato"
+    ],
+    "vibe": "raffinato",
+    "initial": "C",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha una musicalità morbida e sofisticata. Lascia un’impressione curata e di classe."
+  },
+  {
+    "name": "Paz",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce",
+      "corto"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "P",
+    "length": "corto",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Evoca dolcezza, intensità e spontaneità. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Rosario",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "R",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Trasmette energia solare, calore e presenza luminosa. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Soledad",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "S",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha una musicalità viva e femminile. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Vega",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce",
+      "corto"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "V",
+    "length": "corto",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Evoca dolcezza, intensità e spontaneità. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Ximena",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "X",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Trasmette energia solare, calore e presenza luminosa. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Yolanda",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "Y",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha una musicalità viva e femminile. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Adela",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca dolcezza, intensità e spontaneità. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Aitana",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Trasmette energia solare, calore e presenza luminosa. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Almudena",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "A",
+    "length": "lungo",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha una musicalità viva e femminile. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Araceli",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca dolcezza, intensità e spontaneità. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Blanca",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "B",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Trasmette energia solare, calore e presenza luminosa. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Brisa",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "B",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha una musicalità viva e femminile. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Catalina",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "C",
+    "length": "lungo",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Evoca dolcezza, intensità e spontaneità. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Estrella",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "E",
+    "length": "lungo",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Trasmette energia solare, calore e presenza luminosa. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Juana",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "J",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha una musicalità viva e femminile. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Leonor",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "L",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Evoca dolcezza, intensità e spontaneità. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Leticia",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "L",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Trasmette energia solare, calore e presenza luminosa. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Lola",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce",
+      "corto"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "L",
+    "length": "corto",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha una musicalità viva e femminile. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Macarena",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "M",
+    "length": "lungo",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca dolcezza, intensità e spontaneità. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Milagros",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "M",
+    "length": "lungo",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Trasmette energia solare, calore e presenza luminosa. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Montserrat",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "M",
+    "length": "lungo",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha una musicalità viva e femminile. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Nerea",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "N",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca dolcezza, intensità e spontaneità. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Paula",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "P",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Trasmette energia solare, calore e presenza luminosa. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Rocio",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "R",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha una musicalità viva e femminile. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Tatiana",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "T",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Evoca dolcezza, intensità e spontaneità. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Yadira",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "Y",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Trasmette energia solare, calore e presenza luminosa. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Ana",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce",
+      "corto"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "A",
+    "length": "corto",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha una musicalità viva e femminile. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Catarina",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "C",
+    "length": "lungo",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Evoca dolcezza, intensità e spontaneità. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Dulce",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "D",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Trasmette energia solare, calore e presenza luminosa. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Filomena",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "F",
+    "length": "lungo",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha una musicalità viva e femminile. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Isabel",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "I",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca dolcezza, intensità e spontaneità. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Mariana",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Trasmette energia solare, calore e presenza luminosa. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Raquel",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "R",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha una musicalità viva e femminile. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Maribel",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca dolcezza, intensità e spontaneità. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Lara",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce",
+      "corto"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "L",
+    "length": "corto",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Trasmette energia solare, calore e presenza luminosa. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Sol",
+    "origin": "Spagnolo/Portoghese",
+    "styles": [
+      "internazionale",
+      "dolce",
+      "corto"
+    ],
+    "tags": [
+      "solare",
+      "internazionale",
+      "femminile",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "S",
+    "length": "corto",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha una musicalità viva e femminile. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Aisha",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Evoca armonia, intensità ed eleganza delicata. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Aliyah",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "A",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Spesso collegato a luce, bellezza o prosperità. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Amal",
+    "origin": "Arabo/Persiano",
     "styles": [
       "internazionale",
       "moderno",
@@ -9009,17 +9537,19 @@ export const NAMES_DATABASE = [
     "tags": [
       "morbido",
       "luminoso",
-      "raro"
+      "raro",
+      "aperto"
     ],
-    "meaning": "Richiama eleganza morbida, intensità e fascino delicato. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "R",
+    "vibe": "aperto",
+    "initial": "A",
     "length": "corto",
     "international": true,
-    "popularity": "alta"
+    "popularity": "media",
+    "meaning": "Ha un fascino morbido e internazionale. Si adatta bene a gusti e culture diverse."
   },
   {
-    "name": "Sahar",
+    "name": "Amina",
+    "origin": "Arabo/Persiano",
     "styles": [
       "internazionale",
       "moderno"
@@ -9027,17 +9557,61 @@ export const NAMES_DATABASE = [
     "tags": [
       "morbido",
       "luminoso",
-      "raro"
+      "raro",
+      "cosmopolita"
     ],
-    "meaning": "Evoca grazia, armonia e una forte identità internazionale. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "S",
+    "vibe": "cosmopolita",
+    "initial": "A",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "bassa",
+    "meaning": "Evoca armonia, intensità ed eleganza delicata. Ha un respiro internazionale e moderno."
   },
   {
-    "name": "Salima",
+    "name": "Aya",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno",
+      "corto"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "A",
+    "length": "corto",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Spesso collegato a luce, bellezza o prosperità. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Dina",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno",
+      "corto"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "D",
+    "length": "corto",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un fascino morbido e internazionale. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Habiba",
+    "origin": "Arabo/Persiano",
     "styles": [
       "internazionale",
       "moderno"
@@ -9045,17 +9619,82 @@ export const NAMES_DATABASE = [
     "tags": [
       "morbido",
       "luminoso",
-      "raro"
+      "raro",
+      "aperto"
     ],
-    "meaning": "Solitamente associato a luce, bellezza, purezza o prosperità. Funziona bene anche in contesti internazionali.",
-    "origin": "Arabo/Persiano",
-    "initial": "S",
+    "vibe": "aperto",
+    "initial": "H",
     "length": "medio",
     "international": true,
-    "popularity": "media"
+    "popularity": "media",
+    "meaning": "Evoca armonia, intensità ed eleganza delicata. Si adatta bene a gusti e culture diverse."
   },
   {
-    "name": "Sanaa",
+    "name": "Hana",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno",
+      "corto"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "H",
+    "length": "corto",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Spesso collegato a luce, bellezza o prosperità. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Iman",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno",
+      "corto"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "I",
+    "length": "corto",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Ha un fascino morbido e internazionale. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Jana",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno",
+      "corto"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "J",
+    "length": "corto",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca armonia, intensità ed eleganza delicata. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Laila",
+    "origin": "Arabo/Persiano",
     "styles": [
       "internazionale",
       "moderno"
@@ -9063,13 +9702,277 @@ export const NAMES_DATABASE = [
     "tags": [
       "morbido",
       "luminoso",
-      "raro"
+      "raro",
+      "aperto"
     ],
-    "meaning": "Richiama eleganza morbida, intensità e fascino delicato. Funziona bene anche in contesti internazionali.",
+    "vibe": "aperto",
+    "initial": "L",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Spesso collegato a luce, bellezza o prosperità. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Leila",
     "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "L",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha un fascino morbido e internazionale. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Maha",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno",
+      "corto"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "M",
+    "length": "corto",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Evoca armonia, intensità ed eleganza delicata. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Malika",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Spesso collegato a luce, bellezza o prosperità. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Mariam",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "M",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un fascino morbido e internazionale. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Mina",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno",
+      "corto"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "M",
+    "length": "corto",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Evoca armonia, intensità ed eleganza delicata. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Naila",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "N",
+    "length": "medio",
+    "international": true,
+    "popularity": "alta",
+    "meaning": "Spesso collegato a luce, bellezza o prosperità. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Nour",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno",
+      "corto"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "N",
+    "length": "corto",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Ha un fascino morbido e internazionale. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Rania",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "R",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca armonia, intensità ed eleganza delicata. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Rasha",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "R",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Spesso collegato a luce, bellezza o prosperità. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Safiya",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "aperto"
+    ],
+    "vibe": "aperto",
     "initial": "S",
     "length": "medio",
     "international": true,
-    "popularity": "bassa"
+    "popularity": "alta",
+    "meaning": "Ha un fascino morbido e internazionale. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Zahra",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "Z",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Evoca armonia, intensità ed eleganza delicata. Ha un respiro internazionale e moderno."
+  },
+  {
+    "name": "Zaina",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "aperto"
+    ],
+    "vibe": "aperto",
+    "initial": "Z",
+    "length": "medio",
+    "international": true,
+    "popularity": "media",
+    "meaning": "Spesso collegato a luce, bellezza o prosperità. Si adatta bene a gusti e culture diverse."
+  },
+  {
+    "name": "Zeinab",
+    "origin": "Arabo/Persiano",
+    "styles": [
+      "internazionale",
+      "moderno"
+    ],
+    "tags": [
+      "morbido",
+      "luminoso",
+      "raro",
+      "cosmopolita"
+    ],
+    "vibe": "cosmopolita",
+    "initial": "Z",
+    "length": "medio",
+    "international": true,
+    "popularity": "bassa",
+    "meaning": "Ha un fascino morbido e internazionale. Ha un respiro internazionale e moderno."
   }
 ];
