@@ -3,6 +3,7 @@ import { supabase } from "./lib/supabase";
 import { NAMES_DATABASE } from "./data/namesDatabase";
 
 const STORAGE_KEY = "baby_name_app_profile";
+const ENRICH_LIMIT = 100;
 
 const COLORS = {
   bgTop: "#f5f3ff",
@@ -33,42 +34,42 @@ const NAME_ENRICHMENTS = {
     meaning:
       'Nome affettivo e augurale, che continua il latino "Laetitia", letteralmente "gioia", "felicità", "allegria".',
     longOrigin:
-      'Forma italiana di Letitia/Laetitia. Mantiene una tradizione classica latina e comunica un’idea di serenità gioiosa, luminosa e piena di buon auspicio.',
+      "Forma italiana di Letitia/Laetitia. Mantiene una tradizione classica latina e comunica un’idea di serenità gioiosa, luminosa e piena di buon auspicio.",
   },
   Sofia: {
     origin: "Greco, da Sophia",
     meaning:
       'Dal greco "sophia": "sapienza", "saggezza". È un nome classico che unisce profondità intellettuale ed eleganza.',
     longOrigin:
-      'Nome di origine greca diffusissimo in Europa. La sua forza sta nella semplicità del suono e in un significato molto nobile, legato alla sapienza.',
+      "Nome di origine greca diffusissimo in Europa. La sua forza sta nella semplicità del suono e in un significato molto nobile, legato alla sapienza.",
   },
   Aurora: {
     origin: "Latino",
     meaning:
-      'Dal latino "aurora": "alba", "dawn". Evoca luce, rinascita, inizio e delicatezza luminosa.',
+      'Dal latino "aurora": "alba". Evoca luce, rinascita, inizio e delicatezza luminosa.',
     longOrigin:
-      'Nella cultura romana Aurora è la dea del mattino. Come nome richiama il momento in cui la luce torna e tutto ricomincia.',
+      "Nella cultura romana Aurora è la dea del mattino. Come nome richiama il momento in cui la luce torna e tutto ricomincia.",
   },
   Vittoria: {
     origin: "Italiano, dal latino Victoria",
     meaning:
       'Dal latino "victoria": "vittoria", "trionfo". È un nome deciso, classico e molto forte.',
     longOrigin:
-      'Forma italiana di Victoria. Porta con sé un’idea di forza composta, successo e dignità, con un suono molto italiano e autorevole.',
+      "Forma italiana di Victoria. Porta con sé un’idea di forza composta, successo e dignità, con un suono italiano autorevole.",
   },
   Beatrice: {
     origin: "Italiano, dal latino Beatrix / Viatrix",
     meaning:
       'Tradizionalmente collegato a Beatrix, con il senso di "beata", "felice"; in origine probabilmente da Viatrix, "viaggiatrice".',
     longOrigin:
-      'Nome classico di radice latina, reso celebre anche dalla tradizione letteraria italiana. Unisce grazia, spiritualità e una sfumatura di felicità beneaugurante.',
+      "Nome classico di radice latina, reso celebre anche dalla tradizione letteraria italiana. Unisce grazia, spiritualità e una sfumatura di felicità beneaugurante.",
   },
   Ginevra: {
     origin: "Italiano, forma di Guinevere",
     meaning:
-      'Forma italiana di Guinevere, il nome della regina Ginevra del ciclo arturiano; tradizionalmente ricondotto al gallese Gwenhwyfar, con interpretazioni come "bianca", "chiara" o "phantom/fair one".',
+      'Forma italiana di Guinevere, il nome della regina Ginevra del ciclo arturiano; tradizionalmente ricondotto al gallese Gwenhwyfar con interpretazioni come "bianca" o "chiara".',
     longOrigin:
-      'Nome dal fascino letterario e rinascimentale, molto elegante in italiano. Oggi è percepito come raffinato, aristocratico e distintivo.',
+      "Nome dal fascino letterario e rinascimentale, molto elegante in italiano. Oggi è percepito come raffinato, aristocratico e distintivo.",
   },
 };
 
@@ -87,6 +88,73 @@ function isPositiveVote(vote) {
 
 function clamp(val, min, max) {
   return Math.max(min, Math.min(max, val));
+}
+
+function normalizeText(value) {
+  if (!value) return "";
+  return String(value).replace(/\s+/g, " ").trim();
+}
+
+function sentencePunctuate(value) {
+  const text = normalizeText(value);
+  if (!text) return "";
+  return /[.!?]$/.test(text) ? text : `${text}.`;
+}
+
+function lowerFirst(value) {
+  const text = normalizeText(value);
+  if (!text) return "";
+  return text.charAt(0).toLowerCase() + text.slice(1);
+}
+
+function buildGenericMeaning(item) {
+  const baseMeaning = sentencePunctuate(item.meaning || "");
+  const vibeText = item.vibe
+    ? ` Oggi è percepito come un nome ${item.vibe}${item.styles?.[0] ? ` e ${item.styles[0]}` : ""}.`
+    : item.styles?.[0]
+    ? ` Nel catalogo ha un profilo ${item.styles[0]}.`
+    : "";
+  return `${baseMeaning}${vibeText}`.trim();
+}
+
+function buildGenericOrigin(item) {
+  const origin = normalizeText(item.origin);
+  const styleText = item.styles?.length
+    ? ` Nel catalogo è classificato come ${item.styles.slice(0, 2).join(" / ")}.`
+    : "";
+  const tagText = item.tags?.length
+    ? ` Le associazioni principali sono ${item.tags.slice(0, 2).join(" e ")}.`
+    : "";
+  if (!origin) return `${styleText}${tagText}`.trim();
+  return `Nome di area ${lowerFirst(origin)}.${styleText}${tagText}`.trim();
+}
+
+function enrichEntry(item, index) {
+  const curated = NAME_ENRICHMENTS[item.name];
+  if (curated) {
+    return {
+      ...item,
+      origin: curated.origin || item.origin,
+      meaning: curated.meaning || item.meaning,
+      longOrigin: curated.longOrigin || item.origin,
+      enrichmentTier: "curated",
+    };
+  }
+
+  if (index < ENRICH_LIMIT) {
+    return {
+      ...item,
+      meaning: buildGenericMeaning(item),
+      longOrigin: buildGenericOrigin(item),
+      enrichmentTier: "enhanced",
+    };
+  }
+
+  return {
+    ...item,
+    longOrigin: item.origin,
+    enrichmentTier: "base",
+  };
 }
 
 function pageStyle() {
@@ -370,17 +438,13 @@ export default function App() {
   }, [profile]);
 
   const mergedDatabase = useMemo(() => {
-    return NAMES_DATABASE.map((item) => {
-      const override = NAME_ENRICHMENTS[item.name];
-      if (!override) return item;
-      return {
-        ...item,
-        origin: override.origin || item.origin,
-        meaning: override.meaning || item.meaning,
-        longOrigin: override.longOrigin || item.origin,
-      };
-    });
+    return NAMES_DATABASE.map((item, index) => enrichEntry(item, index));
   }, []);
+
+  const enhancedCount = useMemo(
+    () => mergedDatabase.filter((item) => item.enrichmentTier === "enhanced" || item.enrichmentTier === "curated").length,
+    [mergedDatabase]
+  );
 
   const randomNamePool = useMemo(() => shuffleArray(mergedDatabase.map((item) => item.name)), [mergedDatabase]);
 
@@ -402,19 +466,12 @@ export default function App() {
   const matchedNames = useMemo(() => randomNamePool.filter((n) => isPositiveVote(votes[n]) && isPositiveVote(partnerVotes[n])), [votes, partnerVotes, randomNamePool]);
 
   const filteredNamePool = useMemo(() => {
-    const basePool =
-      deckFilter === "favorites"
-        ? favoriteNames
-        : deckFilter === "matches"
-        ? matchedNames
-        : randomNamePool;
-
+    const basePool = deckFilter === "favorites" ? favoriteNames : deckFilter === "matches" ? matchedNames : randomNamePool;
     if (deckFilter === "all" && priorityNames.length > 0) {
       const priorityUnvoted = priorityNames.filter((n) => basePool.includes(n) && !votes[n]);
       const rest = basePool.filter((n) => !priorityUnvoted.includes(n));
       return [...priorityUnvoted, ...rest];
     }
-
     return basePool;
   }, [deckFilter, favoriteNames, matchedNames, randomNamePool, priorityNames, votes]);
 
@@ -437,34 +494,16 @@ export default function App() {
 
   const recentVotes = useMemo(() => Object.entries(votes).map(([babyName, vote]) => ({ babyName, vote })).reverse().slice(0, 8), [votes]);
 
-  const likedMeta = useMemo(() => {
-    return randomNamePool
-      .filter((n) => votes[n] === "yes" || votes[n] === "love")
-      .map((n) => ({ ...namesMap[n], weight: votes[n] === "love" ? 2.2 : 1 }));
-  }, [votes, randomNamePool, namesMap]);
-
-  const dislikedMeta = useMemo(() => {
-    return randomNamePool
-      .filter((n) => votes[n] === "no")
-      .map((n) => ({ ...namesMap[n], penaltyWeight: 1 }));
-  }, [votes, randomNamePool, namesMap]);
+  const likedMeta = useMemo(() => randomNamePool.filter((n) => votes[n] === "yes" || votes[n] === "love").map((n) => ({ ...namesMap[n], weight: votes[n] === "love" ? 2.2 : 1 })), [votes, randomNamePool, namesMap]);
+  const dislikedMeta = useMemo(() => randomNamePool.filter((n) => votes[n] === "no").map((n) => ({ ...namesMap[n], penaltyWeight: 1 })), [votes, randomNamePool, namesMap]);
 
   const smartSuggestions = useMemo(() => {
     const initial = exploreInitial.trim().toUpperCase();
     let candidates = mergedDatabase.filter((item) => !votes[item.name]);
-
-    if (exploreStyle !== "all") {
-      candidates = candidates.filter((item) => item.styles.includes(exploreStyle));
-    }
-    if (exploreOrigin !== "all") {
-      candidates = candidates.filter((item) => item.origin === exploreOrigin);
-    }
-    if (exploreVibe !== "all") {
-      candidates = candidates.filter((item) => item.vibe === exploreVibe);
-    }
-    if (initial) {
-      candidates = candidates.filter((item) => item.initial === initial);
-    }
+    if (exploreStyle !== "all") candidates = candidates.filter((item) => item.styles.includes(exploreStyle));
+    if (exploreOrigin !== "all") candidates = candidates.filter((item) => item.origin === exploreOrigin);
+    if (exploreVibe !== "all") candidates = candidates.filter((item) => item.vibe === exploreVibe);
+    if (initial) candidates = candidates.filter((item) => item.initial === initial);
 
     return candidates
       .map((item) => {
@@ -494,14 +533,7 @@ export default function App() {
         const partnerVote = partnerVotes[nameValue];
         const tier = getMatchTier(myVote, partnerVote);
         const meta = namesMap[nameValue];
-        return {
-          name: nameValue,
-          myVote,
-          partnerVote,
-          meta,
-          ...tier,
-          why: getMatchReason(meta),
-        };
+        return { name: nameValue, myVote, partnerVote, meta, ...tier, why: getMatchReason(meta) };
       })
       .sort((a, b) => b.weight - a.weight || randomRank[a.name] - randomRank[b.name]);
   }, [matchedNames, votes, partnerVotes, namesMap, randomRank]);
@@ -575,13 +607,7 @@ export default function App() {
     if (!currentProfile?.id || !currentProfile?.couple_code) return;
     setMatchLoading(true);
     try {
-      const { data: partnerRows, error: partnerError } = await supabase
-        .from("profiles")
-        .select("id, name, couple_code")
-        .eq("couple_code", currentProfile.couple_code)
-        .neq("id", currentProfile.id)
-        .order("created_at", { ascending: true })
-        .limit(1);
+      const { data: partnerRows, error: partnerError } = await supabase.from("profiles").select("id, name, couple_code").eq("couple_code", currentProfile.couple_code).neq("id", currentProfile.id).order("created_at", { ascending: true }).limit(1);
       if (partnerError) {
         setMessage("Errore caricamento partner: " + partnerError.message);
         return;
@@ -592,10 +618,7 @@ export default function App() {
         setPartnerVotes({});
         return;
       }
-      const { data: votesRows, error: votesError } = await supabase
-        .from("votes")
-        .select("baby_name, vote")
-        .eq("profile_id", foundPartner.id);
+      const { data: votesRows, error: votesError } = await supabase.from("votes").select("baby_name, vote").eq("profile_id", foundPartner.id);
       if (votesError) {
         setMessage("Errore caricamento voti partner: " + votesError.message);
         return;
@@ -621,11 +644,7 @@ export default function App() {
     setMessage("");
     try {
       const coupleCode = generateCoupleCode();
-      const { data, error } = await supabase
-        .from("profiles")
-        .insert({ name: name.trim(), couple_code: coupleCode })
-        .select()
-        .single();
+      const { data, error } = await supabase.from("profiles").insert({ name: name.trim(), couple_code: coupleCode }).select().single();
       if (error) {
         setMessage("Errore Supabase: " + error.message);
         return;
@@ -659,11 +678,7 @@ export default function App() {
     setLoading(true);
     setMessage("");
     try {
-      const { data: existingProfiles, error: checkError } = await supabase
-        .from("profiles")
-        .select("id, couple_code")
-        .eq("couple_code", normalizedCode)
-        .limit(1);
+      const { data: existingProfiles, error: checkError } = await supabase.from("profiles").select("id, couple_code").eq("couple_code", normalizedCode).limit(1);
       if (checkError) {
         setMessage("Errore controllo codice: " + checkError.message);
         return;
@@ -672,11 +687,7 @@ export default function App() {
         setMessage("Codice coppia non trovato");
         return;
       }
-      const { data, error } = await supabase
-        .from("profiles")
-        .insert({ name: name.trim(), couple_code: normalizedCode })
-        .select()
-        .single();
+      const { data, error } = await supabase.from("profiles").insert({ name: name.trim(), couple_code: normalizedCode }).select().single();
       if (error) {
         setMessage("Errore Supabase: " + error.message);
         return;
@@ -702,12 +713,7 @@ export default function App() {
     setVoteSaving(true);
     setMessage("");
     try {
-      const { error } = await supabase
-        .from("votes")
-        .upsert(
-          { profile_id: profile.id, baby_name: currentName, vote: voteType },
-          { onConflict: "profile_id,baby_name" }
-        );
+      const { error } = await supabase.from("votes").upsert({ profile_id: profile.id, baby_name: currentName, vote: voteType }, { onConflict: "profile_id,baby_name" });
       if (error) {
         setMessage("Errore salvataggio voto: " + error.message);
         return;
@@ -775,6 +781,7 @@ export default function App() {
                   <span style={badgeStyle(COLORS.blueSoft, COLORS.blue)}>{detailEntry.origin}</span>
                   <span style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>{detailEntry.vibe}</span>
                   <span style={badgeStyle(COLORS.greenSoft, COLORS.green)}>{detailEntry.length}</span>
+                  <span style={badgeStyle(COLORS.amberSoft, COLORS.amber)}>{detailEntry.enrichmentTier === "curated" ? "curated" : detailEntry.enrichmentTier === "enhanced" ? "enhanced" : "base"}</span>
                 </div>
               </div>
               <button onClick={closeNameDetail} style={buttonStyle("secondary")}>Chiudi</button>
@@ -827,9 +834,9 @@ export default function App() {
       ) : !profile ? (
         <div className="app-shell" style={{ maxWidth: 780 }}>
           <div className="hover-lift" style={cardStyle({ padding: 28, marginBottom: 20, background: `linear-gradient(135deg, ${COLORS.primarySoft} 0%, #ffffff 100%)` })}>
-            <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>✨ v11 Smart Match + Detail</div>
+            <div style={badgeStyle(COLORS.primarySoft, COLORS.primary)}>✨ v11.1 Data Enrichment 100</div>
             <h1 style={{ fontSize: 38, marginBottom: 10 }}>Il Nome Perfetto</h1>
-            <p style={{ color: COLORS.muted, fontSize: 16, lineHeight: 1.6, marginBottom: 0 }}>Motore suggerimenti più intelligente, scheda nome dettagliata e match di coppia più ricchi.</p>
+            <p style={{ color: COLORS.muted, fontSize: 16, lineHeight: 1.6, marginBottom: 0 }}>Enrichment testuale per 100 nomi, recommendation engine più forte, scheda nome dettagliata e match di coppia intelligenti.</p>
           </div>
           <div className="auth-grid">
             <div className="hover-lift" style={cardStyle()}>
@@ -853,7 +860,7 @@ export default function App() {
               <div>
                 <div style={{ ...badgeStyle(COLORS.primarySoft, COLORS.primary), marginBottom: 12 }}>📚 Smart catalog attivo</div>
                 <h1 style={{ margin: 0, fontSize: 34 }}>Il Nome Perfetto</h1>
-                <p style={{ color: COLORS.muted, marginBottom: 0 }}>Ciao <strong>{profile.name}</strong> — codice coppia <strong>{profile.couple_code}</strong> — catalogo: <strong>{mergedDatabase.length} nomi</strong></p>
+                <p style={{ color: COLORS.muted, marginBottom: 0 }}>Ciao <strong>{profile.name}</strong> — codice coppia <strong>{profile.couple_code}</strong> — catalogo: <strong>{mergedDatabase.length} nomi</strong> — schede migliorate: <strong>{enhancedCount}</strong></p>
               </div>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                 <button onClick={refreshMatches} style={buttonStyle("secondary")}>Aggiorna match</button>
@@ -878,7 +885,7 @@ export default function App() {
               <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "center", flexWrap: "wrap", marginBottom: 14 }}>
                 <div>
                   <h2 style={{ margin: 0 }}>Deck con significato</h2>
-                  <p style={{ margin: "6px 0 0 0", color: COLORS.muted, fontSize: 14 }}>Con significato, origine migliorata e accesso rapido alla scheda nome.</p>
+                  <p style={{ margin: "6px 0 0 0", color: COLORS.muted, fontSize: 14 }}>Con significato e origine migliorati, accesso rapido alla scheda nome e ordine sempre random.</p>
                 </div>
                 <div className="chip-wrap">
                   <button onClick={() => setDeckFilter("all")} style={buttonStyle(deckFilter === "all" ? "activePill" : "secondary")}>Tutti</button>
@@ -896,6 +903,7 @@ export default function App() {
                     <div className="chip-wrap">
                       {priorityNames.includes(currentName) ? <span style={badgeStyle("rgba(255,255,255,0.18)", "#fff")}>Suggerito per te</span> : null}
                       <span style={badgeStyle("rgba(255,255,255,0.18)", "#fff")}>{currentMeta.origin}</span>
+                      <span style={badgeStyle("rgba(255,255,255,0.18)", "#fff")}>{currentMeta.enrichmentTier === "curated" ? "curated" : currentMeta.enrichmentTier === "enhanced" ? "enhanced" : "base"}</span>
                     </div>
                   </div>
                   <div style={{ position: "relative" }}>
