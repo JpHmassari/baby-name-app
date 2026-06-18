@@ -4,7 +4,7 @@ import { NAMES_DATABASE } from "./data/namesDatabase";
 
 const STORAGE_KEY = "baby_name_app_profile";
 
-const COLORS = {
+const C = {
   bgTop: "#f5f3ff",
   bgBottom: "#f8fafc",
   card: "#ffffff",
@@ -85,17 +85,17 @@ function similarityScore(a, b) {
 function pageStyle() {
   return {
     minHeight: "100vh",
-    background: `linear-gradient(180deg, ${COLORS.bgTop} 0%, ${COLORS.bgBottom} 100%)`,
+    background: `linear-gradient(180deg, ${C.bgTop} 0%, ${C.bgBottom} 100%)`,
     padding: 20,
     fontFamily: "Inter, Arial, sans-serif",
-    color: COLORS.text,
+    color: C.text,
   };
 }
 
 function cardStyle(extra = {}) {
   return {
-    background: COLORS.card,
-    border: `1px solid ${COLORS.border}`,
+    background: C.card,
+    border: `1px solid ${C.border}`,
     borderRadius: 24,
     padding: 18,
     boxShadow: "0 10px 30px rgba(71, 56, 135, 0.06)",
@@ -109,9 +109,9 @@ function inputStyle() {
     width: "100%",
     boxSizing: "border-box",
     borderRadius: 14,
-    border: `1px solid ${COLORS.border}`,
+    border: `1px solid ${C.border}`,
     background: "#fff",
-    color: COLORS.text,
+    color: C.text,
     outline: "none",
   };
 }
@@ -119,38 +119,38 @@ function inputStyle() {
 function buttonStyle(kind = "primary") {
   const styles = {
     primary: {
-      background: `linear-gradient(135deg, ${COLORS.primary} 0%, ${COLORS.primary2} 100%)`,
+      background: `linear-gradient(135deg, ${C.primary} 0%, ${C.primary2} 100%)`,
       color: "#fff",
       border: "none",
     },
     secondary: {
       background: "#fff",
-      color: COLORS.text,
-      border: `1px solid ${COLORS.border}`,
+      color: C.text,
+      border: `1px solid ${C.border}`,
     },
     yes: {
-      background: COLORS.greenSoft,
-      color: COLORS.green,
+      background: C.greenSoft,
+      color: C.green,
       border: "1px solid #bbf7d0",
     },
     no: {
-      background: COLORS.redSoft,
-      color: COLORS.red,
+      background: C.redSoft,
+      color: C.red,
       border: "1px solid #fecaca",
     },
     love: {
-      background: COLORS.primarySoft,
-      color: COLORS.primary,
+      background: C.primarySoft,
+      color: C.primary,
       border: "1px solid #e9d5ff",
     },
     warning: {
-      background: COLORS.amberSoft,
-      color: COLORS.amber,
+      background: C.amberSoft,
+      color: C.amber,
       border: "1px solid #fde68a",
     },
     activePill: {
-      background: COLORS.primarySoft,
-      color: COLORS.primary,
+      background: C.primarySoft,
+      color: C.primary,
       border: "1px solid #ddd6fe",
     },
   };
@@ -181,9 +181,9 @@ function badgeStyle(bg, color) {
 }
 
 function voteBadgeStyle(vote) {
-  if (vote === "love") return badgeStyle(COLORS.primarySoft, COLORS.primary);
-  if (vote === "yes") return badgeStyle(COLORS.greenSoft, COLORS.green);
-  return badgeStyle(COLORS.redSoft, COLORS.red);
+  if (vote === "love") return badgeStyle(C.primarySoft, C.primary);
+  if (vote === "yes") return badgeStyle(C.greenSoft, C.green);
+  return badgeStyle(C.redSoft, C.red);
 }
 
 export default function App() {
@@ -216,9 +216,7 @@ export default function App() {
         const parsed = JSON.parse(saved);
         if (parsed?.id && parsed?.name && parsed?.couple_code) {
           setProfile(parsed);
-          setMessage(
-            `Bentornata/o ${parsed.name}! Sei collegata/o alla coppia ${parsed.couple_code}`
-          );
+          setMessage(`Bentornata/o ${parsed.name}! Sei collegata/o alla coppia ${parsed.couple_code}`);
         }
       }
     } catch (error) {
@@ -240,15 +238,12 @@ export default function App() {
     }
   }, [profile]);
 
-  const allRandomNames = useMemo(
-    () => shuffleArray(NAMES_DATABASE.map((item) => item.name)),
-    []
-  );
+  const allRandomNames = useMemo(() => shuffleArray(NAMES_DATABASE.map((item) => item.name)), []);
 
   const randomRank = useMemo(() => {
     const rank = {};
-    allRandomNames.forEach((nameValue, index) => {
-      rank[nameValue] = index;
+    allRandomNames.forEach((value, index) => {
+      rank[value] = index;
     });
     return rank;
   }, [allRandomNames]);
@@ -261,18 +256,9 @@ export default function App() {
     return map;
   }, []);
 
-  const allStyles = useMemo(
-    () => [...new Set(NAMES_DATABASE.flatMap((item) => item.styles))].sort(),
-    []
-  );
-  const allOrigins = useMemo(
-    () => [...new Set(NAMES_DATABASE.map((item) => item.origin))].sort(),
-    []
-  );
-  const allVibes = useMemo(
-    () => [...new Set(NAMES_DATABASE.map((item) => item.vibe))].sort(),
-    []
-  );
+  const allStyles = useMemo(() => [...new Set(NAMES_DATABASE.flatMap((item) => item.styles))].sort(), []);
+  const allOrigins = useMemo(() => [...new Set(NAMES_DATABASE.map((item) => item.origin))].sort(), []);
+  const allVibes = useMemo(() => [...new Set(NAMES_DATABASE.map((item) => item.vibe))].sort(), []);
 
   const favoriteNames = useMemo(
     () => allRandomNames.filter((babyName) => votes[babyName] === "yes" || votes[babyName] === "love"),
@@ -280,16 +266,12 @@ export default function App() {
   );
 
   const matchedNames = useMemo(
-    () =>
-      allRandomNames.filter(
-        (babyName) =>
-          isPositiveVote(votes[babyName]) && isPositiveVote(partnerVotes[babyName])
-      ),
+    () => allRandomNames.filter((babyName) => isPositiveVote(votes[babyName]) && isPositiveVote(partnerVotes[babyName])),
     [votes, partnerVotes, allRandomNames]
   );
 
   const filteredNamePool = useMemo(() => {
-    let basePool =
+    const basePool =
       deckFilter === "favorites"
         ? favoriteNames
         : deckFilter === "matches"
@@ -297,9 +279,7 @@ export default function App() {
         : allRandomNames;
 
     if (deckFilter === "all" && priorityNames.length > 0) {
-      const priorityUnvoted = priorityNames.filter(
-        (babyName) => basePool.includes(babyName) && !votes[babyName]
-      );
+      const priorityUnvoted = priorityNames.filter((babyName) => basePool.includes(babyName) && !votes[babyName]);
       const rest = basePool.filter((babyName) => !priorityUnvoted.includes(babyName));
       return [...priorityUnvoted, ...rest];
     }
@@ -328,11 +308,7 @@ export default function App() {
   }, [votes]);
 
   const recentVotes = useMemo(
-    () =>
-      Object.entries(votes)
-        .map(([babyName, vote]) => ({ babyName, vote }))
-        .reverse()
-        .slice(0, 8),
+    () => Object.entries(votes).map(([babyName, vote]) => ({ babyName, vote })).reverse().slice(0, 8),
     [votes]
   );
 
@@ -373,9 +349,8 @@ export default function App() {
   const similarToCurrent = useMemo(() => {
     if (!currentMeta) return [];
 
-    return NAMES_DATABASE.filter(
-      (item) => item.name !== currentMeta.name && !votes[item.name]
-    )
+    return NAMES_DATABASE
+      .filter((item) => item.name !== currentMeta.name && !votes[item.name])
       .map((item) => ({ ...item, score: similarityScore(currentMeta, item) }))
       .sort((a, b) => b.score - a.score || randomRank[a.name] - randomRank[b.name])
       .slice(0, 6);
@@ -406,16 +381,11 @@ export default function App() {
   async function loadVotes(profileId) {
     setVotesLoading(true);
     try {
-      const { data, error } = await supabase
-        .from("votes")
-        .select("baby_name, vote")
-        .eq("profile_id", profileId);
-
+      const { data, error } = await supabase.from("votes").select("baby_name, vote").eq("profile_id", profileId);
       if (error) {
         setMessage("Errore caricamento voti: " + error.message);
         return;
       }
-
       const mappedVotes = {};
       (data || []).forEach((row) => {
         mappedVotes[row.baby_name] = row.vote;
@@ -445,8 +415,7 @@ export default function App() {
         return;
       }
 
-      const foundPartner =
-        partnerRows && partnerRows.length > 0 ? partnerRows[0] : null;
+      const foundPartner = partnerRows && partnerRows.length > 0 ? partnerRows[0] : null;
       setPartner(foundPartner);
 
       if (!foundPartner) {
@@ -604,9 +573,7 @@ export default function App() {
 
   async function resetMyVotes() {
     if (!profile?.id) return;
-    const confirmed = window.confirm(
-      "Vuoi davvero cancellare tutti i tuoi voti? Questa azione non si può annullare."
-    );
+    const confirmed = window.confirm("Vuoi davvero cancellare tutti i tuoi voti? Questa azione non si può annullare.");
     if (!confirmed) return;
 
     setMessage("");
@@ -648,33 +615,7 @@ export default function App() {
 
   return (
     <div style={pageStyle()}>
-      <style>{`
-        * { box-sizing: border-box; }
-        .app-shell { max-width: 1200px; margin: 0 auto; }
-        .stats-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-        .content-grid { display: grid; gap: 20px; grid-template-columns: minmax(320px, 1.3fr) minmax(300px, 1fr); align-items: start; }
-        .secondary-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-        .stack-grid { display: grid; gap: 20px; }
-        .auth-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
-        .deck-actions { display: grid; gap: 12px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-        .chip-wrap { display: flex; gap: 8px; flex-wrap: wrap; }
-        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-        .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(71,56,135,.10); }
-        .message-bar { position: sticky; bottom: 14px; z-index: 20; }
-        .deck-panel { grid-column: 1; }
-        .match-panel { grid-column: 2; }
-        .catalog-panel { grid-column: 2; }
-        .secondary-left { grid-column: 1; }
-        .secondary-right { grid-column: 1 / span 2; }
-        .actions-panel { grid-column: 2; }
-        @media (max-width: 980px) {
-          .content-grid { grid-template-columns: 1fr; }
-          .deck-panel, .match-panel, .catalog-panel, .secondary-left, .secondary-right, .actions-panel { grid-column: auto; }
-        }
-        @media (max-width: 640px) {
-          .deck-actions { grid-template-columns: 1fr; }
-        }
-      `}</style>
+      <style>{`* { box-sizing: border-box; } .app-shell { max-width: 1200px; margin: 0 auto; } .stats-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); } .content-grid { display: grid; gap: 20px; grid-template-columns: minmax(320px, 1.3fr) minmax(300px, 1fr); align-items: start; } .secondary-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); } .stack-grid { display: grid; gap: 20px; } .auth-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); } .deck-actions { display: grid; gap: 12px; grid-template-columns: repeat(3, minmax(0, 1fr)); } .chip-wrap { display: flex; gap: 8px; flex-wrap: wrap; } .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; } .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(71,56,135,.10); } .message-bar { position: sticky; bottom: 14px; z-index: 20; } .deck-panel { grid-column: 1; } .match-panel { grid-column: 2; } .catalog-panel { grid-column: 2; } .secondary-left { grid-column: 1; } .secondary-right { grid-column: 1 / span 2; } .actions-panel { grid-column: 2; } @media (max-width: 980px) { .content-grid { grid-template-columns: 1fr; } .deck-panel, .match-panel, .catalog-panel, .secondary-left, .secondary-right, .actions-panel { grid-column: auto; } } @media (max-width: 640px) { .deck-actions { grid-template-columns: 1fr; } }`}</style>
 
       {checkingSession ? (
         <div className="app-shell">
@@ -695,26 +636,17 @@ export default function App() {
             <div className="hover-lift" style={card()}>
               <h2 style={{ marginTop: 0 }}>Crea nuova coppia</h2>
               <input type="text" placeholder="Il tuo nome" value={name} onChange={(e) => setName(e.target.value)} style={{ ...input, marginBottom: 12 }} />
-              <button onClick={createNewCouple} disabled={loading} style={btn("primary")}>
-                {loading ? "Attendi..." : "Crea nuova coppia"}
-              </button>
+              <button onClick={createNewCouple} disabled={loading} style={btn("primary")}>{loading ? "Attendi..." : "Crea nuova coppia"}</button>
             </div>
-
             <div className="hover-lift" style={card()}>
               <h2 style={{ marginTop: 0 }}>Unisciti a una coppia</h2>
               <input type="text" placeholder="Il tuo nome" value={name} onChange={(e) => setName(e.target.value)} style={{ ...input, marginBottom: 12 }} />
               <input type="text" placeholder="Codice coppia esistente" value={joinCode} onChange={(e) => setJoinCode(e.target.value.toUpperCase())} style={{ ...input, marginBottom: 12 }} />
-              <button onClick={joinExistingCouple} disabled={loading} style={btn("secondary")}>
-                {loading ? "Attendi..." : "Unisciti alla coppia"}
-              </button>
+              <button onClick={joinExistingCouple} disabled={loading} style={btn("secondary")}>{loading ? "Attendi..." : "Unisciti alla coppia"}</button>
             </div>
           </div>
 
-          {message ? (
-            <div style={{ ...card({ marginTop: 20, padding: 14 }) }}>
-              <span style={{ color: C.muted }}>{message}</span>
-            </div>
-          ) : null}
+          {message ? <div style={{ ...card({ marginTop: 20, padding: 14 }) }}><span style={{ color: C.muted }}>{message}</span></div> : null}
         </div>
       ) : (
         <div className="app-shell">
@@ -723,24 +655,16 @@ export default function App() {
               <div>
                 <div style={{ ...badge(C.primarySoft, C.primary), marginBottom: 12 }}>📚 Smart catalog attivo</div>
                 <h1 style={{ margin: 0, fontSize: 34 }}>Il Nome Perfetto</h1>
-                <p style={{ color: C.muted, marginBottom: 0 }}>
-                  Ciao <strong>{profile.name}</strong> — codice coppia <strong>{profile.couple_code}</strong> — catalogo: <strong>{NAMES_DATABASE.length} nomi</strong>
-                </p>
+                <p style={{ color: C.muted, marginBottom: 0 }}>Ciao <strong>{profile.name}</strong> — codice coppia <strong>{profile.couple_code}</strong> — catalogo: <strong>{NAMES_DATABASE.length} nomi</strong></p>
               </div>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                 <button onClick={refreshMatches} style={btn("secondary")}>Aggiorna match</button>
                 <button onClick={logoutProfile} style={btn("secondary")}>Esci</button>
               </div>
             </div>
-
             <div style={{ marginTop: 18 }}>
-              <div style={{ display: "flex", justifyContent: "space-between", fontSize: 14, color: C.muted, marginBottom: 8 }}>
-                <span>Progresso voti</span>
-                <span>{votedCount} / {totalCount} · {progress}%</span>
-              </div>
-              <div style={{ height: 12, borderRadius: 999, background: "#ede9fe", overflow: "hidden" }}>
-                <div style={{ width: `${progress}%`, height: "100%", background: `linear-gradient(90deg, ${C.primary} 0%, ${C.primary2} 100%)` }} />
-              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", fontSize: 14, color: C.muted, marginBottom: 8 }}><span>Progresso voti</span><span>{votedCount} / {totalCount} · {progress}%</span></div>
+              <div style={{ height: 12, borderRadius: 999, background: "#ede9fe", overflow: "hidden" }}><div style={{ width: `${progress}%`, height: "100%", background: `linear-gradient(90deg, ${C.primary} 0%, ${C.primary2} 100%)` }} /></div>
             </div>
           </div>
 
