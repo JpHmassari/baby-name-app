@@ -1,8 +1,9 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { Component, useEffect, useMemo, useRef, useState } from "react";
 import { supabase } from "./lib/supabase";
 import { NAMES_DATABASE } from "./data/namesDatabase";
 
 const STORAGE_KEY = "baby_name_app_profile";
+const SEED_KEY = "baby_name_app_random_seed";
 
 const COLORS = {
   bgTop: "#f5f3ff",
@@ -73,6 +74,46 @@ const CURATED = {
   },
 };
 
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, errorMessage: "" };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, errorMessage: error?.message || String(error) };
+  }
+
+  componentDidCatch(error, info) {
+    console.error("App crash:", error, info);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{ minHeight: "100vh", padding: 24, background: COLORS.bgBottom, fontFamily: "Inter, Arial, sans-serif" }}>
+          <div style={cardStyle({ maxWidth: 760, margin: "0 auto" })}>
+            <h1>Errore nella webapp</h1>
+            <p style={{ color: COLORS.muted }}>La app non è riuscita a renderizzare una sezione. Questo messaggio evita la pagina bianca.</p>
+            <pre style={{ whiteSpace: "pre-wrap", background: COLORS.slateSoft, padding: 12, borderRadius: 12 }}>{this.state.errorMessage}</pre>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+function normalizeText(value) {
+  return String(value || "").replace(/\s+/g, " ").trim();
+}
+
+function punctuate(value) {
+  const text = normalizeText(value);
+  if (!text) return "";
+  return /[.!?]$/.test(text) ? text : `${text}.`;
+}
+
 function titleCase(value) {
   return String(value || "")
     .trim()
@@ -87,16 +128,6 @@ function normalizeKey(value) {
   return String(value || "").trim().toLowerCase();
 }
 
-function normalizeText(value) {
-  return String(value || "").replace(/\s+/g, " ").trim();
-}
-
-function punctuate(value) {
-  const text = normalizeText(value);
-  if (!text) return "";
-  return /[.!?]$/.test(text) ? text : `${text}.`;
-}
-
 function stableHash(value) {
   const text = String(value || "");
   let hash = 2166136261;
@@ -108,11 +139,7 @@ function stableHash(value) {
 }
 
 function stableRandomSort(items, seed) {
-  return [...items].sort((a, b) => {
-    const av = stableHash(`${seed}|${a}`);
-    const bv = stableHash(`${seed}|${b}`);
-    return av - bv;
-  });
+  return [...items].sort((a, b) => stableHash(`${seed}|${a}`) - stableHash(`${seed}|${b}`));
 }
 
 function isPositiveVote(vote) {
@@ -168,8 +195,15 @@ function enrichBaseName(item) {
   if (curated) return { ...item, ...curated, enrichmentTier: "curated" };
   return {
     ...item,
+    name: item.name,
+    origin: item.origin || "Non specificata",
     meaning: punctuate(item.meaning || "Nome del catalogo."),
     longOrigin: item.origin ? `Nome di area ${String(item.origin).toLowerCase()}.` : "Origine non specificata nel catalogo.",
+    styles: Array.isArray(item.styles) ? item.styles : [],
+    tags: Array.isArray(item.tags) ? item.tags : [],
+    vibe: item.vibe || "neutro",
+    length: item.length || "medio",
+    initial: item.initial || String(item.name || "").charAt(0).toUpperCase(),
     enrichmentTier: "base",
   };
 }
@@ -198,6 +232,7 @@ function scoreCandidate(candidate, likedMeta, dislikedMeta) {
   const reasons = [];
   const styleHits = {};
   const vibeHits = {};
+
   likedMeta.forEach((meta) => {
     const weight = meta.weight || 1;
     (meta.styles || []).forEach((style) => {
@@ -213,19 +248,20 @@ function scoreCandidate(candidate, likedMeta, dislikedMeta) {
     if (candidate.origin === meta.origin) score += weight * 2;
     if (candidate.length === meta.length) score += weight;
   });
+
   dislikedMeta.forEach((meta) => {
-    let penalty = 0;
     (meta.styles || []).forEach((style) => {
-      if ((candidate.styles || []).includes(style)) penalty += 1.2;
+      if ((candidate.styles || []).includes(style)) score -= 1.2;
     });
-    if (candidate.vibe === meta.vibe) penalty += 0.9;
-    if (candidate.origin === meta.origin) penalty += 0.8;
-    score -= penalty;
+    if (candidate.vibe === meta.vibe) score -= 0.9;
+    if (candidate.origin === meta.origin) score -= 0.8;
   });
+
   const topStyle = Object.entries(styleHits).sort((a, b) => b[1] - a[1])[0]?.[0];
   const topVibe = Object.entries(vibeHits).sort((a, b) => b[1] - a[1])[0]?.[0];
   if (topStyle) reasons.push(`stile ${topStyle}`);
   if (topVibe) reasons.push(`vibe ${topVibe}`);
+
   return { score, why: reasons.length ? `Consigliato per ${reasons.join(", ")}.` : "Suggerito in base ai tuoi voti positivi." };
 }
 
@@ -255,8 +291,16 @@ function getMatchTier(myVote, partnerVote) {
   return { tier: "Good match", weight: 1, bg: COLORS.greenSoft, color: COLORS.green };
 }
 
-export default function App() {
-  const stableSeed = useRef(String(Date.now())).current;
+function getStableSeed() {
+  const existing = localStorage.getItem(SEED_KEY);
+  if (existing) return existing;
+  const created = String(Date.now());
+  localStorage.setItem(SEED_KEY, created);
+  return created;
+}
+
+function AppContent() {
+  const stableSeed = useRef(getStableSeed()).current;
 
   const [name, setName] = useState("");
   const [joinCode, setJoinCode] = useState("");
@@ -314,14 +358,13 @@ export default function App() {
     loadCustomNames(profile.couple_code);
   }, [profile]);
 
+  const refreshTimerRef = useRef(null);
   useEffect(() => {
-    if (!profile?.id || !profile?.couple_code) return undefined;
-    const timer = setInterval(() => {
-      loadCustomNames(profile.couple_code);
-      loadPartnerAndVotes(profile);
-    }, REFRESH_MS);
-    return () => clearInterval(timer);
-  }, [profile]);
+    if (refreshTimerRef.current) clearInterval(refreshTimerRef.current);
+    return () => {
+      if (refreshTimerRef.current) clearInterval(refreshTimerRef.current);
+    };
+  }, []);
 
   const baseEntries = useMemo(() => NAMES_DATABASE.map(enrichBaseName), []);
   const customEntries = useMemo(() => customNames.map(customNameToEntry), [customNames]);
@@ -357,19 +400,9 @@ export default function App() {
   const currentName = currentIndex >= 0 ? filteredNamePool[currentIndex] : null;
   const currentMeta = currentName ? namesMap[currentName] : null;
 
-  const summary = useMemo(() => {
-    const values = Object.values(votes);
-    return {
-      no: values.filter((item) => item === "no").length,
-      yes: values.filter((item) => item === "yes").length,
-      love: values.filter((item) => item === "love").length,
-    };
-  }, [votes]);
-
   const recentVotes = useMemo(() => Object.entries(votes).map(([babyName, vote]) => ({ babyName, vote })).reverse().slice(0, 12), [votes]);
-
   const likedMeta = useMemo(() => randomNamePool.filter((item) => votes[item] === "yes" || votes[item] === "love").map((item) => ({ ...namesMap[item], weight: votes[item] === "love" ? 2.2 : 1 })), [randomNamePool, votes, namesMap]);
-  const dislikedMeta = useMemo(() => randomNamePool.filter((item) => votes[item] === "no").map((item) => ({ ...namesMap[item], penaltyWeight: 1 })), [randomNamePool, votes, namesMap]);
+  const dislikedMeta = useMemo(() => randomNamePool.filter((item) => votes[item] === "no").map((item) => namesMap[item]), [randomNamePool, votes, namesMap]);
 
   const smartSuggestions = useMemo(() => {
     const initial = exploreInitial.trim().toUpperCase();
@@ -391,10 +424,7 @@ export default function App() {
     if (!currentMeta) return [];
     return mergedDatabase
       .filter((item) => item.name !== currentMeta.name && !votes[item.name])
-      .map((item) => {
-        const result = similarityScore(currentMeta, item);
-        return { ...item, score: result.score, why: result.why };
-      })
+      .map((item) => ({ ...item, ...similarityScore(currentMeta, item) }))
       .sort((a, b) => b.score - a.score || (rankMap[a.name] || 0) - (rankMap[b.name] || 0))
       .slice(0, 8);
   }, [currentMeta, mergedDatabase, votes, rankMap]);
@@ -889,5 +919,13 @@ export default function App() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <ErrorBoundary>
+      <AppContent />
+    </ErrorBoundary>
   );
 }
